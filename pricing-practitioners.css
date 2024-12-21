@@ -1,14 +1,26 @@
 /* General Reset */
 * {
-  margin: 0;
-  padding: 20;
-  box-sizing: border-box;
-}
-
-body {
-  font-family: "Autodesk Sans", sans-serif;
-  line-height: 1.6;
-}
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  /* Apply to all headings (H1 to H6) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold for main headings */
+    color: #08584B; /* Adjust color to suit your design */
+  }
+  
+  /* Slightly lighter for subheadings */
+  h2, h3 {
+    font-weight: 600;
+    color: #028F67; /* Adjust color to suit your design */
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+  }
 
 /* Container */
 .container {
@@ -109,7 +121,6 @@ nav a, .nav-link {
     background-color: #028f67;
 }
 
-/* Hero Section */
 /* Apply to all headings (H1 to H6) */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
@@ -127,36 +138,6 @@ body, p, li, span, .body-text {
     font-weight: 400; /* Regular weight for body content */
     color: #555; /* Adjust color to suit your design */
     line-height: 1.6; /* Add line height for readability */
-}
-
-.hero {
-    display: flex;
-    justify-content: center; /* Center content horizontally */
-    align-items: center; /* Center content vertically */
-    padding: 20px !important; /* Reduce padding to shrink vertical space */
-    background-image: url('https://i.ibb.co/cY65C1K/Pricing-1.png'); /* Background image */
-    background-size: cover; /* Ensures the image covers the section */
-    background-position: center; /* Center the background image */
-    background-repeat: no-repeat;
-    background-color: rgba(255, 255, 255, 0.3); /* Light washed-out effect */
-    background-blend-mode: lighten; /* This ensures the image looks washed out */
-    height: 60vh; /* Increase height to 60% of the viewport */
-    max-height: 60vh; 
-  }
-
-.hero-content {
-    flex: 1;
-    max-width: 600px;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    color: #000;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 20px;
 }
 
 /* Custom Quote Section */

@@ -6,7 +6,7 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     line-height: 1.6;
 }
 
@@ -23,7 +23,7 @@ body {
 /* Navbar Section */
 /* Navigation links */
 nav a, .nav-link {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     font-weight: 500; /* Medium weight for clarity */
     text-transform: uppercase; /* Optional: make links uppercase */
     color: #3a3a46; /* Customize color */
@@ -32,7 +32,7 @@ nav a, .nav-link {
 
 /* Button styles */
 .button, .btn {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     font-weight: 500; /* Medium weight for buttons */
     color: #fff;
     background-color: #08584B; /* Button color */
@@ -111,7 +111,7 @@ nav a, .nav-link {
 
 /* Knowledge Base Section */
 h1, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     font-weight: 700; /* Bold for main headings */
     color: #000; /* Black for main headings */
 }
