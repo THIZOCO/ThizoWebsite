@@ -9,6 +9,7 @@ body {
     font-family: 'Montserrat';
     line-height: 1.6;
 }
+
 /* Apply to all headings (H1 to H6) */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat';
@@ -20,6 +21,7 @@ h1, h2, h3, h4, h5, h6 {
 h2, h3 {
     font-weight: 600;
 }
+
 /* General body text */
 body, p, li, span, .body-text {
     font-family: 'Montserrat';
@@ -27,7 +29,6 @@ body, p, li, span, .body-text {
     color: #555; /* Adjust color to suit your design */
     line-height: 1.6; /* Add line height for readability */
 }
-
 
 /* Container */
 .container {
@@ -192,7 +193,7 @@ nav a, .nav-link {
     padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
     padding-top: 2rem; 
     padding-bottom: 2rem; 
-  }
+}
   
   .footer-container {
     max-width: 75rem;
@@ -267,14 +268,14 @@ nav a, .nav-link {
   body {
     font-family: 'Montserrat';
     line-height: 1.6;
-  
+  }
+
   .legal-links {
     display: inline; /* Makes links inline to sit in one line */
     gap: calc(var(--spacing-unit)); /* Adjusts spacing between links */
     text-decoration: none; /* Removes underline */
     color: rgba(0, 0, 0, 0.6); /* Sets grey text color */
   }
-  
   
   /* Responsive Design */
   @media (max-width: 48rem) {
@@ -310,5 +311,5 @@ nav a, .nav-link {
     }
     a {
       text-decoration: none; /* Removes the underline from all links */
+    } 
   }
-  } 

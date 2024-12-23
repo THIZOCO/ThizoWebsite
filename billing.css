@@ -132,14 +132,14 @@ body, p, li, span, .body-text {
 
 .billing-section {
     background-color: #e8e8e8; /* Matches the footer background */
-    padding: 40px 20px; /* Internal spacing */
+    padding: 40px 40px; /* Internal spacing */
     margin: 0 auto; /* Removes any margin that could create a gap */
 }
 
 /* Individual Billing Cards */
 .billing-card {
     background-color: #ffffff;
-    margin: 20px; /* Adds spacing around cards */
+    margin: 25px; /* Adds spacing around cards */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
@@ -174,7 +174,7 @@ body, p, li, span, .body-text {
 /* Sidebar Section */
 .sidebar {
     position: fixed;
-    margin-right: 50px;
+    margin-right: 90px;
     top: 150px;
     right: 20px;
     width: 300px;
@@ -217,7 +217,6 @@ body, p, li, span, .body-text {
   .footer-wrapper {
     background-color: #e8e8e8; /* Background color for the footer */
     padding: 50px 0; /* Padding for top and bottom */
-    margin-top: 40px; /* Add margin above the footer */
 }
 
 .footer {

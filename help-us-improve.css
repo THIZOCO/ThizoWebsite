@@ -17,6 +17,7 @@ h2, h3 {
   font-weight: 600;
   color: #028F67; /* Adjust color to suit your design */
 }
+
 /* Typography */
 :root {
   --primary-color: #08584B;
@@ -54,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff;
   padding: 20px 0;
 }
+
 /* Navigation links */
 nav a, .nav-link {
   font-family: 'Montserrat', sans-serif;
@@ -130,11 +132,13 @@ nav a, .nav-link {
   background-color: #08584B;
   color: #fff; 
 }
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Gradient background for the contact form section */
 .contact-section {
   display: flex;
@@ -144,6 +148,7 @@ body {
   background: #3a3a46; /* Matches your company’s colors */
   font-family: 'Roboto', sans-serif;
 }
+
 /* Apply to all headings (H1 to H6) */
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
@@ -155,6 +160,7 @@ h1, h2, h3, h4, h5, h6 {
 h2, h3 {
     font-weight: 600;
 }
+
 /* General body text */
 body, p, li, span, .body-text {
     font-family: 'Montserrat', sans-serif;
@@ -162,7 +168,6 @@ body, p, li, span, .body-text {
     color: #08584B; /* Adjust color to suit your design */
     line-height: 1.6; /* Add line height for readability */
 }
-
 
 .form-container {
   background-color: white;
@@ -239,6 +244,7 @@ textarea {
     font-size: 0.9rem;
   }
 }
+
 /* Remove underline from all links */
 a {
     text-decoration: none;
@@ -329,6 +335,7 @@ a:hover {
 body {
   font-family: 'Montserrat';
   line-height: 1.6;
+} 
 
 .legal-links {
   display: inline; /* Makes links inline to sit in one line */
@@ -336,7 +343,6 @@ body {
   text-decoration: none; /* Removes underline */
   color: rgba(0, 0, 0, 0.6); /* Sets grey text color */
 }
-
 
 /* Responsive Design */
 @media (max-width: 48rem) {

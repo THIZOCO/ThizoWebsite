@@ -17,6 +17,7 @@ h2, h3 {
     font-weight: 600;
     color: #028F67; /* Adjust color to suit your design */
 }
+
 /* Typography */
 :root {
     --primary-color: #08584B;
@@ -54,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ffffff;
     padding: 20px 0;
 }
+
 /* Navigation links */
 nav a, .nav-link {
     font-family: 'Montserrat', sans-serif;
@@ -96,7 +98,6 @@ nav a, .nav-link {
     margin: 0;
 }
 
-
 .nav-links ul li a {
     text-decoration: none;
     color: #3a3a46;
@@ -130,11 +131,12 @@ nav a, .nav-link {
     background-color: #08584B;
     color: #fff; 
 }
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
 /* Login Section Styles */
 .login-section {
@@ -204,7 +206,7 @@ body {
     padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
     padding-top: 2rem; 
     padding-bottom: 2rem; 
-  }
+}
   
   .footer-container {
     max-width: 75rem;
@@ -277,7 +279,8 @@ body {
   body {
     font-family: 'Montserrat';
     line-height: 1.6;
-  
+  }
+
   .legal-links {
     display: inline; /* Makes links inline to sit in one line */
     gap: calc(var(--spacing-unit)); /* Adjusts spacing between links */
@@ -310,7 +313,7 @@ body {
         flex-direction: column;
         align-items: center;
     }
-  }
+}
   
   /* Accessibility */
   @media (prefers-reduced-motion: reduce) {
@@ -320,5 +323,5 @@ body {
     }
     a {
       text-decoration: none; /* Removes the underline from all links */
-  }
+    }
   } 

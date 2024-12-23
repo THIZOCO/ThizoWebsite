@@ -131,7 +131,7 @@
 
   .hero-content h1 {
   font-size: 2.5rem;
-  color: #3A3A46;
+  color: #000;
   margin-bottom: 10px;
   margin-left: 50px; 
   }
@@ -169,7 +169,7 @@
     width: 500px;
     height: auto;
     object-fit: contain; /* Ensure image proportions are maintained */
-    overflow: hidden;
+    overflow: hidden; /* Ensures content stays within rounded corners */
     display: block;
     align-self: center; /* Center vertically */
     margin: 0 52px; /* Center horizontally */

@@ -17,6 +17,7 @@ h2, h3 {
   font-weight: 600;
   color: #028F67; /* Adjust color to suit your design */
 }
+
 /* Typography */
 :root {
   --primary-color: #08584B;
@@ -53,6 +54,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff;
   padding: 20px 0;
 }
+
 /* Navigation links */
 nav a, .nav-link {
   font-family: 'Montserrat', sans-serif;
@@ -94,7 +96,6 @@ nav a, .nav-link {
   gap: 30px;
   margin: 0;
 }
-
 
 .nav-links ul li a {
   text-decoration: none;
@@ -226,11 +227,13 @@ textarea {
   .form-container h3 {
     font-size: 0.9rem;
   }
+} 
+
   /* Remove underline from all links */
 a {
     text-decoration: none;
     color: inherit; /* Keeps the color the same as the surrounding text */
-}}
+}
 
 /* Footer */
 .footer {
@@ -311,6 +314,7 @@ a {
 body {
   font-family: 'Montserrat';
   line-height: 1.6;
+} 
 
 .legal-links {
   display: inline; /* Makes links inline to sit in one line */
@@ -318,7 +322,6 @@ body {
   text-decoration: none; /* Removes underline */
   color: rgba(0, 0, 0, 0.6); /* Sets grey text color */
 }
-
 
 /* Responsive Design */
 @media (max-width: 48rem) {
