@@ -437,73 +437,63 @@ body, p, li, span, .body-text {
   }
 }
 
-/* Styling for the pricing section */
-/* Full-width grey background */
+/* Pricing section */
+/* Full-width background */
 .pricing-section {
-  padding: 80px 0; /* Vertical padding only */
-  background-color: #E8E8E8;
-  width: 100vw;
-  margin-left: calc(50% - 50vw); /* Extends background across viewport */
+  position: relative;
+  padding: 50px 0; /* Removed left/right padding to allow the image to bleed off the edges */
+  background-image: url('https://i.ibb.co/Hh9cSYB/Thizo-Website-downpage-solutions-fade.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; /* Ensure it spans the entire width */
+  height: 60vh;
+  overflow: hidden;
+  margin: 0; /* Removes any margin */
+  display: grid; /* Use grid for layout */
+  grid-template-columns: 1fr; /* Single column by default */
+  align-items: center; /* Centers content vertically */
 }
 
-/* Inner container to add left and right padding */
-.pricing-content-container {
-  max-width: 1200px; /* Optional, to limit overall width */
-  margin: 0 auto;
-  padding: 0 60px; /* 60px padding on left and right */
-}
-
-/* Flex container for text and image */
+/* Grid container for text and image */
 .pricing-content {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 140px;
-  flex-wrap: nowrap; /* Ensure elements are side by side */
+  display: grid;
+  grid-template-columns: 1fr auto; /* Text box on the right, image fills the rest */
+  height: 100%; /* Ensure it spans the entire section */
 }
 
 /* Black background box for text */
 .pricing-text {
   background-color: #000000; /* Set to black for strong contrast */
+  font-size: 1.25rem;
   color: #ffffff !important;
   padding: 30px;
   border-radius: 10px;
-  flex: 1 1 45%;
   max-width: 600px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  align-self: center; /* Centers the text box vertically */
+  justify-self: end; /* Aligns the text box to the right */
+  margin-right: 120px; /* Moves it closer to the center */
 }
 
 /* Ensure all text inside .pricing-text is white */
 .pricing-text p, .pricing-text h1, .pricing-text h2, .pricing-text h3 {
+  text-align: center; 
   color: #ffffff;
-}
-
-/* Image container */
-.pricing-image {
-  flex: 1 1 45%;
-  max-width: 600px;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.pricing-image img {
-  max-width: 100%;
-  border-radius: 10px;
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .pricing-content {
-    flex-direction: column; /* Stack text and image vertically */
-    gap: 20px;
+      grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+      grid-template-rows: auto auto; /* Allow text and image to stack */
   }
 
-  .pricing-text, .pricing-image {
-    flex: 1 1 100%;
-  }
-
-  .pricing-content-container {
-    padding: 0 20px; /* Reduce padding on smaller screens */
+  .pricing-text {
+      justify-self: center; /* Center text box on smaller screens */
+      font-size: 1.25rem;
+      align-self: start; /* Move it to the top */
+      margin: 20px; /* Add some space around it */
   }
 }
 

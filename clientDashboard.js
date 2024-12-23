@@ -35,17 +35,16 @@ function uploadFile(projectId) {
     }, 300);
 }
 
-// Update the createOptionButtons function
 function createOptionButtons(projectId) {
     const projectElement = document.querySelector(`#project${projectId}`);
     
     // Check if options already exist
     if (projectElement.querySelector('.project-options')) {
+        console.log("Options already exist for project", projectId); // Debug
         return;
     }
 
-    // Add expanding class to initiate container animation
-    projectElement.classList.add('expanding');
+    console.log("Creating buttons for project", projectId); // Debug
 
     // Create options container
     const optionsContainer = document.createElement('div');
@@ -57,26 +56,28 @@ function createOptionButtons(projectId) {
         button.className = 'project-option';
         button.textContent = option;
         button.dataset.option = option;
-        button.style.animationDelay = `${0.2 + (index * 0.05)}s`; // Stagger the animations
+
+        // Add staggered animation
+        button.style.animationDelay = `${0.2 + index * 0.05}s`;
 
         // Check if this option is selected in other projects
-        const isDisabled = isOptionSelectedInOtherProjects(option, projectId);
-        if (isDisabled) {
+        if (isOptionSelectedInOtherProjects(option, projectId)) {
             button.classList.add('disabled');
             button.disabled = true;
         }
 
+        // Add click handler for toggling options
         button.addEventListener('click', () => toggleOption(button, projectId, option));
         optionsContainer.appendChild(button);
     });
 
-    // Append after a slight delay to ensure container expansion animation starts first
-    setTimeout(() => {
-        projectElement.appendChild(optionsContainer);
-    }, 100);
+    // Append the options container to the project card
+    projectElement.appendChild(optionsContainer);
+
+    // Debug: Ensure options container was added
+    console.log("Options container appended:", projectElement.querySelector('.project-options'));
 }
 
-// Update the toggleOption function to include animation when selecting/deselecting
 function toggleOption(button, projectId, option) {
     const projectKey = `project${projectId}`;
     
@@ -114,8 +115,6 @@ function toggleOption(button, projectId, option) {
         button.classList.remove('selecting', 'deselecting');
     }, 300);
 }
-
-// Rest of your existing code...
 
 function updateOptionAvailability(option, isSelected) {
     document.querySelectorAll('.project-option').forEach(button => {

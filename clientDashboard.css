@@ -17,6 +17,146 @@ h2, h3 {
     font-weight: 600;
     color: #028F67; /* Adjust color to suit your design */
 }
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar Section */
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 0;
+    position: relative; /* Ensure it's positioned above other elements */
+    z-index: 100; /* Higher z-index than the dashboard overlay */
+}
+
+/* Navigation links */
+nav a, .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Medium weight for clarity */
+    text-transform: uppercase; /* Optional: make links uppercase */
+    color: #3A3A46; /* Customize color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Button styles */
+.button, .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Medium weight for buttons */
+    color: #fff;
+    background-color: #08584B; /* Customize button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover, .btn:hover {
+    background-color: #028F67; 
+}
+
+.logo img {
+    width: 120px; /* Allow the width to adjust proportionally */
+    height: 80px; /* Set a fixed height */
+}
+
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #3a3a46;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links ul li a:hover {
+    color: #028F67;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px
+}
+
+.cta-buttons .button {
+    padding: 10px 20px; 
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.demo-button {
+    background-color: #08584B; 
+    color: #fff; 
+}
+
+.login-button {
+    background-color: #08584B;
+    color: #fff; 
+}
+body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+/* Secondary Navigation Bar */
+/* Secondary Navigation Bar */
+.secondary-navbar {
+    background-color: #e8e8e8; /* Light grey background */
+    padding: 15px 0;
+    position: relative; 
+    z-index: 10; 
+    width: 100%;
+}
+
+.secondary-nav-container {
+    display: flex;
+    justify-content: center; /* Center buttons */
+    align-items: center;
+    max-width: 1440px;
+    margin: auto;
+    gap: 50px; /* Reduced gap between buttons for closer alignment */
+}
+
+.secondary-button {
+    background-color: #08584B; /* Dark green background */
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.secondary-button:hover {
+    background-color: #028F67; /* Hover color similar to the primary "Log In" button */
+}
+
 /* Typography */
 :root {
     --primary-color: #08584B;
@@ -25,18 +165,6 @@ h2, h3 {
     --text-color: #333;
     --background-light: #E8E8E8;
     --spacing-unit: 1rem;
-}
-
-body {
-    font-family: 'Montserrat', sans-serif;
-    line-height: 1.6;
-    color: var(--text-color);
-}
-
-h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
-    color: var(--primary-color);
 }
 
 /* Container */
@@ -79,116 +207,38 @@ nav a, .nav-link {
     background-color: #028F67; 
 }
 
-.logo img {
-    width: 120px;
-    height: auto;
-}
-
-.nav-links {
-    flex: 1;
-    text-align: center;
-}
-
-.nav-links ul {
-    list-style: none;
-    display: inline-flex;
-    gap: 30px;
-    margin: 0;
-}
-
-
-.nav-links ul li a {
-    text-decoration: none;
-    color: #3a3a46;
-    font-weight: 600;
-    transition: color 0.3s;
-}
-
-.nav-links ul li a:hover {
-    color: #028F67;
-}
-
-.cta-buttons {
-    display: flex;
-    gap: 15px
-}
-
-.cta-buttons .button {
-    padding: 10px 20px; 
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s, color 0.3s;
-}
-
-.demo-button {
-    background-color: #08584B; 
-    color: #fff; 
-}
-
-.login-button {
-    background-color: #08584B;
-    color: #fff; 
-}
-body {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-
-/* Secondary Navigation Bar */
-.secondary-navbar {
-    background-color: #e8e8e8; /* Light grey background */
-    padding: 15px 0;
-    width: 100%;
-}
-
-.secondary-nav-container {
-    display: flex;
-    justify-content: center; /* Center buttons */
-    align-items: center;
-    max-width: 1440px;
-    margin: auto;
-    gap: 50px; /* Reduced gap between buttons for closer alignment */
-}
-
-.secondary-button {
-    background-color: #08584B; /* Dark green background */
-    color: #fff;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.secondary-button:hover {
-    background-color: #028F67; /* Hover color similar to the primary "Log In" button */
-}
-
+/* Dashboard */
+/* Card Styles */
 .dashboard {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    padding: 20px;
-    background-color: rgba(255, 255, 255, 0.8); /* White overlay for washed-out effect */
+    background-image: url('https://i.ibb.co/kgSWB8q/Office-Building-Sunrise.jpg'); /* Background image */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent tiling */
+    display: flex; /* Enable flexbox for vertical alignment */
+    flex-direction: column; /* Stack elements vertically */
+    justify-content: center; /* Center the content vertically */
+    align-items: center; /* Center horizontally (optional for layout) */
+    height: 80vh; /* Ensure it covers full viewport height */
+    z-index: -2; /* Place the overlay behind content */
+}
+.dashboard::before {
+    content: ""; /* Create a pseudo-element */
+    position: absolute; /* Overlay spans entire section */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7); /* White overlay with 70% opacity */
+    z-index: 1; /* Place the overlay behind content */
 }
 
-.equation-container {
-    display: flex;
-    align-items: center;
-    gap: 20px;
-}
+/* Ensure dashboard content stays above the overlay */
+.dashboard > * {
+    position: relative; /* Position elements above the overlay */
+    z-index: 1; /* Ensure elements are above the overlay */
+}    
 
-.card-group {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
+/* Card Styles */
 .card {
     background-color: #3a3a46;
     color: #fff;
@@ -196,105 +246,108 @@ body {
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    width: 20rem;
+    transition: height 0.4s ease-in-out;
+    overflow: hidden;
+}
+.card past-project h2 {
+    font-size: 1rem;
+    font-weight: 700;
+    color: #028F67;
+    margin-bottom: 10px;
+  }
+  .card past-project p {
+    font-size: .5rem;
+    color: #028F67;
+    margin-bottom: 20px;
+  }
+
+/* Style for when options are being shown */
+.card.expanding {
+    animation: expandContainer 0.4s ease-in-out forwards;
 }
 
-.past-project .number {
-    font-size: 1.2em;
-    color: #08C;
+/* New Styles for Project Options and Buttons */
+.project-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Space above options */
+    width: 100%; /* Full width of the card */
+    opacity: 1; /* Ensure visibility */
+    animation: fadeInSlideUp 0.3s ease-in-out forwards;
 }
 
-.plus-sign, .equals-sign {
-    font-size: 2.5em;
-    font-weight: bold;
-    color: #3a3a46;
-}
-
-.additional-requirements input,
-.current-project input,
-.past-project input {
-    width: 100%;
-    padding: 10px;
-    margin-top: 10px;
+/* Buttons inside options container */
+.project-option {
+    background-color: #4a4a56;
+    color: white;
+    padding: 10px 10px;
     border: none;
     border-radius: 4px;
-}
-
-.build-button {
-    background-color: #3a3a46;
-    color: #fff;
-    padding: 15px 30px;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.1em;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-.build-button:hover {
-    background-color: #444455;
-}
-
-/* Uploading Indicator */
-.uploading-indicator {
-    display: none; /* Hidden by default, shown during file upload */
-    font-size: 0.9em;
-    color: #08584B;
-    background-color: #f0f0f0;
-    padding: 5px;
-    border-radius: 5px;
     text-align: center;
-    margin-top: 10px;
-}
-
-/* Displayed when uploading */
-.uploading-indicator.active {
-    display: block;
-}
-
-/* Secondary Tier Card for Selection */
-.secondary-tier-card {
-    background-color: #e8e8e8; /* Light grey background */
-    padding: 20px;
-    margin-top: 10px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-}
-
-/* Secondary Tier Buttons (A-I options like "Core&Shell", "Layout" etc.) */
-.secondary-tier-button {
-    background-color: #F47801; /* UT orange by default */
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 15px;
     cursor: pointer;
-    transition: background-color 0.3s;
-    font-family: 'Montserrat', sans-serif;
-    font-weight: 500;
+    transition: all 0.3s ease; /* Smooth hover effects */
+    width: 100%; /* Buttons stretch to fill grid cells */
+    text-align: center;
 }
 
-/* Highlighted State for Selected Buttons */
-.secondary-tier-button.selected {
-    background-color: #ce6c15; /* Dark "yellow" to indicate selection */
+/* Hover effect for buttons */
+.project-option:hover {
+    background-color: #028F67;
 }
 
-/* Button Hover Effect */
-.secondary-tier-button:hover {
-    background-color: #028F67; /* Slightly lighter green on hover */
+/* Selected button style */
+.project-option.selected {
+    background-color: #f47801;
 }
 
-/* Additional Media Query for Secondary Card Responsiveness */
-@media (max-width: 768px) {
-    .secondary-tier-card {
-        flex-direction: column;
-        align-items: center;
+/* Disabled button style */
+.project-option.disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+/* Animation for fade-in */
+@keyframes fadeInSlideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
     }
 }
 
+/* Expanding card effect */
+.card.expanding {
+    height: auto; /* Allow card height to grow */
+    overflow: visible; /* Ensure content isn't clipped */
+    transition: height 0.4s ease-in-out; /* Smooth expansion */
+}
+
+.plus-sign {
+    font-size: 3rem; /* Adjusted for larger size */
+    font-weight: bold; /* Ensure the "+" sign is visually strong */
+    color: #3a3a46; /* Grey color (#808080) */
+    text-align: center; /* Align the "+" in the center of its container */
+    margin: 0 auto; /* Center horizontally */
+    display: inline-block; /* Ensure proper spacing and positioning */
+    line-height: 1; /* Align visually with other content */
+}
+.equals-sign {
+    font-size: 3rem; /* Adjusted for larger size */
+    font-weight: bold; /* Ensure the "=" sign is visually strong */
+    color: #3a3a46; /* Grey color (#808080) */
+    text-align: center; /* Align the "+" in the center of its container */
+    margin: 0 auto; /* Center horizontally */
+    display: inline-block; /* Ensure proper spacing and positioning */
+    line-height: 1; /* Align visually with other content */
+}
+
+
+/* Footer Styles */
 /* Footer Styles */
 .footer {
     background-color: #e8e8e8;
@@ -439,53 +492,6 @@ body {
     .footer-bottom-left, .footer-bottom-right {
         text-align: center;
     }
-}
-
-.card {
-    background-color: #3a3a46;
-    color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    width: 18rem;
-    transition: height 0.4s ease-in-out;
-    overflow: hidden;
-}
-
-/* Style for when options are being shown */
-.card.expanding {
-    animation: expandContainer 0.4s ease-in-out forwards;
-}
-
-/* Project options layout with animation */
-.project-options {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.5rem;
-    margin-top: 1rem;
-    width: 100%;
-    opacity: 0;
-    animation: fadeInSlideUp 0.4s ease-in-out forwards;
-    animation-delay: 0.2s; /* Slight delay after container expands */
-}
-
-/* Update option button styles */
-.project-option {
-    background-color: #4a4a56;
-    color: white;
-    padding: 0.5rem;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 0.875rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    opacity: 0.7;
-    position: relative;
-    width: 100%;
-    text-align: center;
-    transform: translateY(20px);
-    animation: fadeInSlideUp 0.3s ease-in-out forwards;
 }
 
 /* Stagger the animation for each button */

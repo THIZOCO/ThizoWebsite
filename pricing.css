@@ -313,6 +313,7 @@ body {
 /* Black background box for text */
 .pricing-text {
   background-color: #000000;
+  font-size: 1rem;
   color: #ffffff;
   padding: 100px;
   border-radius: 10px;
@@ -350,90 +351,84 @@ body {
   }
 }
 
-/* Features Section */
-.features {
-    padding: var(--spacing-xl) min(5%, var(--spacing-lg));
-    background-color: var(--background-light);
+/* Pricing Section */
+.pricing-section {
+  position: relative;
+  padding: 50px 0; /* Removed left/right padding to allow the image to bleed off the edges */
+  background-image: url('https://i.ibb.co/Phv7YqD/Thizo-Website-downpage-Pricing-fade.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%; /* Ensure it spans the entire width */
+  height: 60vh;
+  overflow: hidden;
+  margin: 0; /* Removes any margin */
+  display: grid; /* Use grid for layout */
+  grid-template-columns: 1fr; /* Single column by default */
+  align-items: center; /* Centers content vertically */
 }
 
-.features h2, .features p {
-    text-align: center; /* Center align title and subtitle */
-    margin: 0 auto; /* Ensure consistent spacing */
-    max-width: var(--container-max-width); /* Limit the width for readability */
+/* Grid container for text and image */
+.pricing-content {
+  display: grid;
+  grid-template-columns: 1fr auto; /* Text box on the right, image fills the rest */
+  height: 100%; /* Ensure it spans the entire section */
 }
 
-.features p {
-    margin-bottom: 30px; /* Add 15px spacing below subtitle */
+/* Black background box for text */
+.pricing-text {
+  background-color: #000000; /* Set to black for strong contrast */
+  font-size: 1.25rem;
+  color: #ffffff !important;
+  padding: 30px;
+  border-radius: 10px;
+  max-width: 600px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Adds shadow for depth */
+  align-self: center; /* Centers the text box vertically */
+  justify-self: end; /* Aligns the text box to the right */
+  margin-right: 120px; /* Moves it closer to the center */
 }
 
-.features-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Responsive card layout */
-    gap: var(--spacing-lg);
-    width: min(100%, var(--container-max-width));
-    margin-inline: auto;
+/* Ensure all text inside .pricing-text is white */
+.pricing-text p, .pricing-text h1, .pricing-text h2, .pricing-text h3 {
+  text-align: center; 
+  color: #ffffff;
 }
 
-.feature-item {
-    height: 20rem; /* Fixed height for uniformity */
-    width: 100%;
-    max-width: 18rem; /* Constrain card width */
-    display: flex;
-    flex-direction: column; /* Stack content vertically */
-    align-items: center; /* Center align content horizontally */
-    justify-content: space-between; /* Distribute content evenly */
-    text-align: center;
-    background-color: #fff;
-    padding: var(--spacing-md);
-    border-radius: var(--border-radius);
-    box-shadow: var(--box-shadow);
-    transition: transform 0.3s, box-shadow 0.3s;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .pricing-content {
+      grid-template-columns: 1fr; /* Stack items vertically on smaller screens */
+      grid-template-rows: auto auto; /* Allow text and image to stack */
+  }
+
+  .pricing-text {
+      justify-self: center; /* Center text box on smaller screens */
+      font-size: 1.25rem;
+      align-self: start; /* Move it to the top */
+      margin: 20px; /* Add some space around it */
+  }
 }
 
-.feature-item img {
-    max-width: 5rem; /* Set a consistent maximum size for icons */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: var(--spacing-sm); /* Add spacing below the icon */
-}
-
-.feature-item h3 {
-    font-size: 1.25rem; /* Title size */
-    margin: 0; /* Remove extra spacing */
-}
-
-.feature-item p {
-    font-size: 0.875rem; /* Paragraph size */
-    margin: 0.5rem 0; /* Add consistent spacing */
-}
-
-
-/* Footer Section */
-/* Footer Section */
-  /* Footer */
-  .footer-wrapper {
-    background-color: #e8e8e8; /* Background color for the footer */
-    padding: 50px 0; /* Padding for top and bottom */
-    margin-top: 40px; /* Add margin above the footer */
-}
-
+/* Footer Styles */
+/* Footer */
 .footer {
-    background-color: #e8e8e8; /* Retain footer background color */
-    padding: 60px 0 20; /* Maintain footer padding */
-    border-radius: 0px; /* Remove any rounding */
-    border: none; /* Remove border if any */
+  background-color: var(--background-light);
+  padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
 }
+
 .footer-container {
   max-width: 75rem;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
-  gap: 40px;
+  gap: calc(var(--spacing-unit) * 2.5);
 }
 
 .footer-logo {
   width: 9.375rem;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: calc(var(--spacing-unit) * 1.25);
 }
 
 .footer-description {
@@ -442,21 +437,20 @@ body {
 
 .social-links {
   display: flex;
-  gap: 10px;
-  margin: 20px 0;
+  gap: calc(var(--spacing-unit) * 0.625);
+  margin: calc(var(--spacing-unit) * 1.25) 0;
 }
 
 .social-links img {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .footer-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
-  gap: 20px;
+  gap: calc(var(--spacing-unit) * 2.5);
 }
-
 .footer-column h4 {
   margin-bottom: 10px;
   font-size: 1rem;
@@ -469,7 +463,7 @@ body {
 }
 
 .footer-column ul li {
-  margin-bottom: 8px;
+  margin-bottom: 5px;
 }
 
 .footer-column ul li a {
@@ -481,86 +475,59 @@ body {
   color: #028f67; /* Optional: Keep hover effect */
 }
 
-
-/* Footer Bottom */
 .footer-bottom {
   max-width: 75rem;
-  margin: 20px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  margin: calc(var(--spacing-unit) * 2.5) auto 0;
+  padding-top: calc(var(--spacing-unit) * 1.25);
+  border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  gap: 10px;
+  gap: var(--spacing-unit);
 }
 
 .legal-links {
   display: flex;
-  gap: 20px; /* Add space between individual links */
+  gap: calc(var(--spacing-unit) * 1.25);
   flex-wrap: wrap;
-  text-align: center;
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media (max-width: 48rem) {
+  .navbar .container {
+      flex-direction: column;
+      gap: calc(var(--spacing-unit));
+  }
+
+  .nav-links ul {
+      flex-direction: column;
+      align-items: center;
+  }
+
+  .support-container {
+      grid-template-columns: 1fr;
+  }
+
   .footer-container {
       grid-template-columns: 1fr;
   }
 
   .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+
+  .hero-buttons {
+      flex-direction: column;
+      align-items: center;
   }
 }
-.footer-bottom {
-display: flex;
-justify-content: space-between; /* Align links and text on the same plane */
-align-items: center; /* Vertically align elements */
-flex-wrap: wrap; /* Ensure proper alignment on smaller screens */
-font-size: 0.875rem; /* Match the font size of the copyright text */
-color: #555; /* Match the color for consistency */
-gap: 10px; /* Add spacing for wrapping items */
-}  
-  .footer-bottom p {
-    margin: 0;
-    margin-left: 10px; /* Add 10px left margin */
-    font-size: inherit; /* Ensure font size consistency */
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+      animation: none !important;
+      transition: none !important;
   }
-   
-  
-  .legal-links {
-    display: flex;
-    margin-right: 75px; 
-    gap: 20px; /* Add space between individual links */
-  } 
-  
-.legal-links a {
-  font-family: 'Montserrat', sans-serif; /* Match the desired font */
-  font-weight: 500; /* Medium weight for clarity */
-  font-size: inherit; /* Match the footer's font size */
-  text-decoration: none; /* Remove underlines */
-  color: #555; /* Ensure color matches copyright text */
-}
-
-.legal-links a:hover {
-  text-decoration: underline; /* Add hover effect for clarity */
-}
-
-/* Remove "+" signs from navigation links */
-.nav-links ul li::before {
-  content: none; /* Removes any "+" or other symbols */
-}
-
-/* Remove "+" signs from popular articles */
-.popular-articles ul li::before {
-  content: none; /* Removes any "+" or other symbols */
-}
-
-/* General rule to prevent "+" signs globally (if needed) */
-ul li::before {
-  content: none; /* Safeguard: removes any default content for list items */
-}
-a {
-    text-decoration: none; /* Removes the underline from all links */
 }
