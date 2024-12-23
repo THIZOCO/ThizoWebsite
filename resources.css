@@ -281,13 +281,13 @@
   
   .roi-header h2 {
     font-size: 2.5em;
-    color: #08584B; /* Black for the heading */
+    color: #08584B; /* Dark green for the heading */
     margin-bottom: 10px;
   }
   
   .roi-header p {
     font-size: 1.2em;
-    color: #08584B; /* Cadet Gray for subheading */
+    color: #08584B; /* Dark green for subheading */
     margin-bottom: 40px;
   }
   
@@ -304,18 +304,18 @@
   
   .stat-item h3 {
     font-size: 3em;
-    color: #3a3a46; /* Black for the percentage stats */
+    color: #3a3a46; /* Dark grey for the percentage stats */
     margin-bottom: 10px;
   }
   
   .stat-item p {
     font-size: 1.1em;
-    color: #3a3a46; /* Cadet Gray for smaller text */
+    color: #3a3a46; /* Dark grey for smaller text */
     margin-bottom: 10px;
   }
   
   .stat-item strong {
-    color: #000000; /* Black for emphasized text */
+    color: #000000; /* Dark grey for emphasized text */
   }
   
   .roi-button {

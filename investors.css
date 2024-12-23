@@ -6,9 +6,28 @@
 }
 
 body {
-    font-family: 'Montserrat', sans-serif;
+    font-family: 'Montserrat';
     line-height: 1.6;
 }
+/* Apply to all headings (H1 to H6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 700; /* Bold for main headings */
+    color: #333; /* Adjust color to suit your design */
+}
+
+/* Slightly lighter for subheadings */
+h2, h3 {
+    font-weight: 600;
+}
+/* General body text */
+body, p, li, span, .body-text {
+    font-family: 'Montserrat';
+    font-weight: 400; /* Regular weight for body content */
+    color: #555; /* Adjust color to suit your design */
+    line-height: 1.6; /* Add line height for readability */
+}
+
 
 /* Container */
 .container {
@@ -34,8 +53,7 @@ nav a, .nav-link {
 .button, .btn {
     font-family: 'Montserrat', sans-serif;
     font-weight: 500; /* Medium weight for buttons */
-    color: #fff;
-    background-color: #08584B; /* Button color */
+    color: #08584B;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
@@ -43,7 +61,7 @@ nav a, .nav-link {
 }
 
 .button:hover, .btn:hover {
-    background-color: #028f67; /* Lighter on hover */
+    background-color: #028f67; /* Darker on hover */
 }
 
 .navbar {
@@ -69,7 +87,7 @@ nav a, .nav-link {
 
 .nav-links ul li a {
     text-decoration: none;
-    color: #333;
+    color: #3a3a46;
     font-weight: 600;
     transition: color 0.3s;
 }
@@ -96,17 +114,9 @@ nav a, .nav-link {
     color: #fff;
 }
 
-.demo-button:hover {
-    background-color: #028f67;
-}
-
 .login-button {
     background-color: #08584B;
     color: #fff;
-}
-
-.login-button:hover {
-    background-color: #028f67;
 }
 
 /* Login Section Styles */
@@ -129,6 +139,8 @@ nav a, .nav-link {
 }
 
 .login-container h2 {
+    font-family: 'Montserrat';
+    font-weight: 600; /* Medium weight for clarity */
     color: #08584B;
     margin-bottom: 20px;
 }
@@ -136,6 +148,7 @@ nav a, .nav-link {
 .login-form label {
     display: block;
     margin: 15px 0 5px;
+    font-family: 'Montserrat';
     font-weight: 600;
     color: #333;
 }
@@ -164,9 +177,138 @@ nav a, .nav-link {
 
 .login-form a {
     color: #028f67;
+    font-family: 'Montserrat';
+    font-weight: 600;
     text-decoration: none;
 }
 
 .login-form a:hover {
     text-decoration: underline;
 }
+
+/* Footer */
+.footer {
+    background-color: var(--background-light);
+    padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
+    padding-top: 2rem; 
+    padding-bottom: 2rem; 
+  }
+  
+  .footer-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+    gap: calc(var(--spacing-unit) * 2.5);
+  }
+  
+  .footer-logo {
+    width: 9.375rem;
+    height: auto;
+    margin-bottom: calc(var(--spacing-unit) * 1.25);
+  }
+  
+  .footer-description {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    max-width: 25rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: calc(var(--spacing-unit) * 0.625);
+    margin: calc(var(--spacing-unit) * 1.25) 0;
+  }
+  
+  .social-links img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+    gap: calc(var(--spacing-unit) * 2.5);
+  }
+  
+  .footer-column h4 {
+    margin-bottom: calc(var(--spacing-unit));
+    color:#08584B; 
+  }
+  
+  .footer-column ul {
+    list-style: none;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: calc(var(--spacing-unit) * 0.625);
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .footer-bottom {
+    max-width: 65rem;
+    margin-left: 180px; 
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
+    border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: copyright and legal links */
+    justify-content: center; /* Centers the content horizontally */
+    gap: 30px; 
+    align-items: center; /* Aligns items vertically */
+    text-align: right;
+    color: rgba(0, 0, 0, 0.6); /* Adjusts text to grey */
+  }
+  
+  body {
+    font-family: 'Montserrat';
+    line-height: 1.6;
+  
+  .legal-links {
+    display: inline; /* Makes links inline to sit in one line */
+    gap: calc(var(--spacing-unit)); /* Adjusts spacing between links */
+    text-decoration: none; /* Removes underline */
+    color: rgba(0, 0, 0, 0.6); /* Sets grey text color */
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 48rem) {
+    .navbar .container {
+        flex-direction: column;
+        gap: calc(var(--spacing-unit));
+    }
+  
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .support-container {
+        grid-template-columns: 1fr;
+    }
+  
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+  
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    a {
+      text-decoration: none; /* Removes the underline from all links */
+  }
+  } 

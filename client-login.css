@@ -197,3 +197,128 @@ body {
 .login-form a:hover {
     text-decoration: underline;
 }
+
+/* Footer */
+.footer {
+    background-color: var(--background-light);
+    padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
+    padding-top: 2rem; 
+    padding-bottom: 2rem; 
+  }
+  
+  .footer-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+    gap: calc(var(--spacing-unit) * 2.5);
+  }
+  
+  .footer-logo {
+    width: 9.375rem;
+    height: auto;
+    margin-bottom: calc(var(--spacing-unit) * 1.25);
+  }
+  
+  .footer-description {
+    max-width: 25rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: calc(var(--spacing-unit) * 0.625);
+    margin: calc(var(--spacing-unit) * 1.25) 0;
+  }
+  
+  .social-links img {
+    width: 1.875rem;
+    height: 1.875rem;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+    gap: calc(var(--spacing-unit) * 2.5);
+  }
+  
+  .footer-column h4 {
+    margin-bottom: calc(var(--spacing-unit));
+    color:#08584B; 
+  }
+  
+  .footer-column ul {
+    list-style: none;
+  }
+  
+  .footer-column ul li {
+    margin-bottom: calc(var(--spacing-unit) * 0.625);
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: var(--text-color);
+  }
+  
+  .footer-bottom {
+    max-width: 65rem;
+    margin-left: 180px; 
+    padding-top: 1.5rem;
+    padding-bottom: .5rem;
+    border-top: 0.0625rem solid rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: auto 1fr; /* Two columns: copyright and legal links */
+    justify-content: center; /* Centers the content horizontally */
+    gap: 30px; 
+    align-items: center; /* Aligns items vertically */
+    text-align: right;
+    color: rgba(0, 0, 0, 0.6); /* Adjusts text to grey */
+  }
+  
+  body {
+    font-family: 'Montserrat';
+    line-height: 1.6;
+  
+  .legal-links {
+    display: inline; /* Makes links inline to sit in one line */
+    gap: calc(var(--spacing-unit)); /* Adjusts spacing between links */
+    text-decoration: none; /* Removes underline */
+    color: rgba(0, 0, 0, 0.6); /* Sets grey text color */
+  }
+  
+  
+  /* Responsive Design */
+  @media (max-width: 48rem) {
+    .navbar .container {
+        flex-direction: column;
+        gap: calc(var(--spacing-unit));
+    }
+  
+    .nav-links ul {
+        flex-direction: column;
+        align-items: center;
+    }
+  
+    .support-container {
+        grid-template-columns: 1fr;
+    }
+  
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+  
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+  }
+  
+  /* Accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important;
+    }
+    a {
+      text-decoration: none; /* Removes the underline from all links */
+  }
+  } 

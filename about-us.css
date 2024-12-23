@@ -3,87 +3,139 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
+  }
+  
+  /* Apply to all headings (H1 to H6) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 700; /* Bold for main headings */
+    color: #08584B; /* Adjust color to suit your design */
+  }
+  
+  /* Slightly lighter for subheadings */
+  h2, h3 {
+    font-weight: 600;
+    color: #028F67; /* Adjust color to suit your design */
+  }
+  /* Typography */
+  :root {
+    --primary-color: #08584B;
+    --secondary-color: #028F67;
+    --accent-color: #F47801;
+    --text-color: #333;
+    --spacing-unit: 1rem;
+  }
+  
+  body {
     font-family: 'Montserrat';
     line-height: 1.6;
-    background-color: #fff;
-    color: #333;
-}
-
-/* Container */
-.container {
+    color: var(--text-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  /* Container */
+  .container {
     max-width: 1200px;
     margin: auto;
     padding: 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-
-/* Navbar Section */
-.navbar {
+  }
+  
+  /* Navbar Section */
+  .navbar {
     background-color: #ffffff;
     padding: 20px 0;
-}
-
-.logo img {
+  }
+  /* Navigation links */
+  nav a, .nav-link {
+    font-family: 'Montserrat';
+    font-weight: 500; /* Medium weight for clarity */
+    text-transform: uppercase; /* Optional: make links uppercase */
+    color: #3A3A46; /* Customize color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Button styles */
+  .button, .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Medium weight for buttons */
+    color: #fff;
+    background-color: #028F67; /* Customize button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .button:hover, .btn:hover {
+    background-color: #08584B; 
+  }
+  
+  .logo img {
     width: 120px;
-}
-
-.nav-links {
+    height: auto;
+  }
+  
+  .nav-links {
     flex: 1;
     text-align: center;
-}
-
-.nav-links ul {
+  }
+  
+  .nav-links ul {
     list-style: none;
     display: inline-flex;
     gap: 30px;
-}
-
-.nav-links ul li a {
+    margin: 0;
+  }
+  
+  
+  .nav-links ul li a {
     text-decoration: none;
-    color: #333;
+    color: #3a3a46;
     font-weight: 600;
     transition: color 0.3s;
-}
-
-.nav-links ul li a:hover {
-    color: #028f67;
-}
-
-.cta-buttons {
+  }
+  
+  .nav-links ul li a:hover {
+    color: #028F67;
+  }
+  
+  .cta-buttons {
     display: flex;
-    gap: 15px;
-}
-
-.cta-buttons .button {
-    padding: 10px 20px;
-    text-decoration: none;
+    gap: 15px
+  }
+  
+  .cta-buttons .button {
+    padding: 10px 20px; 
     border-radius: 5px;
+    text-decoration: none;
     font-weight: bold;
     transition: background 0.3s, color 0.3s;
-}
-
-.demo-button {
+  }
+  
+  .demo-button {
+    background-color: #08584B; 
+    color: #fff; 
+  }
+  
+  .login-button {
     background-color: #08584B;
-    color: #fff;
-}
-
-.demo-button:hover {
-    background-color: #028f67;
-}
-
-.login-button {
-    background-color: #08584B;
-    color: #fff;
-}
-
-.login-button:hover {
-    background-color: #028f67;
-}
+    color: #fff; 
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
 
 /* Hero Section */
 .hero {
@@ -164,7 +216,7 @@ body {
 
 /* Intro Section */
 .intro {
-    padding: 2rem;
+    padding: 3rem 10rem;
     text-align: center;
 }
 
@@ -179,7 +231,7 @@ body {
 }
 
 .intro article {
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
 }
 
 .intro article h2, .intro article h3 {
@@ -196,13 +248,15 @@ body {
 /* Focus Text Section */
 .focus-text {
     background: #e8e8e8;
+    padding-top: 1rem; /* Adds spacing internally within the section */
+    margin-top: 0; /* Resets margin-top */
     text-align: center;
-    margin-bottom: 2rem; /* Adds spacing between header and columns */
 }
 
 .focus-text h5 {
     font-size: 2rem;
     margin: 0.5rem 0;
+    margin-top: 2rem; 
     color: #f47801;
 }
 
@@ -217,7 +271,7 @@ body {
     display: flex;
     flex-wrap: wrap; /* Ensures responsiveness */
     justify-content: center; /* Centers the columns */
-    gap: 3rem; /* Adds spacing between columns */
+    gap: 5rem; /* Adds spacing between columns */
     align-items: flex-start;
     padding: 2rem;
     background: #e8e8e8; /* Sets the background color */

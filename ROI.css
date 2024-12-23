@@ -129,18 +129,19 @@ nav a, .nav-link {
   
   .roi-header h2 {
     font-size: 2.5em;
-    color: #08584B; /* Black for the heading */
+    color: #028f67; /* Green for the heading */
     margin-bottom: 10px;
   }
   
   .roi-header p {
     font-size: 1.2em;
-    color: #08584B; /* Cadet Gray for subheading */
+    color: #028f67; /* Green for subheading */
     margin-bottom: 40px;
   }
   
   .roi-stats {
     display: flex;
+    color: #fff; /* White for the percentage stats */
     justify-content: space-around;
     margin-bottom: 40px;
   }
@@ -152,18 +153,18 @@ nav a, .nav-link {
   
   .stat-item h3 {
     font-size: 3em;
-    color: #3a3a46; /* Black for the percentage stats */
+    color: #fff; /* White for the percentage stats */
     margin-bottom: 10px;
   }
   
   .stat-item p {
     font-size: 1.1em;
-    color: #3a3a46; /* Cadet Gray for smaller text */
+    color: #fff; /* White for smaller text */
     margin-bottom: 10px;
   }
   
   .stat-item strong {
-    color: #000000; /* Black for emphasized text */
+    color: #fff; /* White for emphasized text */
   }
   
   .roi-button {
