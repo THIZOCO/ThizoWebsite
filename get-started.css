@@ -1,0 +1,511 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply to all headings (H1 to H6) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700; /* Bold for main headings */
+    color: #08584B; /* Adjust color to suit your design */
+  }
+  
+  /* Slightly lighter for subheadings */
+  h2, h3 {
+    font-weight: 600;
+    color: #028F67; /* Adjust color to suit your design */
+  }
+  
+  /* Typography */
+  :root {
+    --primary-color: #08584B;
+    --secondary-color: #028F67;
+    --accent-color: #F47801;
+    --text-color: #333;
+    --background-light: #E8E8E8;
+    --spacing-unit: 1rem;
+  }
+  
+  body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Navbar Section */
+  .navbar {
+    background-color: #ffffff;
+    padding: 20px 0;
+  }
+  /* Navigation links */
+  nav a, .nav-link {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Medium weight for clarity */
+    text-transform: uppercase; /* Optional: make links uppercase */
+    color: #3A3A46; /* Customize color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Button styles */
+  .button, .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Medium weight for buttons */
+    color: #fff;
+    background-color: #028F67; /* Customize button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .button:hover, .btn:hover {
+    background-color: #08584B; 
+  }
+  
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  .nav-links {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    margin: 0;
+  }
+  
+  
+  .nav-links ul li a {
+    text-decoration: none;
+    color: #3a3a46;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .nav-links ul li a:hover {
+    color: #028F67;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 15px
+  }
+  
+  .cta-buttons .button {
+    padding: 10px 20px; 
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .demo-button {
+    background-color: #08584B; 
+    color: #fff; 
+  }
+  
+  .login-button {
+    background-color: #08584B;
+    color: #fff; 
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  :root {
+    --primary-color: #08584B;
+    --secondary-color: #028f67;
+    --accent-color: #f47801;
+    --dark-accent: #CE6C15;
+    --text-color: #3a3a46;
+    --background-light: #E8E8E8;
+    --box-shadow: 0 0.125rem 0.625rem rgba(0, 0, 0, 0.1);
+    --box-shadow-hover: 0 0.25rem 0.938rem rgba(0, 0, 0, 0.15);
+    --spacing-xs: 0.625rem;
+    --spacing-sm: 1.25rem;
+    --spacing-md: 1.875rem;
+    --spacing-lg: 2.5rem;
+    --spacing-xl: 3.75rem;
+    --container-max-width: 75rem;
+    --border-radius: 0.625rem;
+  }
+  
+  
+  /* Hero Section */
+  .hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two columns: text on the left, image on the right */
+    align-items: center; /* Center content vertically */
+    gap: var(--spacing-md); /* Adds spacing between columns */
+    padding: var(--spacing-lg);
+    background-image: url('https://i.ibb.co/hfzPjT0/Thizo-Website-Pricing-Hero-fade.jpg'); /* Background image */
+    background-size: cover; /* Ensures the image covers the section */
+    background-position: center; /* Center the background image */
+    background-repeat: no-repeat;
+    height: 60vh;
+  }
+  
+  /* Hero Content (Text on the Left) */
+  .hero-content {
+    text-align: left; /* Aligns text to the left */
+    max-width: 800px; /* Limits the width of the text block */
+  }
+  
+  .hero-content h1 {
+    font-size: 2.5rem;
+    margin-left: 250px;
+    color: #3A3A46;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+  
+  .hero-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    margin-left: 250px;
+    color: #08584B;
+    text-align: center;
+  }
+  
+  /* Custom Quote Section */
+  .custom-quote {
+      padding: var(--spacing-xl) min(5%, var(--spacing-lg));
+      background-color: #e8e8e8;
+      text-align: center;
+  }
+
+  .custom-quote h2 {
+    font-size: 4rem;
+    font-weight: 700;
+    color: #08584B;
+    margin-bottom: 20px;
+  }
+  .custom-quote p {
+    font-size: 1rem;
+    color: #08584B;
+    margin-bottom: 20px;
+  }
+
+  .quote-container p {
+    margin-bottom: 20px; /* Adds space below the paragraph */
+}
+
+  /* Button Styling */
+  .next-btn {
+    margin-top: 40px; /* Space above */ 
+    background-color: #f47801;
+    color: #fff;
+    border: none;
+    padding: 25px 40px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    font-weight: 700;
+    transition: background-color 0.3s;
+  }
+  
+  .next-btn:hover {
+    background-color: #CE6C15;
+  }
+  
+  /* Features Section */
+  .features {
+      padding: var(--spacing-xl) min(8%, var(--spacing-lg));
+      background-color: var(--background-light);
+  }
+  
+  .features h2, .features p {
+      text-align: center; /* Center align title and subtitle */
+      margin: 0 auto; /* Ensure consistent spacing */
+      max-width: var(--container-max-width); /* Limit the width for readability */
+  }
+  
+  .features p {
+      margin-bottom: 30px; /* Add 15px spacing below subtitle */
+      padding-bottom: 10px;
+  }
+  
+  .features-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); /* Responsive card layout */
+      gap: var(--spacing-lg);
+      width: min(100%, var(--container-max-width));
+      margin-inline: auto;
+  }
+  
+  .feature-item {
+      height: 20rem; /* Fixed height for uniformity */
+      width: 100%;
+      max-width: 18rem; /* Constrain card width */
+      display: flex;
+      flex-direction: column; /* Stack content vertically */
+      align-items: center; /* Center align content horizontally */
+      justify-content: space-between; /* Distribute content evenly */
+      text-align: center;
+      background-color: #fff;
+      padding: var(--spacing-md);
+      border-radius: var(--border-radius);
+      box-shadow: var(--box-shadow);
+      transition: transform 0.3s, box-shadow 0.3s;
+  }
+  
+  .feature-item img {
+      max-width: 5rem; /* Set a consistent maximum size for icons */
+      height: auto; /* Maintain aspect ratio */
+      margin-bottom: var(--spacing-sm); /* Add spacing below the icon */
+  }
+  
+  .feature-item h3 {
+      font-size: 1.25rem; /* Title size */
+      margin: 0; /* Remove extra spacing */
+  }
+  
+  .feature-item p {
+      font-size: 0.875rem; /* Paragraph size */
+      margin: 0.5rem 0; /* Add consistent spacing */
+  }
+  /* Pricing Information Section */
+  /* Pricing Information Section */
+  .pricing-section {
+    padding: 80px 0; /* Vertical padding */
+    background-color: #E8E8E8;
+    width: 100%; /* Full width */
+    margin: 0px auto; /* Center horizontally */
+  }
+  
+  /* Inner container to center content */
+  .pricing-content-container {
+    max-width: 1200px; /* Limit the maximum width of the container */
+    margin: 0 50px; /* Center the container */
+    padding: 0 100px; /* Add significant padding left/right to bring content inward */
+  }
+  
+  /* Grid container for text and image */
+  .pricing-content {
+    display: grid; /* Use grid layout */
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    column-gap: 40px; /* Space between text and image */
+    align-items: center; /* Vertically align content */
+  }
+  
+  /* Black background box for text */
+  .pricing-text {
+    background-color: #000000;
+    color: #ffffff;
+    padding: 100px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin-left: 75px; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
+  }
+  
+  /* Ensure all text inside .pricing-text is white */
+  .pricing-text p, .pricing-text h1, .pricing-text h2, .pricing-text h3 {
+    color: #ffffff;
+  }
+  
+  /* Image container */
+  .pricing-image {
+    justify-self: end; /* Align image to the right */
+    max-width: 600px;
+    margin-right: 75px; 
+  }
+  
+  .pricing-image img {
+    max-width: 100%;
+    border-radius: 10px;
+  }
+  
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    .pricing-content {
+      grid-template-columns: 1fr; /* Stack text and image vertically */
+      row-gap: 20px; /* Space between rows */
+    }
+  
+    .pricing-content-container {
+      padding: 0 20px; /* Reduce padding for smaller screens */
+    }
+  }
+  
+  /* Footer Section */
+  /* Footer Section */
+    /* Footer */
+    .footer-wrapper {
+      background-color: #e8e8e8; /* Background color for the footer */
+      padding: 50px 0; /* Padding for top and bottom */
+      margin-top: 40px; /* Add margin above the footer */
+  }
+  
+  .footer {
+      background-color: #e8e8e8; /* Retain footer background color */
+      padding: 60px 0 20; /* Maintain footer padding */
+      border-radius: 0px; /* Remove any rounding */
+      border: none; /* Remove border if any */
+  }
+  .footer-container {
+    max-width: 75rem;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+    gap: 40px;
+  }
+  
+  .footer-logo {
+    width: 9.375rem;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .footer-description {
+    max-width: 25rem;
+  }
+  
+  .social-links {
+    display: flex;
+    gap: 10px;
+    margin: 20px 0;
+  }
+  
+  .social-links img {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .footer-links {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+    gap: 20px;
+  }
+  
+  .footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 1rem;
+    color: #08584B; /* Set titles to green */
+  }
+  
+  .footer-column ul {
+    list-style: none; /* Remove bullet points */
+    padding-left: 0; /* Remove padding to align items */
+  }
+  
+  .footer-column ul li {
+    margin-bottom: 8px;
+  }
+  
+  .footer-column ul li a {
+    text-decoration: none;
+    color: #000000; /* Set text links to black */
+  }
+  
+  .footer-column ul li a:hover {
+    color: #028f67; /* Optional: Keep hover effect */
+  }
+  
+  
+  /* Footer Bottom */
+  .footer-bottom {
+    max-width: 75rem;
+    margin: 20px auto 0;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .legal-links {
+    display: flex;
+    gap: 20px; /* Add space between individual links */
+    flex-wrap: wrap;
+    text-align: center;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .footer-container {
+        grid-template-columns: 1fr;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  }
+  .footer-bottom {
+  display: flex;
+  justify-content: space-between; /* Align links and text on the same plane */
+  align-items: center; /* Vertically align elements */
+  flex-wrap: wrap; /* Ensure proper alignment on smaller screens */
+  font-size: 0.875rem; /* Match the font size of the copyright text */
+  color: #555; /* Match the color for consistency */
+  gap: 10px; /* Add spacing for wrapping items */
+  }  
+    .footer-bottom p {
+      margin: 0;
+      margin-left: 10px; /* Add 10px left margin */
+      font-size: inherit; /* Ensure font size consistency */
+    }
+     
+    
+    .legal-links {
+      display: flex;
+      margin-right: 75px; 
+      gap: 20px; /* Add space between individual links */
+    } 
+    
+  .legal-links a {
+    font-family: 'Montserrat', sans-serif; /* Match the desired font */
+    font-weight: 500; /* Medium weight for clarity */
+    font-size: inherit; /* Match the footer's font size */
+    text-decoration: none; /* Remove underlines */
+    color: #555; /* Ensure color matches copyright text */
+  }
+  
+  .legal-links a:hover {
+    text-decoration: underline; /* Add hover effect for clarity */
+  }
+  
+  /* Remove "+" signs from navigation links */
+  .nav-links ul li::before {
+    content: none; /* Removes any "+" or other symbols */
+  }
+  
+  /* Remove "+" signs from popular articles */
+  .popular-articles ul li::before {
+    content: none; /* Removes any "+" or other symbols */
+  }
+  
+  /* General rule to prevent "+" signs globally (if needed) */
+  ul li::before {
+    content: none; /* Safeguard: removes any default content for list items */
+  }
+  a {
+      text-decoration: none; /* Removes the underline from all links */
+  }
+  

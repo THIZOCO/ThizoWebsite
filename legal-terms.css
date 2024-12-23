@@ -120,8 +120,9 @@ nav a, .nav-link {
 /* Knowledge Base Section */
 h1, h4, h5, h6 {
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 750;
     color: #000;
+    line-height: 2;
 }
 
 h2, h3 {

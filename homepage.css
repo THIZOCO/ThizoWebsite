@@ -76,7 +76,7 @@ nav a, .nav-link {
 }
 
 .button:hover, .btn:hover {
-    background-color: #08584B; 
+    background-color: #028F67; 
 }
 
 .logo img {
@@ -95,7 +95,6 @@ nav a, .nav-link {
     gap: 30px;
     margin: 0;
 }
-
 
 .nav-links ul li a {
     text-decoration: none;
@@ -130,6 +129,7 @@ nav a, .nav-link {
     background-color: #08584B;
     color: #fff; 
 }
+
 body {
     margin: 0;
     padding: 0;
@@ -142,9 +142,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: #f6BFA8; /* Updated to requested color */
+    background-color: #0858; /* Updated to requested color */
     position: relative;
-    margin-top: 1rem;
+    margin-top: 2rem;
 }
 
 .hero::before {
@@ -158,12 +158,12 @@ body {
     position: relative;
     z-index: 2;
     text-align: center;
-    max-width: 56.25rem;
+    max-width: 65rem;
     padding: 0 var(--spacing-unit);
 }
 
 .hero h1 {
-    font-size: clamp(4rem, 7vw, 3.75rem);
+    font-size: 5rem;
     font-family: 'nobel uno', sans-serif;
     margin-bottom: calc(var(--spacing-unit) * 1.25);
 }
@@ -189,6 +189,49 @@ body {
 
 .hero-buttons .button:hover {
     background-color: var(--secondary-color);
+}
+
+/* Four Images Section */
+.four-images .grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    width: 100vw;
+    height: 100vh;
+}
+
+.four-images .grid-item {
+    background-color: #ccc; /* Replace with images later */
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Placeholder colors for visuals */
+.four-images .grid-item:nth-child(1) {
+    background-image: url('https://i.ibb.co/PQW0XsM/Model-Avatar-1.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.four-images .grid-item:nth-child(2) {
+    background-image: url('https://i.ibb.co/cTsMB8L/Screenshot-2024-12-23-at-9-23-45-AM.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.four-images .grid-item:nth-child(3) {
+    background-image: url('https://i.ibb.co/4KJ73H2/Screenshot-2024-12-23-at-9-28-18-AM.png'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
+}
+
+.four-images .grid-item:nth-child(4) {
+    background-image: url('https://i.ibb.co/kgSWB8q/Office-Building-Sunrise.jpg'); /* Replace with your image path */
+    background-size: cover;
+    background-position: center;
 }
 
 /* Solutions Section */

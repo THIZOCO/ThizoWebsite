@@ -48,7 +48,7 @@ nav a, .nav-link {
 }
 
 .button:hover, .btn:hover {
-    background-color: #028F67; /* Darker on hover */
+    background-color: #028F67; /* Lighter on hover */
 }
 
 .navbar {

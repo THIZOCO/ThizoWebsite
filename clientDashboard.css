@@ -266,7 +266,7 @@ body {
 
 /* Secondary Tier Buttons (A-I options like "Core&Shell", "Layout" etc.) */
 .secondary-tier-button {
-    background-color: #3a3a46; /* Dark grey by default */
+    background-color: #F47801; /* UT orange by default */
     color: #fff;
     border: none;
     border-radius: 5px;
@@ -279,7 +279,7 @@ body {
 
 /* Highlighted State for Selected Buttons */
 .secondary-tier-button.selected {
-    background-color: #08584B; /* Dark green to indicate selection */
+    background-color: #ce6c15; /* Dark "yellow" to indicate selection */
 }
 
 /* Button Hover Effect */
