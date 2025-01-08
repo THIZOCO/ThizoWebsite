@@ -306,20 +306,21 @@ body {
     }
 }
 
-/* Footer Section */
+/* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
     background-color: #e8e8e8; /* Background color for the footer */
     padding: 50px 0; /* Padding for top and bottom */
-    margin-top: 40px; /* Add margin above the footer */
 }
 
 .footer {
     background-color: #e8e8e8; /* Retain footer background color */
-    padding: 60px 0; /* Maintain footer padding */
+    padding: 50px 0; /* Maintain footer padding */
     border-radius: 0px; /* Remove any rounding */
     border: none; /* Remove border if any */
+    font-size: 1rem; 
 }
+
 .footer-container {
   max-width: 75rem;
   margin: 0 auto;
@@ -334,14 +335,17 @@ body {
   margin-bottom: calc(var(--spacing-unit) * 1.25);
 }
 
-.footer-description {
+.footer-description p {
   max-width: 25rem;
+  font-size: 1rem; 
 }
 
 .social-links {
   display: flex;
   gap: calc(var(--spacing-unit) * 0.625);
   margin: calc(var(--spacing-unit) * 1.25) 0;
+  margin-top: 1.5rem; 
+  margin-bottom: 1.5rem; 
 }
 
 .social-links img {
@@ -357,16 +361,18 @@ body {
 
 .footer-column h4 {
   margin-bottom: 10px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #08584B; /* Set titles to green */
 }
 
 .footer-column ul {
+  line-height: 2;
   list-style: none; /* Remove bullet points */
   padding-left: 0; /* Remove padding to align items */
 }
 
 .footer-column ul li {
+  line-height: 2; 
   margin-bottom: 5px;
 }
 
@@ -377,19 +383,6 @@ body {
 
 .footer-column ul li a:hover {
   color: #028f67; /* Optional: Keep hover effect */
-}
-
-
-/* Footer Bottom */
-.footer-bottom {
-  max-width: 75rem;
-  margin: 20px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .legal-links {
@@ -411,6 +404,7 @@ body {
       text-align: center;
   }
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between; /* Align links and text on the same plane */
@@ -423,13 +417,13 @@ body {
 
 .footer-bottom p {
   margin: 0;
-  margin-left: 15px; /* Add 15px left margin */
+  margin-left: 10px; /* Add 15px left margin */
   font-size: inherit; /* Ensure font size consistency */
 }
 
-
 .legal-links {
   display: flex;
+  margin-right: 10px; 
   gap: 20px; /* Add space between individual links */
 }
 
@@ -461,3 +455,16 @@ ul li::before {
 a {
     text-decoration: none; /* Removes the underline from all links */
 }
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 75rem;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+

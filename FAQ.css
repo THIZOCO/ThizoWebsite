@@ -257,158 +257,165 @@ a {
 a:hover {
     text-decoration: underline;
 }
-/* Footer Styles */
-/* Footer */
-.footer-wrapper {
-  background-color: #e8e8e8; /* Background color for the footer */
-  padding: 50px 0; /* Padding for top and bottom */
-  margin-top: 40px; /* Add margin above the footer */
+
+/* FOOTER SECTION */
+  /* Footer */
+  .footer-wrapper {
+    background-color: #e8e8e8; /* Background color for the footer */
+    padding: 50px 0; /* Padding for top and bottom */
 }
 
 .footer {
-  background-color: #e8e8e8; /* Retain footer background color */
-  padding: 60px 0; /* Maintain footer padding */
-  border-radius: 0px; /* Remove any rounding */
-  border: none; /* Remove border if any */
+    background-color: #e8e8e8; /* Retain footer background color */
+    padding: 50px 0; /* Maintain footer padding */
+    border-radius: 0px; /* Remove any rounding */
+    border: none; /* Remove border if any */
+    font-size: 1rem; 
 }
+
 .footer-container {
-max-width: 75rem;
-margin: 0 auto;
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
-gap: calc(var(--spacing-unit) * 2.5);
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+  gap: calc(var(--spacing-unit) * 2.5);
 }
 
 .footer-logo {
-width: 9.375rem;
-height: auto;
-margin-bottom: calc(var(--spacing-unit) * 1.25);
+  width: 9.375rem;
+  height: auto;
+  margin-bottom: calc(var(--spacing-unit) * 1.25);
 }
 
-.footer-description {
-max-width: 25rem;
+.footer-description p {
+  max-width: 25rem;
+  font-size: 1rem; 
 }
 
 .social-links {
-display: flex;
-gap: calc(var(--spacing-unit) * 0.625);
-margin: calc(var(--spacing-unit) * 1.25) 0;
+  display: flex;
+  gap: calc(var(--spacing-unit) * 0.625);
+  margin: calc(var(--spacing-unit) * 1.25) 0;
+  margin-top: 1.5rem; 
+  margin-bottom: 1.5rem; 
 }
 
 .social-links img {
-width: 1.875rem;
-height: 1.875rem;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .footer-links {
-display: grid;
-grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
-gap: calc(var(--spacing-unit) * 2.5);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+  gap: calc(var(--spacing-unit) * 2.5);
 }
 
 .footer-column h4 {
-margin-bottom: 10px;
-font-size: 1rem;
-color: #08584B; /* Set titles to green */
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #08584B; /* Set titles to green */
 }
 
 .footer-column ul {
-list-style: none; /* Remove bullet points */
-padding-left: 0; /* Remove padding to align items */
+  line-height: 2;
+  list-style: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding to align items */
 }
 
 .footer-column ul li {
-margin-bottom: 5px;
+  line-height: 2; 
+  margin-bottom: 5px;
 }
 
 .footer-column ul li a {
-text-decoration: none;
-color: #000000; /* Set text links to black */
+  text-decoration: none;
+  color: #000000; /* Set text links to black */
 }
 
 .footer-column ul li a:hover {
-color: #028f67; /* Optional: Keep hover effect */
-}
-
-
-/* Footer Bottom */
-.footer-bottom {
-max-width: 75rem;
-margin: 20px auto 0;
-padding-top: 20px;
-border-top: 1px solid rgba(0, 0, 0, 0.1);
-display: flex;
-justify-content: space-between;
-flex-wrap: wrap;
-gap: 10px;
+  color: #028f67; /* Optional: Keep hover effect */
 }
 
 .legal-links {
-display: flex;
-gap: 20px;
-flex-wrap: wrap;
-text-align: center;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
 }
 
 /* Responsive Design */
 @media (max-width: 768px) {
-.footer-container {
-    grid-template-columns: 1fr;
+  .footer-container {
+      grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
 }
 
 .footer-bottom {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-}
-}
-.footer-bottom {
-display: flex;
-justify-content: space-between; /* Align links and text on the same plane */
-align-items: center; /* Vertically align elements */
-flex-wrap: wrap; /* Ensure proper alignment on smaller screens */
-font-size: 0.875rem; /* Match the font size of the copyright text */
-color: #555; /* Match the color for consistency */
-gap: 10px; /* Add spacing for wrapping items */
+  display: flex;
+  justify-content: space-between; /* Align links and text on the same plane */
+  align-items: center; /* Vertically align elements */
+  flex-wrap: wrap; /* Ensure proper alignment on smaller screens */
+  font-size: 0.875rem; /* Match the font size of the copyright text */
+  color: #555; /* Match the color for consistency */
+  gap: 10px; /* Add spacing for wrapping items */
 }
 
 .footer-bottom p {
-margin: 0;
-margin-left: 15px; /* Add 15px left margin */
-font-size: inherit; /* Ensure font size consistency */
+  margin: 0;
+  margin-left: 10px; /* Add 15px left margin */
+  font-size: inherit; /* Ensure font size consistency */
 }
 
-
 .legal-links {
-display: flex;
-gap: 20px; /* Add space between individual links */
+  display: flex;
+  margin-right: 10px; 
+  gap: 20px; /* Add space between individual links */
 }
 
 .legal-links a {
-font-family: 'Montserrat', sans-serif; /* Match the desired font */
-font-weight: 500; /* Medium weight for clarity */
-font-size: inherit; /* Match the footer's font size */
-text-decoration: none; /* Remove underlines */
-color: #555; /* Ensure color matches copyright text */
+  font-family: 'Montserrat', sans-serif; /* Match the desired font */
+  font-weight: 500; /* Medium weight for clarity */
+  font-size: inherit; /* Match the footer's font size */
+  text-decoration: none; /* Remove underlines */
+  color: #555; /* Ensure color matches copyright text */
 }
 
 .legal-links a:hover {
-text-decoration: underline; /* Add hover effect for clarity */
+  text-decoration: underline; /* Add hover effect for clarity */
 }
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
-content: none; /* Removes any "+" or other symbols */
+  content: none; /* Removes any "+" or other symbols */
 }
 
 /* Remove "+" signs from popular articles */
 .popular-articles ul li::before {
-content: none; /* Removes any "+" or other symbols */
+  content: none; /* Removes any "+" or other symbols */
 }
 
 /* General rule to prevent "+" signs globally (if needed) */
 ul li::before {
-content: none; /* Safeguard: removes any default content for list items */
+  content: none; /* Safeguard: removes any default content for list items */
 }
 a {
-  text-decoration: none; /* Removes the underline from all links */
+    text-decoration: none; /* Removes the underline from all links */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 75rem;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }

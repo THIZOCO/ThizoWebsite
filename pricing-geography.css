@@ -13,6 +13,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Slightly lighter for subheadings */
 h2, h3 {
+  font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   color: #028F67; /* Adjust color to suit your design */
 }
@@ -113,13 +114,8 @@ nav a, .nav-link {
   color: #fff;
 }
 
-/* Hero Section */
-/* General body text */
-body, p, li, span, .body-text {
-  font-family: 'Montserrat', sans-serif; /* Fixed font-family declaration */
-  font-weight: 400; /* Regular weight for body content */
-  color: #555; /* Adjust color to suit your design */
-  line-height: 1.6; /* Add line height for readability */
+.login-button:hover {
+  background-color: #028f67;
 }
 
 /* Apply to all headings (H1 to H6) */
@@ -132,6 +128,14 @@ h1, h2, h3, h4, h5, h6 {
 /* Slightly lighter for subheadings */
 h2, h3 {
   font-weight: 600;
+}
+
+/* General body text */
+body, p, li, span, .body-text {
+  font-family: 'Montserrat', sans-serif; /* Fixed font-family declaration */
+  font-weight: 400; /* Regular weight for body content */
+  color: #555; /* Adjust color to suit your design */
+  line-height: 1.6; /* Add line height for readability */
 }
 
 /* Custom Quote Section */
@@ -250,19 +254,19 @@ h2, h3 {
     color: #999;
 }
 
-/* Footer Section */
-/* Footer */
-.footer-wrapper {
-  background-color: #e8e8e8;
-  margin-top: 40px; /* Added top margin */
-  padding: 50px 0;
+/* FOOTER SECTION */
+  /* Footer */
+  .footer-wrapper {
+    background-color: #e8e8e8; /* Background color for the footer */
+    padding: 50px 0; /* Padding for top and bottom */
 }
 
 .footer {
-  background-color: #e8e8e8;
-  padding: 60px 0 20px;
-  border-radius: 0; /* Ensure corners are not rounded */
-  border: none;
+    background-color: #e8e8e8; /* Retain footer background color */
+    padding: 50px 0; /* Maintain footer padding */
+    border-radius: 0px; /* Remove any rounding */
+    border: none; /* Remove border if any */
+    font-size: 1rem; 
 }
 
 .footer-container {
@@ -270,47 +274,53 @@ h2, h3 {
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
-  gap: 40px;
+  gap: calc(var(--spacing-unit) * 2.5);
 }
 
 .footer-logo {
   width: 9.375rem;
   height: auto;
-  margin-bottom: 20px;
+  margin-bottom: calc(var(--spacing-unit) * 1.25);
 }
 
-.footer-description {
+.footer-description p {
   max-width: 25rem;
+  font-size: 1rem; 
 }
 
 .social-links {
   display: flex;
-  gap: 10px;
-  margin: 20px 0;
+  gap: calc(var(--spacing-unit) * 0.625);
+  margin: calc(var(--spacing-unit) * 1.25) 0;
+  margin-top: 1.5rem; 
+  margin-bottom: 1.5rem; 
 }
 
 .social-links img {
-  width: 30px;
-  height: 30px;
+  width: 1.875rem;
+  height: 1.875rem;
 }
 
 .footer-links {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
-  gap: 20px;
+  gap: calc(var(--spacing-unit) * 2.5);
 }
+
 .footer-column h4 {
   margin-bottom: 10px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #08584B; /* Set titles to green */
 }
 
 .footer-column ul {
+  line-height: 2;
   list-style: none; /* Remove bullet points */
   padding-left: 0; /* Remove padding to align items */
 }
 
 .footer-column ul li {
+  line-height: 2; 
   margin-bottom: 5px;
 }
 
@@ -321,19 +331,6 @@ h2, h3 {
 
 .footer-column ul li a:hover {
   color: #028f67; /* Optional: Keep hover effect */
-}
-
-
-/* Footer Bottom */
-.footer-bottom {
-  max-width: 75rem;
-  margin: 20px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .legal-links {
@@ -355,6 +352,7 @@ h2, h3 {
       text-align: center;
   }
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between; /* Align links and text on the same plane */
@@ -367,13 +365,13 @@ h2, h3 {
 
 .footer-bottom p {
   margin: 0;
-  margin-left: 15px; /* Add 15px left margin */
+  margin-left: 10px; /* Add 15px left margin */
   font-size: inherit; /* Ensure font size consistency */
 }
 
-
 .legal-links {
   display: flex;
+  margin-right: 10px; 
   gap: 20px; /* Add space between individual links */
 }
 
@@ -404,4 +402,16 @@ ul li::before {
 }
 a {
     text-decoration: none; /* Removes the underline from all links */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 75rem;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }

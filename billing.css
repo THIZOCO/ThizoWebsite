@@ -188,6 +188,7 @@ body, p, li, span, .body-text {
 /* Link Styling for Contact My Rep */
 .sidebar a {
     color: #ED6B14; /* Apply the specific orange color */
+    margin-top: 10px; 
     text-decoration: none; /* Remove the underline */
     font-weight: bold; /* Make the text bold */
 }
@@ -211,8 +212,7 @@ body, p, li, span, .body-text {
     }
 }
 
-/* Footer Section */
-/* Footer Section */
+/* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
     background-color: #e8e8e8; /* Background color for the footer */
@@ -221,10 +221,12 @@ body, p, li, span, .body-text {
 
 .footer {
     background-color: #e8e8e8; /* Retain footer background color */
-    padding: 60px 0; /* Maintain footer padding */
+    padding: 50px 0; /* Maintain footer padding */
     border-radius: 0px; /* Remove any rounding */
     border: none; /* Remove border if any */
+    font-size: 1rem; 
 }
+
 .footer-container {
   max-width: 75rem;
   margin: 0 auto;
@@ -239,14 +241,18 @@ body, p, li, span, .body-text {
   margin-bottom: calc(var(--spacing-unit) * 1.25);
 }
 
-.footer-description {
+.footer-description p {
   max-width: 25rem;
+  font-size: 1rem;
+  color: #000000; /* Set titles to black */ 
 }
 
 .social-links {
   display: flex;
   gap: calc(var(--spacing-unit) * 0.625);
   margin: calc(var(--spacing-unit) * 1.25) 0;
+  margin-top: 1.5rem; 
+  margin-bottom: 1.5rem; 
 }
 
 .social-links img {
@@ -262,16 +268,18 @@ body, p, li, span, .body-text {
 
 .footer-column h4 {
   margin-bottom: 10px;
-  font-size: 1rem;
+  font-size: 1.25rem;
   color: #08584B; /* Set titles to green */
 }
 
 .footer-column ul {
+  line-height: 2;
   list-style: none; /* Remove bullet points */
   padding-left: 0; /* Remove padding to align items */
 }
 
 .footer-column ul li {
+  line-height: 2; 
   margin-bottom: 5px;
 }
 
@@ -282,19 +290,6 @@ body, p, li, span, .body-text {
 
 .footer-column ul li a:hover {
   color: #028f67; /* Optional: Keep hover effect */
-}
-
-
-/* Footer Bottom */
-.footer-bottom {
-  max-width: 75rem;
-  margin: 20px auto 0;
-  padding-top: 20px;
-  border-top: 1px solid rgba(0, 0, 0, 0.1);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
 }
 
 .legal-links {
@@ -316,6 +311,7 @@ body, p, li, span, .body-text {
       text-align: center;
   }
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between; /* Align links and text on the same plane */
@@ -328,13 +324,14 @@ body, p, li, span, .body-text {
 
 .footer-bottom p {
   margin: 0;
-  margin-left: 15px; /* Add 15px left margin */
+  margin-left: 10px; /* Add 15px left margin */
   font-size: inherit; /* Ensure font size consistency */
+  color: #000000; /* Set titles to black */ 
 }
-
 
 .legal-links {
   display: flex;
+  margin-right: 10px; 
   gap: 20px; /* Add space between individual links */
 }
 
@@ -365,4 +362,16 @@ ul li::before {
 }
 a {
     text-decoration: none; /* Removes the underline from all links */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 75rem;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
 }
