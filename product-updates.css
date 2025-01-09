@@ -109,7 +109,7 @@ nav a, .nav-link {
     background-color: #028f67;
 }
 
-/* Getting Started Section */
+/* PRODUCT UPDATES */
 .getting-started {
     padding: 40px 60px;
     background-color: #ffffff; /* Background color */
@@ -175,7 +175,8 @@ nav a, .nav-link {
         grid-column: 1; /* Text spans below the image in single-column view */
     }
 }
-/* Privacy Section */
+
+/* CONTACT US BANNER */
 .privacy-section {
     text-align: center;
     padding: 60px 40px;
@@ -207,6 +208,7 @@ nav a, .nav-link {
     text-decoration: none; /* No underline on hover and focus */
     color: #ed6b14; /* Keep the color consistent on hover */
   }
+
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
@@ -353,6 +355,7 @@ nav a, .nav-link {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

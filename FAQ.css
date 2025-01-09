@@ -26,6 +26,7 @@ body, p, li, span, .body-text {
     color: #555;
     line-height: 1.6;
 }
+
 /* General Reset */
 * {
   margin: 0;
@@ -149,7 +150,7 @@ body {
   box-sizing: border-box;
 }
 
-/* FAQ Section Styles */
+/* FAQs SECTION */
 .faq-section {
     padding: 60px 5%;
     background-color: #e8e8e8;
@@ -212,7 +213,7 @@ body {
     color: #f47801;
 }
 
-/* FAQ Item Expanded */
+/* FAQ EXPANDED ANSWERS */
 .faq-question[aria-expanded="true"] + .faq-answer {
     max-height: 1000px; /* Large enough for most answers */
     padding-top: 10px;
@@ -390,6 +391,7 @@ a:hover {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -404,6 +406,7 @@ a:hover {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

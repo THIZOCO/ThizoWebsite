@@ -116,14 +116,15 @@ nav a, .nav-link {
     background-color: #08584B;
     color: #fff; 
 }
+
 body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
-/* Secondary Navigation Bar */
-/* Secondary Navigation Bar */
+
+/* SECONDARY NAVIGATION BAR */
 .secondary-navbar {
     background-color: #e8e8e8; /* Light grey background */
     padding: 15px 0;
@@ -182,6 +183,7 @@ body {
     background-color: #ffffff;
     padding: 20px 0;
 }
+
 /* Navigation links */
 nav a, .nav-link {
     font-family: 'Montserrat', sans-serif;
@@ -207,8 +209,7 @@ nav a, .nav-link {
     background-color: #028F67; 
 }
 
-/* Dashboard */
-/* Card Styles */
+/* UPLOAD DASHBOARD */
 .dashboard {
     background-image: url('https://i.ibb.co/kgSWB8q/Office-Building-Sunrise.jpg'); /* Background image */
     background-size: cover; /* Cover the entire section */
@@ -224,6 +225,7 @@ nav a, .nav-link {
 .dashboard::before {
     content: ""; /* Create a pseudo-element */
     position: absolute; /* Overlay spans entire section */
+    padding-bottom: 20px; 
     top: 0;
     left: 0;
     width: 100%;
@@ -238,7 +240,7 @@ nav a, .nav-link {
     z-index: 1; /* Ensure elements are above the overlay */
 }    
 
-/* Card Styles */
+/* CARD STYLES */
 .card {
     background-color: #3a3a46;
     color: #fff;
@@ -250,12 +252,14 @@ nav a, .nav-link {
     transition: height 0.4s ease-in-out;
     overflow: hidden;
 }
+
 .card past-project h2 {
     font-size: 1rem;
     font-weight: 700;
     color: #028F67;
     margin-bottom: 10px;
   }
+
   .card past-project p {
     font-size: .5rem;
     color: #028F67;
@@ -269,7 +273,7 @@ nav a, .nav-link {
 
 /* New Styles for Project Options and Buttons */
 .project-options {
-    display: grid;
+    display: grid; 
     grid-template-columns: repeat(3, 1fr); /* 3 buttons per row */
     gap: 10px; /* Space between buttons */
     margin-top: 10px; /* Space above options */
@@ -345,6 +349,7 @@ nav a, .nav-link {
     display: inline-block; /* Ensure proper spacing and positioning */
     line-height: 1; /* Align visually with other content */
 }
+
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
@@ -479,6 +484,7 @@ nav a, .nav-link {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -493,6 +499,7 @@ nav a, .nav-link {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

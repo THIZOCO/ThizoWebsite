@@ -114,7 +114,7 @@ body {
     background-color: #028f67;
 }
 
-/* Coming Soon Section */
+/* COMING SOON SECTION */
 .coming-soon-section {
     text-align: center;
     padding: 60px 40px;
@@ -134,7 +134,7 @@ body {
     color: #333333; /* Grey paragraph */
   }
 
-/* Privacy Section */
+/* CONTACT US BANNER */
 .privacy-section {
     text-align: center;
     padding: 60px 40px;
@@ -299,6 +299,7 @@ body {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -313,6 +314,7 @@ body {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

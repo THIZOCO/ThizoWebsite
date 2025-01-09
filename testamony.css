@@ -109,7 +109,7 @@ nav a, .nav-link {
     background-color: #028f67;
 }
 
-/* Header */
+/* HEADER */
 .header {
     background-color: #f4f4f4;
     padding: 40px 20px;
@@ -138,7 +138,7 @@ nav a, .nav-link {
 }
 
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
     position: relative;
     padding: 50px 20px;
@@ -156,7 +156,7 @@ nav a, .nav-link {
       margin-left: 100px; 
 }
 
-/* Main Content */
+/* MAIN CONTAINER */
 /* Section Container */
 .section-container {
     display: flex;
@@ -236,6 +236,7 @@ nav a, .nav-link {
     margin-left: 20px;
     color: #3a3a46;
 }
+
 /* Blockquote */
 blockquote {
     margin: 60px auto; /* Center the blockquote */

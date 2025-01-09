@@ -53,6 +53,7 @@
     background-color: #ffffff;
     padding: 20px 0;
   }
+
   /* Navigation links */
   nav a, .nav-link {
     font-family: 'Montserrat';
@@ -95,7 +96,6 @@
     margin: 0;
   }
   
-  
   .nav-links ul li a {
     text-decoration: none;
     color: #3a3a46;
@@ -137,7 +137,7 @@
     background-color: #fff;
   }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
     position: relative;
     padding: 50px 20px;
@@ -214,7 +214,7 @@
     }
 }
 
-/* Intro Section */
+/* OUR STORY */
 .intro {
     padding: 3rem 10rem;
     text-align: center;
@@ -245,7 +245,7 @@
     color: #666;
 }
 
-/* Focus Text Section */
+/* OUR VALUES TITLE */
 .focus-text {
     background: #e8e8e8;
     padding-top: 1rem; /* Adds spacing internally within the section */
@@ -260,13 +260,12 @@
     color: #f47801;
 }
 
-
 .focus-text p {
     color: #333; /* Darker text color for contrast */
     font-size: 1.2rem;
 }
 
-/* Column Section */
+/* OUR VALUES COLUMNS */
 .three-column {
     display: flex;
     flex-wrap: wrap; /* Ensures responsiveness */
@@ -302,7 +301,7 @@
     margin-bottom: 1rem;
 }
 
-/* Privacy Section */
+/* WANT TO JOIN OUR TEAM BANNER */
 .privacy-section {
     text-align: center;
     padding: 60px 40px;
@@ -332,6 +331,7 @@
     text-decoration: underline;
     color: #ed6b14;
 }
+
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
@@ -466,6 +466,7 @@
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -480,6 +481,7 @@
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

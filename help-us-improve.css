@@ -98,7 +98,6 @@ nav a, .nav-link {
   margin: 0;
 }
 
-
 .nav-links ul li a {
   text-decoration: none;
   color: #3a3a46;
@@ -169,6 +168,7 @@ body, p, li, span, .body-text {
     line-height: 1.6; /* Add line height for readability */
 }
 
+/* HELP US IMPROVE */
 .form-container {
   background-color: white;
   padding: 30px;
@@ -390,6 +390,7 @@ a:hover {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -404,6 +405,7 @@ a:hover {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

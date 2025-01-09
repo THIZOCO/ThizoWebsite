@@ -104,7 +104,7 @@
     color: #fff;
   }
  
-  /* Hero Section */
+  /* HERO SECTION */
   .hero {
       position: relative;
       padding: 50px 20px;
@@ -205,6 +205,7 @@
       color: #028F67; /* Customize color */
       text-decoration: none; /* Remove underline */
   }
+
   /* General body text */
   body, p, li, span, .body-text {
       font-family: 'Montserrat', sans-serif;
@@ -213,7 +214,7 @@
       line-height: 1.6; /* Add line height for readability */
   }
   
-  /* Testaments Section */
+  /* TESTAMONIALS SECTION */
   .testaments-section {
     text-align: center;
     padding: 40px;
@@ -272,7 +273,7 @@
     }
   }
   
-  /* Roi Section */
+  /* ROI SECTION */
   .roi-section {
     text-align: center;
     padding: 60px 40px;
@@ -352,7 +353,8 @@
       margin-bottom: 30px;
     }
   }
-  /* Platform Section */
+
+  /* ONE PLATFORM */
   .platform-section {
     padding: 60px 40px;
     background-color: #e8e8e8;
@@ -439,7 +441,8 @@
       margin-bottom: 20px;
     }
   }
-  /* Privacy Section */
+
+  /* PRIVACY RIGHTS BANNER */
   .privacy-section {
     text-align: center;
     padding: 60px 40px;
@@ -604,6 +607,7 @@
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -618,6 +622,7 @@
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

@@ -32,7 +32,7 @@ nav a, .nav-link {
     font-weight: 500; /* Medium weight for clarity */
     text-transform: uppercase; /* Optional: make links uppercase */
     color: #00474f; /* Customize color */
-    text-decoration: none; /* Remove underline */
+    text-decoration: none; /* Remove bullets */
 }
 
 /* Button styles */
@@ -63,20 +63,37 @@ nav a, .nav-link {
 .nav-links {
     flex: 1;
     text-align: center;
+    text-decoration: none; /* Remove underline */
+    list-style-type: none;
 }
 
 .nav-links ul {
-    list-style: none;
+    list-style-type: none;
     display: inline-flex;
     gap: 30px;
     margin: 0;
+    text-decoration: none; /* Remove underline */
+    list-style: none; /* Remove bullets */
+    padding: 0; /* Reset padding */
+    margin: 0; /* Reset margin */
 }
 
 .nav-links ul li a {
+    list-style: none;
     text-decoration: none;
     color: #333;
     font-weight: 600;
+    list-style-type: none;
     transition: color 0.3s;
+    text-decoration: none; /* Remove underline */
+}
+
+.nav-links ul li {
+    position: relative; /* Prevent inherited styles from affecting this */
+}
+
+.nav-links ul li::before {
+    content: none; /* Remove any pseudo-element bullets */
 }
 
 .nav-links ul li a:hover {
@@ -106,7 +123,15 @@ nav a, .nav-link {
     color: #fff;
 }
 
-/* Hero Section */
+.demo-button a:hover {
+    color: #028F67;
+}
+
+.login-button a:hover {
+    color: #028F67;
+}
+
+/* HERO SECTION */
 .hero {
     position: relative;
     padding: 50px 20px;
@@ -218,7 +243,7 @@ body, p, li, span, .body-text {
     line-height: 1.6; /* Add line height for readability */
   }
 
-/* Section 2 - We Are Here For You */
+/* WE ARE HERE FOR YOU */
 .clients {
     padding: 60px 10px;
     background-color: #E8E8E8; /* Background color for visual distinction */
@@ -333,7 +358,7 @@ body, p, li, span, .body-text {
     }
 }
 
-/* General Styles */
+/* MAIN CONTENT */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -356,15 +381,19 @@ p {
 
 ul {
     list-style-type: none;
-    padding: 0;
+    padding: 0; 
 }
 
 ul li {
     font-size: 1rem;
     color: #FF6F00;
     margin-bottom: 10px;
-    list-style-type:disc; 
+    list-style-type: none;
     position: relative;
+}
+
+.profiles-section ul li {
+    list-style: disc; /* For client profiles */
 }
 
 ul li::before {
@@ -385,6 +414,8 @@ ul li::before {
 
 .profiles-container {
     display: grid;
+    padding-top: 40px; 
+    padding-bottom:40px; 
     grid-template-columns: 1fr 1fr;
     gap: 40px;
     align-items: center;
@@ -427,9 +458,11 @@ ul li::before {
     }
 }
   
-/* Resources Section (Section 4) */
+/* RESOURCES SECTION (Section 4) */
 .resources {
     padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
+    padding-top: 20px; 
+    padding-bottom: 20px; 
     background-color: #e8e8e8; /* Section background color */
 }
 
@@ -506,7 +539,6 @@ ul li::before {
     position: relative;
     left: 0; /* Align with the left edge */
 }
-
 
 /* FOOTER SECTION */
   /* Footer */
@@ -607,6 +639,7 @@ ul li::before {
       text-align: center;
   }
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between; /* Align links and text on the same plane */
@@ -622,7 +655,6 @@ ul li::before {
   margin-left: 10px; /* Add 15px left margin */
   font-size: inherit; /* Ensure font size consistency */
 }
-
 
 .legal-links {
   display: flex;
@@ -641,6 +673,7 @@ ul li::before {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -655,6 +688,7 @@ ul li::before {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }
@@ -670,4 +704,3 @@ a {
   flex-wrap: wrap;
   gap: 10px;
 }
-

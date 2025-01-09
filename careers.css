@@ -109,7 +109,7 @@ nav a, .nav-link {
     background-color: #028f67;
 }
 
-/* Product Updates Section */
+/* CAREERS SECTION */
 .careers {
     display: block;
     grid-template-columns: 1fr; /* Single column grid */
@@ -128,7 +128,7 @@ nav a, .nav-link {
     margin-bottom: 30px;
 }
 
-/* Individual Career Cards */
+/* INDIVIDUAL CAREER CARDS */
 .careers-card {
     display: block; /* Keeps the card block-level */
     padding: 0px;
@@ -159,7 +159,7 @@ nav a, .nav-link {
     color: #3a3a46;
 }
 
-/* Privacy Section */
+/* INTERESTED IN WORKING WITH US BANNER */
 .privacy-section {
     text-align: center;
     padding: 60px 40px;
@@ -192,6 +192,7 @@ nav a, .nav-link {
     text-decoration: none; /* No underline on hover and focus */
     color: #ed6b14; /* Keep the color consistent on hover */
   }
+
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
@@ -326,6 +327,7 @@ nav a, .nav-link {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -340,6 +342,7 @@ nav a, .nav-link {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

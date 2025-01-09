@@ -138,7 +138,7 @@
     background-color: #fff;
   }
 
-/* Login Section Styles */
+/* ACCOUNT MANAGMENT LOGIN SECTION STYLES */
 .login-section {
     display: flex;
     justify-content: center;
@@ -199,6 +199,7 @@
 .login-form a:hover {
     text-decoration: underline;
 }
+
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
@@ -333,6 +334,7 @@
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -347,6 +349,7 @@
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

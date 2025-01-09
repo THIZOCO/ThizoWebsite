@@ -120,7 +120,7 @@ nav a, .nav-link {
     justify-content: center; /* Center items vertically */
 }
 
-/* Roi Section */
+/* ROI STATS SECTION */
 .roi-section {
     text-align: center;
     padding: 60px 40px;
@@ -188,7 +188,7 @@ nav a, .nav-link {
       margin-bottom: 30px;
     }
   }
-/* Main Content */
+/* MAIN CONTENT */
 /* Platform Section 1*/
  .platform-section {
     padding: 100px 5%; /* Keep original padding */
@@ -494,7 +494,6 @@ nav a, .nav-link {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     margin-left: 38px; /* Move the image slightly to the right */
 }
-
   
 /* Platform Section 3*/
 .platform-section {
@@ -558,6 +557,7 @@ nav a, .nav-link {
     margin-bottom: 15px;
     text-decoration: none;
   }
+
   .platform-right p {
     font-size: 1rem;
     color: #555;
@@ -641,6 +641,7 @@ nav a, .nav-link {
       padding: 10px 16px;
     }
   }
+
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
@@ -773,6 +774,7 @@ nav a, .nav-link {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -787,6 +789,7 @@ nav a, .nav-link {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

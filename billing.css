@@ -117,7 +117,7 @@ body, p, li, span, .body-text {
     line-height: 1.6; /* Add line height for readability */
 }
 
-/* Billing Grid */
+/* BILLING GRID */
 .billing-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr); /* Two cards per row */
@@ -136,7 +136,7 @@ body, p, li, span, .body-text {
     margin: 0 auto; /* Removes any margin that could create a gap */
 }
 
-/* Individual Billing Cards */
+/* INDIVIDUAL BILLING CARDS */
 .billing-card {
     background-color: #ffffff;
     margin: 25px; /* Adds spacing around cards */
@@ -171,10 +171,10 @@ body, p, li, span, .body-text {
     text-align: center; /* Center-align descriptions */
 }
 
-/* Sidebar Section */
+/* SIDEBAR SECTION */
 .sidebar {
     position: fixed;
-    margin-right: 90px;
+    margin-right: 100px;
     top: 150px;
     right: 20px;
     width: 300px;
@@ -188,7 +188,7 @@ body, p, li, span, .body-text {
 /* Link Styling for Contact My Rep */
 .sidebar a {
     color: #ED6B14; /* Apply the specific orange color */
-    margin-top: 10px; 
+    margin-top: 20px; 
     text-decoration: none; /* Remove the underline */
     font-weight: bold; /* Make the text bold */
 }
@@ -346,6 +346,7 @@ body, p, li, span, .body-text {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -360,6 +361,7 @@ body, p, li, span, .body-text {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

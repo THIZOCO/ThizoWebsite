@@ -55,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
   background-color: #ffffff;
   padding: 20px 0;
 }
+
 /* Navigation links */
 nav a, .nav-link {
   font-family: 'Montserrat', sans-serif;
@@ -97,7 +98,6 @@ nav a, .nav-link {
   margin: 0;
 }
 
-
 .nav-links ul li a {
   text-decoration: none;
   color: #3a3a46;
@@ -131,11 +131,13 @@ nav a, .nav-link {
   background-color: #08584B;
   color: #fff; 
 }
+
 body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 :root {
   --primary-color: #08584B;
   --secondary-color: #028f67;
@@ -154,8 +156,7 @@ body {
   --border-radius: 0.625rem;
 }
 
-
-/* Hero Section */
+/* HERO SECTION */
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr; /* Two columns: text on the left, image on the right */
@@ -191,7 +192,7 @@ body {
   text-align: center;
 }
 
-/* Custom Quote Section */
+/* MARKET OPTIONS CUSTOM QUOTE */
 .custom-quote {
     padding: var(--spacing-xl) min(5%, var(--spacing-lg));
     background-color: #e8e8e8;
@@ -255,14 +256,14 @@ body {
   background-color: #d6b587; /* Hover background color */
   border: 2px solid #d6b587; /* Hover border color */
 }
-/* Selected State */
+
+/* Selected Card */
 .company-type.selected {
   background-color: #D6B587; /* Highlight color */
   border: 2px solid #D6B587;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Optional shadow for emphasis */
   transform: scale(1.05); /* Slightly larger on selection */
 }
-
 
 .company-type p {
   font-size: 1.5rem;
@@ -286,59 +287,6 @@ body {
   background-color: #CE6C15;
 }
 
-/* Pricing Information Section */
-/* Pricing Information Section */
-.pricing-section {
-  padding: 80px 0; /* Vertical padding */
-  background-color: #E8E8E8;
-  width: 100%; /* Full width */
-  margin: 0px auto; /* Center horizontally */
-}
-
-/* Inner container to center content */
-.pricing-content-container {
-  max-width: 1200px; /* Limit the maximum width of the container */
-  margin: 0 50px; /* Center the container */
-  padding: 0 100px; /* Add significant padding left/right to bring content inward */
-}
-
-/* Grid container for text and image */
-.pricing-content {
-  display: grid; /* Use grid layout */
-  grid-template-columns: 1fr 1fr; /* Two equal columns */
-  column-gap: 40px; /* Space between text and image */
-  align-items: center; /* Vertically align content */
-}
-
-/* Black background box for text */
-.pricing-text {
-  background-color: #000000;
-  font-size: 1rem;
-  color: #ffffff;
-  padding: 100px;
-  border-radius: 10px;
-  max-width: 600px;
-  margin-left: 75px; 
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add depth with shadow */
-}
-
-/* Ensure all text inside .pricing-text is white */
-.pricing-text p, .pricing-text h1, .pricing-text h2, .pricing-text h3 {
-  color: #ffffff;
-}
-
-/* Image container */
-.pricing-image {
-  justify-self: end; /* Align image to the right */
-  max-width: 600px;
-  margin-right: 75px; 
-}
-
-.pricing-image img {
-  max-width: 100%;
-  border-radius: 10px;
-}
-
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .pricing-content {
@@ -351,7 +299,7 @@ body {
   }
 }
 
-/* Pricing Section */
+/* PRICING BLACK BOX */
 .pricing-section {
   position: relative;
   padding: 50px 0; /* Removed left/right padding to allow the image to bleed off the edges */
@@ -542,6 +490,7 @@ body {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -556,6 +505,7 @@ body {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

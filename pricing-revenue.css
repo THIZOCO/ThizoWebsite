@@ -4,6 +4,7 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 /* Apply to all headings (H1 to H6) */
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -121,7 +122,7 @@ nav a, .nav-link {
     background-color: #028f67;
 }
 
-/* Custom Quote Section */
+/* REVENUE CUSTOM QUOTE */
 .custom-quote {
     padding: 60px 5%;
     background-color: #e8e8e8;
@@ -415,6 +416,7 @@ nav a, .nav-link {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -429,6 +431,7 @@ nav a, .nav-link {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

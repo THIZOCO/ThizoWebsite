@@ -17,6 +17,7 @@ h2, h3 {
     font-weight: 600;
     color: #028F67; /* Adjust color to suit your design */
 }
+
 /* Typography */
 :root {
     --primary-color: #08584B;
@@ -54,6 +55,7 @@ h1, h2, h3, h4, h5, h6 {
     background-color: #ffffff;
     padding: 20px 0;
 }
+
 /* Navigation links */
 nav a, .nav-link {
     font-family: 'Montserrat', sans-serif;
@@ -136,7 +138,7 @@ body {
     box-sizing: border-box;
   }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
     min-height: 75vh;
     display: flex;
@@ -191,7 +193,7 @@ body {
     background-color: var(--secondary-color);
 }
 
-/* Four Images Section */
+/* FOUR IMAGES SECTION */
 .four-images .grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -234,7 +236,7 @@ body {
     background-position: center;
 }
 
-/* Solutions Section */
+/* SOLUTIONS BUILT FOR YOU */
 .solutions {
     padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
     background-color: var(--background-light);
@@ -292,7 +294,7 @@ body {
     margin-bottom: calc(var(--spacing-unit) * 0.625);
 }
 
-/* Support Section */
+/* SUPPORT BEYOND SOFTWARE SECTION */
 .support {
     padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
     background-color: var(--background-light);
@@ -350,7 +352,7 @@ body {
 .support-card p {
     color: #000;
 }
-/* Resources Section */
+/* RESOURCES SECTION */
 .resources {
     padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
     background-color: var(--background-light);
@@ -542,6 +544,7 @@ body {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -556,6 +559,7 @@ body {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

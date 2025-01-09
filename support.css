@@ -148,7 +148,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Search Bar */
+/* SEARCH BAR */
 .search-bar {
     width: 100%;
     text-align: center;
@@ -191,7 +191,7 @@ body {
     background-color: #3a3a46; /* Hover color */
 }
 
-/* Help Topics */
+/* HELP TOPICS */
 .help-topics {
     flex: 2;
 }
@@ -233,7 +233,7 @@ body {
     margin-bottom: 10px;
 }
 
-/* Sidebar */
+/* SIDEBAR */
 .sidebar {
     flex: 1;
     margin-top: 55px;
@@ -438,6 +438,7 @@ body {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -452,6 +453,7 @@ body {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

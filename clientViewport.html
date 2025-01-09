@@ -5,20 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thizo - 3D Digital Models</title>
     
-    <!-- Link to Google Fonts -->
+    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Autodesk+Sans:wght@400;700&display=swap" rel="stylesheet">
-    
-    <!-- Link all CSS files -->
-    <link rel="stylesheet" href="contact-us.css">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" href="popup-styles.css">
+    <link rel="stylesheet" href="clientDashboard.css"> <!-- Custom Stylesheet for this Page -->
 </head>
+
 <body>
-    <!-- Header Section -->
+    <!-- PRIMARY NAVIGATION BAR -->
     <header class="navbar">
         <div class="container">
             <div class="logo">
                 <a href="index.html">
-                    <img src="https://i.ibb.co/26cPFf7/LOGO.jpg" alt="Thizo Logo">
+                    <img src="https://i.ibb.co/26cPFf7/LOGO.jpg" alt="Logo">
                 </a>
             </div>
             <nav class="nav-links">
@@ -31,59 +33,43 @@
                 </ul>
             </nav>
             <div class="cta-buttons">
-                <a href="request-a-demo-popup.html" class="button demo-button">Request a Demo</a>
-                <a href="client-login.html" class="button login-button">Log In</a>
+                <a href="../html/request-a-demo-popup.html" class="button">Request a Demo</a>
+                <a href="../html/client-login.html" class="button">Log In</a>
             </div>
         </div>
     </header>
 
-<body>
-  <!-- CONTACT SECTION -->
-  <div class="contact-section">
-    <div class="form-container">
-      <h1>Contact Us</h1>
-      <h3>We want to hear from you! Let us know who is the best resource to contact you and how quickly you need to be contacted.</h3>
-      
-      <!-- CONTACT FORM -->
-      <form id="contact-form">
-        <label for="name">Name*</label>
-        <input type="text" id="name" name="name" placeholder="Your Name" required>
-        
-        <label for="email">Email Address*</label>
-        <input type="email" id="email" name="email" placeholder="Your Email" required>
-
-        <label for="urgency">Urgency*</label>
-        <input type="text" id="urgency" name="urgency" placeholder="1-2 days" required>
-        
-        <label for="resource">Resource Title*</label>
-        <input type="text" id="resource" name="resource" placeholder="Tech Help" required>
-        
-        <label for="message">Message</label>
-        <textarea id="message" name="message" placeholder="Your Message" required></textarea>
-        
-        <button type="submit" class="btn">Send Message</button>
-      </form>
+    <!-- SECONDARY NAVIGATION BAR -->
+    <div class="secondary-navbar">
+        <div class="container secondary-nav-container">
+            <button onclick="saveFile()" class="secondary-button">Save</button>
+            <button onclick="openPriceCheckPopup()" class="secondary-button">Price Check</button>
+            <button onclick="openSheetsPopup()" class="secondary-button">Sheets</button>
+            <button onclick="goToSupport()" class="secondary-button">Help</button>
+            <button onclick="openSuggestionsPopup()" class="secondary-button">Suggestions</button>
+        </div>
     </div>
-  </div>
-</body>
-</html>
 
-     <!-- FOOTER SECTION -->
-     <footer class="footer">
-        <div class="footer-container">
+    <!-- VIEWPORT DASHBOARD SECTION -->
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <!-- Left side: Description and Social Links -->
             <div class="footer-description">
                 <img src="https://i.ibb.co/D9nGN89/processed-image.png" alt="Thizo Logo" class="footer-logo">
                 <p>Thizo is committed to advancing the design and real estate industries by improving the lives of professionals everywhere, leading technology innovation, and building a global community of elevated creators. Our connected platform turbo charges stakeholders by compressing nuanced work and supporting the experts; fostering innovation, efficiency, and the new era of design.</p>
                 <div class="social-links">
                     <a href="https://www.linkedin.com/company/thizo/?viewAsMember=true" target="_blank">
-                        <img src="https://i.ibb.co/s5zffWq/image-3.png" alt="LinkedIn">
+                        <img src="https://i.ibb.co/s5zffWq/image-3.png" alt="LinkedIn" style="height: 30px;">
                     </a>
                 </div>
                 <p class="contact-info">Call us at <a href="tel:+18001234567">(800) 123-4567</a> to speak with a product expert.</p>
             </div>
-  
+
+            <!-- Right side: Links -->
             <div class="footer-links">
-                <div class="footer-column new-to-thizo">
+                <div class="footer-column">
                     <h4>New to Thizo?</h4>
                     <ul>
                         <li><a href="about-us.html">What is Thizo?</a></li>
@@ -106,15 +92,22 @@
                 </div>
             </div>
         </div>
-  
+
+        <!-- Footer Bottom -->
         <div class="footer-bottom">
-            <p>© 2025 Thizo Technologies, Inc.</p>
-            <div class="legal-links">
-                <a href="legal-privacy.html">Privacy Notice</a>
-                <a href="legal-terms.html">Terms of Service</a>
-                <a href="legal-do-not-sell.html">Do Not Sell Personal Information</a>
+            <div class="footer-bottom-left">
+                <p>© 2025 Thizo Technologies, Inc.</p>
+            </div>
+            <div class="footer-bottom-right">
+                <div class="legal-links">
+                    <a href="legal-privacy.html">Privacy Notice</a>
+                    <a href="legal-terms.html">Terms of Service</a>
+                    <a href="legal-do-not-sell.html">Do Not Sell Personal Information</a>
+                </div>
             </div>
         </div>
     </footer>
-  </body>
-  </html>
+
+    <script src="clientDashboard.js"></script>
+</body>
+</html>

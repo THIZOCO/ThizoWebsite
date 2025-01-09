@@ -109,7 +109,7 @@ nav a, .nav-link {
     background-color: #028f67;
 }
 
-/* Getting Started Section */
+/* GETTING STARTED SECTION */
 .getting-started {
     padding: 40px 60px;
     background-color: #e8e8e8; /* Background color */
@@ -175,7 +175,7 @@ nav a, .nav-link {
         grid-column: 1; /* Text spans below the image in single-column view */
     }
 }
-/* Privacy Section */
+/* CONTACT US BANNER */
 .privacy-section {
     text-align: center;
     padding: 60px 40px;
@@ -341,6 +341,7 @@ nav a, .nav-link {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -355,6 +356,7 @@ nav a, .nav-link {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

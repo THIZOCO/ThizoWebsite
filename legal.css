@@ -122,7 +122,7 @@ body {
     line-height: 1.6;
 }
 
-/* Legal Grid */
+/* LEGAL GRID */
 .legal-grid {
     display: grid;
     grid-template-columns: 1fr; /* Single column grid */
@@ -132,7 +132,7 @@ body {
     padding: 20px;
 }
 
-/* Individual Legal Cards */
+/* INDIVIDUAL LEGAL CARDS */
 .legal-card {
     display: block; /* Makes the entire card clickable */
     padding: 20px;
@@ -161,6 +161,7 @@ body {
     color: #333; /* Neutral text color */
 }
 
+/* SUPPORT SIDEBAR */
 .support-sidebar {
     position: fixed; /* Stick within the viewport */
     top: 150px; /* Distance from the top when scrolling */
@@ -338,6 +339,7 @@ body {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -352,6 +354,7 @@ body {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

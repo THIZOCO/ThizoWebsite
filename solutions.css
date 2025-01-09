@@ -121,7 +121,7 @@ body {
   box-sizing: border-box;
 }
 
-/* Hero Section */
+/* HERO SECTION */
 .hero {
   position: relative;
   padding: 50px 20px;
@@ -199,6 +199,7 @@ body {
       max-width: 100%;
       padding: 20px;
   }
+
   .hero-content {
       position: relative;
       top: unset;
@@ -208,6 +209,7 @@ body {
       text-align: center;
       padding: 0;
   }
+
   .hero-foreground {
       position: relative;
       top: unset;
@@ -216,6 +218,7 @@ body {
       max-width: 80%;
       margin: 0 auto;
   }
+
   .hero-buttons {
       text-align: center; /* Center buttons on smaller screens */
   }
@@ -229,7 +232,7 @@ body, p, li, span, .body-text {
   line-height: 1.6; /* Add line height for readability */
 }
 
-/* Solutions Section (Section 2) */
+/* SOLUTIONS BUILT FOR YOU */
 .solutions {
     padding: 80px 100px;
     background-color: #e8e8e8; /* Change background color to #E8E8E8 */; 
@@ -291,8 +294,7 @@ body, p, li, span, .body-text {
 
 }
 
-/* General Section Styling */
-/* Platform Section */
+/* ONE PLATFORM FOR THE FUTURE */
 .platform-section {
   padding: 100px 5%; /* Keep original padding */
   background-color: #ffffff;
@@ -346,6 +348,7 @@ body, p, li, span, .body-text {
   margin-bottom: 20px;
   text-decoration: none; /* Ensure headings are not underlined */
 }
+
 /* Styling for the specific subtitles */
 .platform-right h3 {
   color: #08584B; /* Set color to the desired green shade */
@@ -353,6 +356,7 @@ body, p, li, span, .body-text {
   margin-bottom: 15px;
   text-decoration: none;
 }
+
 .platform-right p {
   font-size: 1rem;
   color: #555;
@@ -437,8 +441,7 @@ body, p, li, span, .body-text {
   }
 }
 
-/* Pricing section */
-/* Full-width background */
+/* PRICING BLACK BOX */
 .pricing-section {
   position: relative;
   padding: 50px 0; /* Removed left/right padding to allow the image to bleed off the edges */
@@ -595,6 +598,7 @@ body, p, li, span, .body-text {
       text-align: center;
   }
 }
+
 .footer-bottom {
   display: flex;
   justify-content: space-between; /* Align links and text on the same plane */
@@ -610,7 +614,6 @@ body, p, li, span, .body-text {
   margin-left: 10px; /* Add 15px left margin */
   font-size: inherit; /* Ensure font size consistency */
 }
-
 
 .legal-links {
   display: flex;
@@ -629,6 +632,7 @@ body, p, li, span, .body-text {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -643,6 +647,7 @@ body, p, li, span, .body-text {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }
@@ -658,4 +663,3 @@ a {
   flex-wrap: wrap;
   gap: 10px;
 }
-

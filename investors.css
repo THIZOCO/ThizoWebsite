@@ -1,25 +1,42 @@
 /* General Reset */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Montserrat';
-    line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Apply to all headings (H1 to H6) */
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Montserrat';
-    font-weight: 700; /* Bold for main headings */
-    color: #333; /* Adjust color to suit your design */
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700; /* Bold for main headings */
+  color: #08584B; /* Adjust color to suit your design */
 }
 
 /* Slightly lighter for subheadings */
 h2, h3 {
-    font-weight: 600;
+  font-weight: 600;
+  color: #028F67; /* Adjust color to suit your design */
+}
+
+/* Typography */
+:root {
+  --primary-color: #08584B;
+  --secondary-color: #028F67;
+  --accent-color: #F47801;
+  --text-color: #333;
+  --spacing-unit: 1rem;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  color: var(--primary-color);
 }
 
 /* General body text */
@@ -120,7 +137,7 @@ nav a, .nav-link {
     color: #fff;
 }
 
-/* Login Section Styles */
+/* INVESTOR LOGIN SECTION */
 .login-section {
     display: flex;
     justify-content: center;
@@ -319,6 +336,7 @@ nav a, .nav-link {
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -333,6 +351,7 @@ nav a, .nav-link {
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }

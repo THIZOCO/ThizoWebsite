@@ -55,6 +55,7 @@
     background-color: #ffffff;
     padding: 20px 0;
   }
+
   /* Navigation links */
   nav a, .nav-link {
     font-family: 'Montserrat', sans-serif;
@@ -97,7 +98,6 @@
     margin: 0;
   }
   
-  
   .nav-links ul li a {
     text-decoration: none;
     color: #3a3a46;
@@ -131,11 +131,13 @@
     background-color: #08584B;
     color: #fff; 
   }
+
   body {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
+
   :root {
     --primary-color: #08584B;
     --secondary-color: #028f67;
@@ -154,8 +156,7 @@
     --border-radius: 0.625rem;
   }
   
-  
-  /* Hero Section */
+  /* HERO SECTION */
   .hero {
     display: grid;
     grid-template-columns: 1fr 1fr; /* Two columns: text on the left, image on the right */
@@ -191,7 +192,7 @@
     text-align: center;
   }
   
-  /* Custom Quote Section */
+  /* PRICING GET STARTED */
   .custom-quote {
       padding: var(--spacing-xl) min(5%, var(--spacing-lg));
       background-color: #e8e8e8;
@@ -236,9 +237,8 @@
 .next-btn:hover {
     background-color: #CE6C15;
 }
-
   
-  /* Features Section */
+  /* FEATURES SECTION */
   .features {
       padding: var(--spacing-xl) min(8%, var(--spacing-lg));
       background-color: var(--background-light);
@@ -294,7 +294,6 @@
       font-size: 0.875rem; /* Paragraph size */
       margin: 0.5rem 0; /* Add consistent spacing */
   }
-
 
 /* FOOTER SECTION */
   /* Footer */
@@ -428,6 +427,7 @@
 .legal-links a:hover {
   text-decoration: underline; /* Add hover effect for clarity */
 }
+
 /* Remove "+" signs from navigation links */
 .nav-links ul li::before {
   content: none; /* Removes any "+" or other symbols */
@@ -442,6 +442,7 @@
 ul li::before {
   content: none; /* Safeguard: removes any default content for list items */
 }
+
 a {
     text-decoration: none; /* Removes the underline from all links */
 }
