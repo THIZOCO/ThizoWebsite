@@ -218,32 +218,32 @@ body, p, li, span, .body-text {
     line-height: 1.6; /* Add line height for readability */
   }
 
-/* Solutions Section (Section 2) */
-.solutions {
-    padding: 60px 20px;
+/* Section 2 - We Are Here For You */
+.clients {
+    padding: 60px 10px;
     background-color: #E8E8E8; /* Background color for visual distinction */
     margin-top: 0px; /* Space between sections */
     text-align: center;
 }
 
-.solutions-title {
+.clients-title {
     font-size: 2.5rem;
     color: #00574f;
     margin-bottom: 40px; /* Match spacing to Section 4's title */
 }
 
-.solutions-container {
+.clients-container {
     max-width: 1200px;
     margin: 0 auto; /* Center the content */
 }
 
-.solutions-cards {
+.clients-cards {
     display: flex;
     justify-content: space-between; /* Space cards evenly across the page */
     gap: 20px;
 }
 
-.solution-card {
+.clients-architects-card {
     background-color: #ffffff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -253,27 +253,69 @@ body, p, li, span, .body-text {
     transition: transform 0.3s ease;
 }
 
-.solution-card:hover {
+.clients-engineers-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%; /* Each card takes up roughly one-third of the width */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.clients-developers-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%; /* Each card takes up roughly one-third of the width */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.clients-government-card {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    width: 30%; /* Each card takes up roughly one-third of the width */
+    text-align: left;
+    transition: transform 0.3s ease;
+}
+
+.clients-architects-card:hover {
     transform: translateY(-5px);
 }
 
-.solution-image img {
+.clients-engineers-card:hover {
+    transform: translateY(-5px);
+}
+
+.clients-developers-card:hover {
+    transform: translateY(-5px);
+}
+
+.clients-government-card:hover {
+    transform: translateY(-5px);
+}
+
+.clients-image img {
     width: 100%;
     height: auto;
     display: block;
 }
 
-.solution-content {
+.clients-content {
     padding: 20px;
 }
 
-.solution-content h3 {
+.clients-content h3 {
     font-size: 1.5rem;
     color: #00574f;
     margin-bottom: 10px;
 }
 
-.solution-content p {
+.clients-content p {
     font-size: 1rem;
     color: #333;
     line-height: 1.5;
@@ -321,11 +363,11 @@ ul li {
     font-size: 1rem;
     color: #FF6F00;
     margin-bottom: 10px;
+    list-style-type:disc; 
     position: relative;
 }
 
 ul li::before {
-    content: '+';
     font-size: 1.5rem;
     position: absolute;
     left: -20px;
@@ -333,15 +375,15 @@ ul li::before {
     color: #FF6F00;
 }
 
-/* Section Styling */
-.content-section {
+/* Client Profiles Section Styling */
+.profiles-section {
     background-color: #FFFFFF;
     padding: 60px 5%;
     display: flex;
     justify-content: center;
 }
 
-.content-container {
+.profiles-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
@@ -360,7 +402,7 @@ ul li::before {
 }
 
 /* Reverse Layout for Alternating Sections */
-.reverse-layout .content-container {
+.reverse-layout .profiles-container {
     grid-template-columns: 1fr 1fr;
     direction: rtl;
 }
@@ -376,7 +418,7 @@ ul li::before {
         text-align: center;
     }
 
-    .reverse-layout .content-container {
+    .reverse-layout .profiles-container {
         direction: ltr;
     }
 
