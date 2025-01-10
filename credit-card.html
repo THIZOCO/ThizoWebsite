@@ -40,27 +40,47 @@
     </header>
 
   <!-- CREDIT CARD SECTION -->
-  <section class="credit-card section">
-    <div class="payment">
-        <h1>PAYMENT DETAILS</h1>
-        <form>
-          <label for="card-name">Cardholder Name</label>
-          <input type="text" id="card-name" name="card-name" placeholder="Cardholder Name" required>
-      
-          <label for="card-number">Card Number</label>
-          <input type="text" id="card-number" name="card-number" placeholder="1234 5678 9012 3456" required>
-      
-          <label for="expiry-date">Expiry Date</label>
-          <input type="text" id="expiry-date" name="expiry-date" placeholder="MM/YY" required>
-      
-          <label for="cvv">CVV</label>
-          <input type="text" id="cvv" name="cvv" placeholder="123" required>
-      
-          <button type="submit" class="submit-btn">Review Order</button>
+  <section id="payment-settings">
+    <h1>Payment Settings</h1>
+    <div class="saved-cards">
+        <h2>Saved Cards:</h2>
+        <div class="card">
+            <div class="card-info">
+                <img src="https://i.ibb.co/Gt9GZhr/Screenshot-2025-01-10-at-1-48-11-PM.png" alt="American Express Logo">
+                <p>Card Number: **** **** **** 3193</p>
+            </div>
+            <button class="remove-card-button">Remove card</button>
+        </div>
+        <div class="card">
+            <div class="card-info">
+                <img src="https://i.ibb.co/ZV24vHX/Screenshot-2025-01-10-at-1-47-08-PM.png" alt="Visa Logo">
+                <p>Card Number: **** **** **** 4296</p>
+            </div>
+            <button class="remove-card-button">Remove card</button>
+        </div>
+    </div>
+    <div class="add-card">
+        <h2>Add New Card:</h2>
+        <form id="add-card-form">
+            <label for="cardholder-name">Cardholder's Name</label>
+            <input type="text" id="cardholder-name" placeholder="Scott Anderson" required>
+            <label for="card-number">Card Number</label>
+            <input type="text" id="card-number" placeholder="1234 5678 1234 5678" required>
+            <div class="expiry-cvv">
+                <div>
+                    <label for="expiry-date">Expire</label>
+                    <input type="text" id="expiry-date" placeholder="MM/YY" required>
+                </div>
+                <div>
+                    <label for="cvv">CVV</label>
+                    <input type="text" id="cvv" placeholder="123" required>
+                </div>
+            </div>
+            <button type="submit" class="add-card-button">ADD CARD</button>
         </form>
-      </div>
+    </div>
+</section>
 
-  </section>
 
   <!-- Link to JavaScript -->
   <script src="credit-card.js"></script>

@@ -151,59 +151,131 @@ body {
 }
 
 /* CREDIT CARD SECTION */
-.payment {
-    font-family: Arial, sans-serif;
-    padding-top: 80px; 
-    padding-bottom: 80px; 
-    max-width: 700px;
-    margin: auto;
-  }
-  
-  h1, h2 {
-    font-size: 24px;
-    text-align: center;
-  }
-  
-  p {
-    text-align: center;
-    color: #555;
-  }
-  
-  .sign-in {
-    display: block;
-    margin: 10px auto;
-    padding: 10px 20px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
-  
-  form {
-    display: flex;
-    flex-direction: column;
-  }
-  
-  label {
-    margin-top: 10px;
-    font-weight: bold;
-  }
-  
-  input {
-    padding: 10px;
-    margin-top: 5px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .submit-btn {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #000;
-    color: #fff;
-    border: none;
-    cursor: pointer;
-  }
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+}
+
+
+/* Payment Settings Section */
+#payment-settings {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 20px 30px;
+  width: 600px;
+  margin: 80px auto; /* Center the section with margin */
+}
+
+#payment-settings h1 {
+  color: #08584B;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Saved Cards */
+.saved-cards h2 {
+  color: #333;
+  margin-bottom: 15px;
+}
+
+.card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+}
+
+.card-info {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.card img {
+  width: 40px;
+  height: 25px;
+}
+
+.card p {
+  flex-grow: 1;
+  margin-left: 5px;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+.remove-card-button {
+  background-color: #555;
+  margin-left: 15px; 
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.remove-card-button:hover {
+  background-color: #08584B;
+}
+
+/* Add New Card Section */
+.add-card h2 {
+  color: #333;
+  margin: 20px 0 10px;
+}
+
+form label {
+  font-size: 0.9rem;
+  color: #555;
+  display: block;
+  margin-bottom: 5px;
+}
+
+form input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 5px;
+  font-size: 0.9rem;
+}
+
+.expiry-cvv {
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.expiry-cvv div {
+  flex: 1;
+}
+
+.add-card-button {
+  background-color: #f47801;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100%;
+  font-size: 1rem;
+  transition: background-color 0.3s;
+}
+
+.add-card-button:hover {
+  background-color: #CE6C15;
+}
+
   
 /* FOOTER SECTION */
   /* Footer */
