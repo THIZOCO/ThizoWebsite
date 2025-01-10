@@ -162,30 +162,30 @@ body {
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-  max-width: 900px; /* Restrict width */
+  max-width: 1200px; /* Restrict width */
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
   gap: 30px; /* Space between columns */
-  align-items: start; /* Align titles with the top of their respective columns */
+  align-items: start; /* Align items to the top */
 }
 
-.account-card .column {
-  display: flex;
-  flex-direction: column;
-}
-
-.account-card .title-row {
-  grid-column: 1 / -1; /* Span both columns */
-  display: grid;
-  justify-content: space-between; /* Space the titles horizontally */
-  margin-bottom: 20px; /* Add space below the titles */
+.account-card .title {
+  grid-column: span 1; /* Ensure each title is within its respective column */
+  text-align: left; /* Align titles to the left of their respective columns */
+  margin-bottom: 10px;
 }
 
 .account-card h3 {
   color: #08584B;
   font-size: 1.2rem;
+  text-transform: uppercase; 
   margin-bottom: 10px;
+}
+
+.account-card .column {
+  display: flex;
+  flex-direction: column;
 }
 
 .account-card p {
@@ -202,14 +202,83 @@ body {
     gap: 20px;
   }
 
-  .account-card .title-row {
-    flex-direction: column; /* Stack titles vertically */
-    align-items: center;
+  .account-card .title {
+    grid-column: 1 / -1; /* Titles span the full width on smaller screens */
+    text-align: center;
   }
 }
 
-
 /* PAYMENT HISTORY CHART */
+#payment-history-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-header h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #08584B;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.download-button {
+  background-color: #08584B;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #028f67;
+}
+
+/* Payment History Table */
+.payment-history-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.payment-history-table thead th {
+  background-color: #3a6c50; /* Light green */
+  color: #ffffff;
+  text-align: left;
+  padding: 10px;
+}
+
+.payment-history-table tbody tr:nth-child(even) {
+  background-color: #f4f4f4; /* Light grey */
+}
+
+.payment-history-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White */
+}
+
+.payment-history-table tbody td {
+  padding: 10px;
+  text-align: left;
+  color: #333;
+}
+
+.payment-history-table tbody tr td:first-child {
+  font-weight: bold;
+}
+
 
 /* ACTION BUTTONS SECTION */
   .buttons-grid-container {
