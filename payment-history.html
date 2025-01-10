@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Autodesk+Sans:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Link all CSS files -->
-    <link rel="stylesheet" href="credit-card.css">
+    <link rel="stylesheet" href="payment-history.css">
     
 </head>
 
@@ -40,32 +40,60 @@
     </header>
 
   <!-- ACCOUNT SYNOPSIS SECTION -->
+<section class="account-cards-container">
+  <div class="account-card">
+    <!-- Titles Row -->
+    <div class="title-row">
+      <h3>Firm Contact</h3>
+      <h3>Firm History</h3>
+    </div>
+
+    <!-- Column 1: Firm Contact -->
+    <div class="column">
+      <p>Firm Name:</p>
+      <p>Contact Name:</p>
+      <p>Contact Email:</p>
+      <p>Contact Phone Number:</p>
+      <p>Contact HQ Address:</p>
+      <p>Alternative Contact Name:</p>
+      <p>Alternative Contact Email:</p>
+      <p>Alternative Contact Phone Number:</p>
+    </div>
+
+    <!-- Column 2: Firm History -->
+    <div class="column">
+      <p>Firm Name:</p>
+      <p>Client Start Date:</p>
+      <p>Current Credit Total:</p>
+    </div>
+  </div>
+</section>
 
   <!-- PAYMENT HISTORY SECTION -->
 
 <!-- ACTION BUTTONS SECTION -->
-<section class="buttons-grid-container"> 
-  <div class="button">
-    <a href="account.html" class="account-button">
-      <h4>Account Management</h4>
-    </a>
-  </div>
-  <div class="button">
-    <a href="billing.html" class="billing-button">
-      <h4>Billing Dashboard</h4>
-    </a>
-  </div>
-  <div class="button">
-    <a href="credit-card.html" class="credit-card-button">
-      <h4>Make Payment</h4>
-    </a>
-  </div>
-  <div class="button">
-    <a href="ROI.html" class="ROI-button">
-      <h4>ROI Report</h4>
-    </a>
-  </div>
-</section>  
+<div class="buttons-grid-container"> 
+    <div class="button">
+      <a href="account.html" class="account-button">
+        <h4>Account Management</h4>
+      </a>
+    </div>
+    <div class="button">
+      <a href="billing.html" class="billing-button">
+        <h4>Billing Dashboard</h4>
+      </a>
+    </div>
+    <div class="button">
+      <a href="credit-card.html" class="credit-card-button">
+        <h4>Make Payment</h4>
+      </a>
+    </div>
+    <div class="button">
+      <a href="ROI.html" class="ROI-button">
+        <h4>ROI Report</h4>
+      </a>
+    </div>
+</div> 
 
   <!-- Link to JavaScript -->
   <script src="payment-history.js"></script>

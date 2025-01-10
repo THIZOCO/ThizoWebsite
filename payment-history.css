@@ -151,28 +151,86 @@ body {
 }
 
 /* ACCOUNT SYNOPSIS */
+.account-cards-container {
+  display: flex;
+  justify-content: center; /* Center the card in the container */
+  margin: 80px auto;
+}
+
+.account-card {
+  background-color: #ffffff; /* Entire card is white */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 900px; /* Restrict width */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  gap: 30px; /* Space between columns */
+  align-items: start; /* Align titles with the top of their respective columns */
+}
+
+.account-card .column {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-card .title-row {
+  grid-column: 1 / -1; /* Span both columns */
+  display: grid;
+  justify-content: space-between; /* Space the titles horizontally */
+  margin-bottom: 20px; /* Add space below the titles */
+}
+
+.account-card h3 {
+  color: #08584B;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.account-card p {
+  color: #333;
+  font-size: 1rem; /* Increase font size for readability */
+  font-weight: 500; /* Slightly bolder font for better visibility */
+  margin: 5px 0; /* Add spacing between paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .account-card {
+    grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+    gap: 20px;
+  }
+
+  .account-card .title-row {
+    flex-direction: column; /* Stack titles vertically */
+    align-items: center;
+  }
+}
+
 
 /* PAYMENT HISTORY CHART */
 
 /* ACTION BUTTONS SECTION */
-.buttons-grid-container {
-    display: grid;
-    max-width: 1200px; 
-    padding: 80px auto; 
-    margin: 60px auto; 
-    background-color: #e8e8e8; /* Change background color to #E8E8E8 */; 
+  .buttons-grid-container {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    gap: 20px; /* Spacing between buttons */
+    gap: 30px; /* Space between buttons */
+    max-width: 900px; /* Restrict grid width */
+    margin-top: 80px; 
+    margin-left: 400px; 
+    margin-bottom: 80px;  
+    list-style: none;
+    background-color: #e8e8e8; /* Optional: background to distinguish the grid area */
 }
 
 .button {
+    color: #ffffff;   
     background-color: #028f67;
-    color: #ffffff; 
     border-radius: 5px;
     padding: 15px 20px;
     text-align: center;
-    transition: background-color 0.3s ease-in-out;
-    flex: 1;
 }
 
 .button h4 {
