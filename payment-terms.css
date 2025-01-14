@@ -144,215 +144,76 @@ nav a, .nav-link {
   color: #ffffff !important;
 }
 
-/* WRAPPER TO CONTAIN THE TWO COLUMNS */
-.settings-container {
-  display: flex; /* Change grid to flexbox for more control */
-  flex-direction: column; /* Stack title and card sections vertically */
-  align-items: center; /* Center items horizontally */
-  padding: 80px; /* Padding around the section */
-  background-color: #f5f5f5; /* Background color for the section */
-}
-
-.payment-title {
-  text-align: center; /* Center title text */
-  margin-bottom: 40px; /* Add space between title and the cards */
-  font-size: 32px; /* Larger font size */
-  font-weight: bold; /* Make it prominent */
-}
-
-.cards-container {
-  display: grid; /* Keep grid layout for the two columns */
-  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-  grid-gap: 20px; /* Space between columns */
-  width: 100%; /* Full width to align with the container */
-}
-
-/* Left Column (Two stacked cards) */
-.left-column {
-  display: inline-block; /* Ensures block layout */
-  width: 100%; /* Use full width of the grid column */
-}
-
-.left-column .card {
-  margin-bottom: 20px; /* Space between stacked cards */
-}
-
-/* CURRENT SETTINGS AND AUTO REFILL */
-.card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-left: 60px; /* Maintain left margin for left-side cards */
-  padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  margin: 0 0 15px 0;
-  font-size: 26px;
-}
-
-.card input[type="text"],
-.card input[type="number"] {
-  width: calc(100% - 20px);
-  padding: 8px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.toggle-switch {
-  display: inline-block;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.radio-group {
-  margin: 15px 0;
-}
-
-.radio-group label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-button#submit {
-  background-color: #f47801; /* Match Add Card button */
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  width: 100%; /* Full width for consistency */
-  transition: background-color 0.3s;
-}
-
-button#submit:hover {
-  background-color: #CE6C15; /* Hover effect */
-}
-
-/* Right Column (Larger Payment Settings card) */
-.right-column {
-  display: inline-block; /* Ensures the layout does not break */
-  width: 100%; /* Use full width of the grid column */
-  margin-right: 100px; /* Add 80px right margin for right-side card */
-}
-
-#payment-settings {
-  background-color: #ffffff;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px 30px;
-  width: 100%; /* Use available width */
-}
-
-.saved-cards {
-  margin-bottom: 20px;
-}
-
-.saved-cards .card {
-  display: flex;
-  justify-content: space-between; /* Align card info and buttons */
-  align-items: center;
-  padding: 15px;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
-.card-info {
-  display: flex;
-  align-items: center; /* Vertically align the content */
-}
-
-.card img {
-  width: 40px;
-  height: 25px;
-  margin-right: 15px;
-}
-
-.card p {
+body {
   margin: 0;
-  font-size: 0.9rem;
-  color: #555;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.card-buttons {
-  display: flex;
-  gap: 10px; /* Space between buttons */
+/* MAIN CONTENT */
+h1, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 750;
+    color: #000;
+    line-height: 2;
 }
 
-.remove-card-button,
-.primary-payment-button {
-  background-color: #555; /* Neutral gray */
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
+h2, h3 {
+    font-weight: 600;
+    color: #08584B;
 }
 
-.remove-card-button:hover,
-.primary-payment-button:hover {
-  background-color: #08584B;
+/* General body text */
+body, p, li, span, .body-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    color: #3a3a46;
+    line-height: 1.6;
 }
 
-.primary-payment-button.active {
-  background-color: #555; /* Green when selected */
-  color: white;
+/* Apply to all headings (H1 to H6) */
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #08584B;
+    margin-top: 30px;
 }
 
-/* Add New Card Section */
-.add-card form {
-  display: block;
+h2, h3 {
+    font-weight: 600;
 }
 
-.add-card h2 {
-  margin-top: 30px; 
-  padding-top: 30px; 
+.payment-terms {
+    margin-top: 80px; 
+    margin-right: 200px; 
+    margin-bottom: 80px; 
+    margin-left: 200px; 
 }
 
-form input {
-  width: 100%;
-  padding: 10px;
-  margin-right: 60px;
-  margin-bottom: 32px;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
 }
 
-.expiry-cvv {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
+p {
+    margin-bottom: 30px;
+    margin-bottom: 1em; /* Adjust this value for more or less spacing */
+    line-height: 2;
+    font-weight: 400; 
 }
 
-.expiry-cvv div {
-  display: table-cell;
-  padding-right: 10px;
+/* Links */
+a {
+    color: #ff5733;
+    text-decoration: none;
 }
 
-.add-card-button {
-  background-color: #f47801;
-  color: #fff;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
-  font-size: 1rem;
-  transition: background-color 0.3s;
+a:hover {
+    text-decoration: underline;
 }
 
-.add-card-button:hover {
-  background-color: #CE6C15;
-}
-  
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {

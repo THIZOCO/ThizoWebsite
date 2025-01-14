@@ -1,0 +1,419 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    line-height: 1.6;
+}
+
+/* Container */
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Navbar Section */
+/* Navigation links */
+nav a, .nav-link {
+    font-family: 'Montserrat';
+    font-weight: 500; /* Medium weight for clarity */
+    text-transform: uppercase; /* Optional: make links uppercase */
+    color: #3a3a46; /* Customize color */
+    text-decoration: none; /* Remove underline */
+}
+
+/* Button styles */
+.button, .btn {
+    font-family: 'Montserrat';
+    font-weight: 500; /* Medium weight for buttons */
+    color: #fff;
+    background-color: #08584B; /* Button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.button:hover, .btn:hover {
+    background-color: #028f67; /* Lighter on hover */
+}
+
+.navbar {
+    background-color: #ffffff;
+    padding: 20px 0;
+}
+
+.logo img {
+    width: 120px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-links ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    margin: 0;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links ul li a:hover {
+    color: #028f67;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 15px;
+}
+
+.cta-buttons .button {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+}
+
+.demo-button {
+    background-color: #08584B;
+    color: #fff;
+}
+
+.demo-button:hover {
+    background-color: #028f67;
+}
+
+.login-button {
+    background-color: #08584B;
+    color: #fff;
+}
+
+.login-button:hover {
+    background-color: #028f67;
+}
+
+/* Knowledge Base Section */
+h1, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 700; /* Bold for main headings */
+    color: #000; /* Black for main headings */
+}
+
+h2, h3 {
+    font-weight: 600;
+    color: #08584B; /* Specific color for card titles */
+}
+
+/* General body text */
+body, p, li, span, .body-text {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400; /* Regular weight for body content */
+    color: #3a3a46; /* Adjust color to suit your design */
+    line-height: 1.6; /* Add line height for readability */
+}
+
+.knowledge-base {
+    background-color: #949597; /* Updated background color */
+    padding: 40px 5%;
+}
+
+.knowledge-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* ACCOUNT SYNOPSIS */
+.account-cards-container {
+    display: flex;
+    justify-content: center; /* Center the card in the container */
+    margin: 80px auto;
+  }
+  
+  .account-card {
+    background-color: #ffffff; /* Entire card is white */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    max-width: 1200px; /* Restrict width */
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+    gap: 30px; /* Space between columns */
+    align-items: start; /* Align items to the top */
+  }
+  
+  .account-card .title {
+    grid-column: span 1; /* Ensure each title is within its respective column */
+    text-align: left; /* Align titles to the left of their respective columns */
+    margin-bottom: 10px;
+  }
+  
+  .account-card h3 {
+    color: #08584B;
+    font-size: 1.2rem;
+    text-transform: uppercase; 
+    margin-bottom: 10px;
+  }
+  
+  .account-card .column {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .account-card p {
+    color: #333;
+    font-size: 1rem; /* Increase font size for readability */
+    font-weight: 500; /* Slightly bolder font for better visibility */
+    margin: 5px 0; /* Add spacing between paragraphs */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .account-card {
+      grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+      gap: 20px;
+    }
+  
+    .account-card .title {
+      grid-column: 1 / -1; /* Titles span the full width on smaller screens */
+      text-align: center;
+    }
+  }
+
+/* ACCOUNT MANAGEMENT TOPICS */
+.account-topics {
+    flex: 3;
+    margin-top: 100px; 
+    margin-right: 200px; 
+    margin-bottom: 100px; 
+    margin-left: 200px; 
+}
+
+.account-topics h3 {
+    font-size: 1.5rem;
+    color: #000; /* Updated to black */
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.account-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 3fr);
+    gap: 20px;
+}
+
+.account-item {
+    background-color: #ffffff; /* Set background color to pure white */
+    padding: 20px;
+    border-radius: 10px;
+    text-align: left;
+    transition: transform 0.3s;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Add slight shadow for depth */
+}
+
+.account-item:hover {
+    transform: translateY(-5px);
+}
+
+.account-item img {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.account-item h4 {
+    font-size: 1.2rem;
+    color: #08584B; /* Updated to specific blue color */
+    margin-bottom: 10px;
+}
+
+/* FOOTER SECTION */
+  /* Footer */
+  .footer-wrapper {
+    background-color: #e8e8e8; /* Background color for the footer */
+    padding: 50px 0; /* Padding for top and bottom */
+}
+
+.footer {
+    background-color: #e8e8e8; /* Retain footer background color */
+    padding: 50px 0; /* Maintain footer padding */
+    border-radius: 0px; /* Remove any rounding */
+    border: none; /* Remove border if any */
+    font-size: 1rem; 
+}
+
+.footer-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+  gap: calc(var(--spacing-unit) * 2.5);
+}
+
+.footer-logo {
+  width: 9.375rem;
+  height: auto;
+  margin-bottom: calc(var(--spacing-unit) * 1.25);
+}
+
+.footer-description p {
+  max-width: 25rem;
+  font-size: 1rem; 
+}
+
+.social-links {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 0.625);
+  margin: calc(var(--spacing-unit) * 1.25) 0;
+  margin-top: 1.5rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.social-links img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+  gap: calc(var(--spacing-unit) * 2.5);
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #08584B; /* Set titles to green */
+}
+
+.footer-column ul {
+  line-height: 2;
+  list-style: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding to align items */
+}
+
+.footer-column ul li {
+  line-height: 2; 
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #000000; /* Set text links to black */
+}
+
+.footer-column ul li a:hover {
+  color: #028f67; /* Optional: Keep hover effect */
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; /* Align links and text on the same plane */
+  align-items: center; /* Vertically align elements */
+  flex-wrap: wrap; /* Ensure proper alignment on smaller screens */
+  font-size: 0.875rem; /* Match the font size of the copyright text */
+  color: #555; /* Match the color for consistency */
+  gap: 10px; /* Add spacing for wrapping items */
+}
+
+.footer-bottom p {
+  margin: 0;
+  margin-left: 10px; /* Add 15px left margin */
+  font-size: inherit; /* Ensure font size consistency */
+}
+
+.legal-links {
+  display: flex;
+  margin-right: 10px; 
+  gap: 20px; /* Add space between individual links */
+}
+
+.legal-links a {
+  font-family: 'Montserrat', sans-serif; /* Match the desired font */
+  font-weight: 500; /* Medium weight for clarity */
+  font-size: inherit; /* Match the footer's font size */
+  text-decoration: none; /* Remove underlines */
+  color: #555; /* Ensure color matches copyright text */
+}
+
+.legal-links a:hover {
+  text-decoration: underline; /* Add hover effect for clarity */
+}
+
+/* Remove "+" signs from navigation links */
+.nav-links ul li::before {
+  content: none; /* Removes any "+" or other symbols */
+}
+
+/* Remove "+" signs from popular articles */
+.popular-articles ul li::before {
+  content: none; /* Removes any "+" or other symbols */
+}
+
+/* General rule to prevent "+" signs globally (if needed) */
+ul li::before {
+  content: none; /* Safeguard: removes any default content for list items */
+}
+
+a {
+    text-decoration: none; /* Removes the underline from all links */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 75rem;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+

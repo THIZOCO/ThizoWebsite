@@ -208,8 +208,8 @@ body {
   }
 }
 
-/* PAYMENT HISTORY CHART */
-#payment-history-section {
+/* TRANSACTION HISTORY CHART */
+#transaction-history-section {
   max-width: 1200px;
   margin: 50px auto;
   background-color: #ffffff;
@@ -248,34 +248,34 @@ body {
   background-color: #028f67;
 }
 
-/* Payment History Table */
-.payment-history-table {
+/* Transaction History Table */
+.transaction-history-table {
   width: 100%;
   border-collapse: collapse;
 }
 
-.payment-history-table thead th {
-  background-color: #3a6c50; /* Light green */
+.transaction-history-table thead th {
+  background-color: #08584B; /* Light green */
   color: #ffffff;
   text-align: left;
   padding: 10px;
 }
 
-.payment-history-table tbody tr:nth-child(even) {
+.transaction-history-table tbody tr:nth-child(even) {
   background-color: #f4f4f4; /* Light grey */
 }
 
-.payment-history-table tbody tr:nth-child(odd) {
+.transaction-history-table tbody tr:nth-child(odd) {
   background-color: #ffffff; /* White */
 }
 
-.payment-history-table tbody td {
+.transaction-history-table tbody td {
   padding: 10px;
   text-align: left;
   color: #333;
 }
 
-.payment-history-table tbody tr td:first-child {
+.transaction-history-table tbody tr td:first-child {
   font-weight: bold;
 }
 

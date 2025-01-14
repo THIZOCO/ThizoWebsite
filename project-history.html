@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Autodesk+Sans:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Link all CSS files -->
-    <link rel="stylesheet" href="credit-card.css">
+    <link rel="stylesheet" href="project-history.css">
     
 </head>
 
@@ -38,95 +38,110 @@
             </div>
         </div>
     </header>
+
+  <!-- ACCOUNT SYNOPSIS SECTION -->
+  <section class="account-cards-container">
+    <div class="account-card">
+      <!-- Firm Contact Column -->
+      <div class="column">
+        <h3 class="title">Firm Contact</h3>
+        <p>Firm Name:</p>
+        <p>Contact Name:</p>
+        <p>Contact Email:</p>
+        <p>Contact Phone Number:</p>
+        <p>Contact HQ Address:</p>
+        <p>Alternative Contact Name:</p>
+        <p>Alternative Contact Email:</p>
+        <p>Alternative Contact Phone Number:</p>
+      </div>
+  
+      <!-- Firm History Column -->
+      <div class="column">
+        <h3 class="title">Firm History</h3>
+        <p>Client Start Date:</p>
+        <p>Total Hours Saved: </p>
+        <p>Total Projects Flipped:</p>
+      </div>
+    </div>
+  </section>  
+
+
+  <!-- PAYMENT HISTORY SECTION -->
+  <section id="project-history-section">
+    <div class="chart-header">
+      <h3>Project History</h3>
+      <button class="download-button">Download</button>
+    </div>
+    <table class="project-history-table">
+      <thead>
+        <tr>
+          <th>Name</th>
+          <th>Total Square Footage</th>
+          <th>User</th>
+          <th>Date Requested</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Universal Offices</td>
+          <td>68,000 sf</td>
+          <td>SAnderson@greatfirm.com</td>
+          <td>Jan 8, 2025</td>
+        </tr>
+        <tr>
+          <td>First Health Center</td>
+          <td>24,000 sf</td>
+          <td>HKay@greatfirm.com</td>
+          <td>Jan 6, 2025</td>
+        </tr>
+
+        <!-- Placeholder rows for "ghost" examples -->
+        <tr>
+          <td>---</td>
+          <td>---</td>
+          <td>---</td>
+          <td>---</td>
+        </tr>
+        <tr>
+          <td>---</td>
+          <td>---</td>
+          <td>---</td>
+          <td>---</td>
+        </tr>
+        <!-- Add more rows here -->
+      </tbody>
+    </table>
+  </section>
+  
+
+<!-- ACTION BUTTONS SECTION -->
+<div class="buttons-grid-container"> 
+    <div class="button">
+      <a href="clientDashboard.html" class="client-dashboard-button">
+        <h4>Dashboard</h4>
+      </a>
+    </div>
+    <div class="button">
+      <a href="account-management.html" class="account-management-button">
+        <h4>Account Management</h4>
+      </a>
+    </div>
+    <div class="button">
+      <a href="transaction-history.html" class="transaction-history-button">
+        <h4>Transaction History</h4>
+      </a>
+    </div>
+    <div class="button">
+      <a href="ROI.html" class="ROI-button">
+        <h4>ROI Report</h4>
+      </a>
+    </div>
+</div> 
+
+  <!-- Link to JavaScript -->
+  <script src="project-history.js"></script>
 </body>
-
-  <!-- PAYMENT SETTINGS SECTION -->
-<div class="settings-container">
-  <h1 class="payment-title">Payment Settings</h1>
-
-  <div class="cards-container">
-    <!-- Left Column -->
-    <div class="left-column">
-
-      <!-- Current Settings Card -->
-      <div class="card current-settings-card">
-        <h3>Current Settings:</h3>
-        <label for="current-amount">Current Amount:</label>
-        <input type="text" id="current-amount" value="$10,000.00" readonly>
-  
-        <label for="default-card">Default Card:</label>
-        <input type="text" id="default-card" value="3193" readonly>
-  
-        <div class="toggle-switch">
-          <input type="checkbox" id="auto-refill" checked>
-          <label for="auto-refill">Auto refill:</label>
-        </div>
-      </div>
-  
-      <!-- Auto Refill Card -->
-      <div class="card auto-refill-card">
-        <h3>Auto Refill:</h3>
-        <div class="radio-group">
-          <label><input type="radio" name="refill-amount" value="5000"> $5,000.00</label>
-          <label><input type="radio" name="refill-amount" value="10000" checked> $10,000.00</label>
-          <label><input type="radio" name="refill-amount" value="20000"> $20,000.00</label>
-        </div>
-        <label for="other-amount">Other:</label>
-        <input type="number" id="other-amount" placeholder="$35,000.00" min="5000">
-        <button id="submit">Save Settings</button>
-      </div>
-    </div>
-  
-    <!-- Right Column -->
-    <div class="right-column">
-      <section id="payment-settings">
-        <div class="saved-cards">
-          <h2>Saved Cards:</h2>
-          <div class="card">
-            <div class="card-info">
-              <img src="https://i.ibb.co/Gt9GZhr/Screenshot-2025-01-10-at-1-48-11-PM.png" alt="American Express Logo">
-              <p>Card Number: **** **** **** 3193</p>
-            </div>
-            <div class="card-buttons">
-              <button class="primary-payment-button">Primary Payment</button>
-              <button class="remove-card-button">Remove Card</button>
-            </div>
-          </div>
-          <div class="card">
-            <div class="card-info">
-              <img src="https://i.ibb.co/ZV24vHX/Screenshot-2025-01-10-at-1-47-08-PM.png" alt="Visa Logo">
-              <p>Card Number: **** **** **** 4296</p>
-            </div>
-            <div class="card-buttons">
-              <button class="primary-payment-button">Primary Payment</button>
-              <button class="remove-card-button">Remove Card</button>
-            </div>
-          </div>
-        </div>
-        <div class="add-card">
-          <h2>Add New Card:</h2>
-          <form id="add-card-form">
-            <label for="cardholder-name">Cardholder's Name</label>
-            <input type="text" id="cardholder-name" placeholder="Scott Anderson" required>
-            <label for="card-number">Card Number</label>
-            <input type="text" id="card-number" placeholder="1234 5678 1234 5678" required>
-            <div class="expiry-cvv">
-              <div>
-                <label for="expiry-date">Expire</label>
-                <input type="text" id="expiry-date" placeholder="MM/YY" required>
-              </div>
-              <div>
-                <label for="cvv">CVV</label>
-                <input type="text" id="cvv" placeholder="123" required>
-              </div>
-            </div>
-            <button type="submit" class="add-card-button">ADD CARD</button>
-          </form>
-        </div>
-      </section>
-    </div>
-  </div>  
-</div>
+</html>
 
   <!-- FOOTER SECTION -->
 <footer class="footer">

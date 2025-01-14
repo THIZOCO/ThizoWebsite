@@ -144,215 +144,196 @@ nav a, .nav-link {
   color: #ffffff !important;
 }
 
-/* WRAPPER TO CONTAIN THE TWO COLUMNS */
-.settings-container {
-  display: flex; /* Change grid to flexbox for more control */
-  flex-direction: column; /* Stack title and card sections vertically */
-  align-items: center; /* Center items horizontally */
-  padding: 80px; /* Padding around the section */
-  background-color: #f5f5f5; /* Background color for the section */
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.payment-title {
-  text-align: center; /* Center title text */
-  margin-bottom: 40px; /* Add space between title and the cards */
-  font-size: 32px; /* Larger font size */
-  font-weight: bold; /* Make it prominent */
+/* ACCOUNT SYNOPSIS */
+.account-cards-container {
+  display: flex;
+  justify-content: center; /* Center the card in the container */
+  margin: 80px auto;
 }
 
-.cards-container {
-  display: grid; /* Keep grid layout for the two columns */
-  grid-template-columns: 1fr 1fr; /* Two equal-width columns */
-  grid-gap: 20px; /* Space between columns */
-  width: 100%; /* Full width to align with the container */
-}
-
-/* Left Column (Two stacked cards) */
-.left-column {
-  display: inline-block; /* Ensures block layout */
-  width: 100%; /* Use full width of the grid column */
-}
-
-.left-column .card {
-  margin-bottom: 20px; /* Space between stacked cards */
-}
-
-/* CURRENT SETTINGS AND AUTO REFILL */
-.card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin-left: 60px; /* Maintain left margin for left-side cards */
+.account-card {
+  background-color: #ffffff; /* Entire card is white */
   padding: 20px;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-}
-
-.card h3 {
-  margin: 0 0 15px 0;
-  font-size: 26px;
-}
-
-.card input[type="text"],
-.card input[type="number"] {
-  width: calc(100% - 20px);
-  padding: 8px;
-  margin: 10px 0;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 14px;
-}
-
-.toggle-switch {
-  display: inline-block;
-  align-items: center;
-  margin-top: 10px;
-}
-
-.radio-group {
-  margin: 15px 0;
-}
-
-.radio-group label {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 14px;
-}
-
-button#submit {
-  background-color: #f47801; /* Match Add Card button */
-  color: white;
-  border: none;
-  padding: 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  font-size: 14px;
-  width: 100%; /* Full width for consistency */
-  transition: background-color 0.3s;
-}
-
-button#submit:hover {
-  background-color: #CE6C15; /* Hover effect */
-}
-
-/* Right Column (Larger Payment Settings card) */
-.right-column {
-  display: inline-block; /* Ensures the layout does not break */
-  width: 100%; /* Use full width of the grid column */
-  margin-right: 100px; /* Add 80px right margin for right-side card */
-}
-
-#payment-settings {
-  background-color: #ffffff;
   border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  padding: 20px 30px;
-  width: 100%; /* Use available width */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  max-width: 1200px; /* Restrict width */
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two equal columns */
+  gap: 30px; /* Space between columns */
+  align-items: start; /* Align items to the top */
 }
 
-.saved-cards {
+.account-card .title {
+  grid-column: span 1; /* Ensure each title is within its respective column */
+  text-align: left; /* Align titles to the left of their respective columns */
+  margin-bottom: 10px;
+}
+
+.account-card h3 {
+  color: #08584B;
+  font-size: 1.2rem;
+  text-transform: uppercase; 
+  margin-bottom: 10px;
+}
+
+.account-card .column {
+  display: flex;
+  flex-direction: column;
+}
+
+.account-card p {
+  color: #333;
+  font-size: 1rem; /* Increase font size for readability */
+  font-weight: 500; /* Slightly bolder font for better visibility */
+  margin: 5px 0; /* Add spacing between paragraphs */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .account-card {
+    grid-template-columns: 1fr; /* Stack columns vertically on smaller screens */
+    gap: 20px;
+  }
+
+  .account-card .title {
+    grid-column: 1 / -1; /* Titles span the full width on smaller screens */
+    text-align: center;
+  }
+}
+
+/* PAYMENT HISTORY CHART */
+#payment-history-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   margin-bottom: 20px;
 }
 
-.saved-cards .card {
-  display: flex;
-  justify-content: space-between; /* Align card info and buttons */
-  align-items: center;
-  padding: 15px;
-  border: 1px solid #e0e0e0;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-bottom: 10px;
-}
-
-.card-info {
-  display: flex;
-  align-items: center; /* Vertically align the content */
-}
-
-.card img {
-  width: 40px;
-  height: 25px;
-  margin-right: 15px;
-}
-
-.card p {
-  margin: 0;
-  font-size: 0.9rem;
-  color: #555;
-}
-
-.card-buttons {
-  display: flex;
-  gap: 10px; /* Space between buttons */
-}
-
-.remove-card-button,
-.primary-payment-button {
-  background-color: #555; /* Neutral gray */
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s;
-}
-
-.remove-card-button:hover,
-.primary-payment-button:hover {
+.chart-header h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
   background-color: #08584B;
-}
-
-.primary-payment-button.active {
-  background-color: #555; /* Green when selected */
-  color: white;
-}
-
-/* Add New Card Section */
-.add-card form {
-  display: block;
-}
-
-.add-card h2 {
-  margin-top: 30px; 
-  padding-top: 30px; 
-}
-
-form input {
-  width: 100%;
-  padding: 10px;
-  margin-right: 60px;
-  margin-bottom: 32px;
-  border: 1px solid #e0e0e0;
+  margin-left: 300px; 
+  padding: 10px 20px;
   border-radius: 5px;
 }
 
-.expiry-cvv {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-}
-
-.expiry-cvv div {
-  display: table-cell;
-  padding-right: 10px;
-}
-
-.add-card-button {
-  background-color: #f47801;
-  color: #fff;
+.download-button {
+  background-color: #08584B;
+  color: #ffffff;
+  margin-right: 300px; 
+  padding: 10px 20px;
   border: none;
-  padding: 10px;
   border-radius: 5px;
-  cursor: pointer;
-  width: 100%;
   font-size: 1rem;
-  transition: background-color 0.3s;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-.add-card-button:hover {
-  background-color: #CE6C15;
+.download-button:hover {
+  background-color: #028f67;
 }
-  
+
+/* Project History Table */
+.project-history-table {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: 300px; 
+  border-collapse: collapse;
+}
+
+.project-history-table thead th {
+  background-color: #08584B; /* Light green */
+  color: #ffffff;
+  text-align: left;
+  padding: 10px;
+}
+
+.project-history-table tbody tr:nth-child(even) {
+  background-color: #f4f4f4; /* Light grey */
+}
+
+.project-history-table tbody tr:nth-child(odd) {
+  background-color: #ffffff; /* White */
+}
+
+.project-history-table tbody td {
+  padding: 10px;
+  text-align: left;
+  color: #333;
+}
+
+.project-history-table tbody tr td:first-child {
+  font-weight: bold;
+}
+
+
+/* ACTION BUTTONS SECTION */
+  .buttons-grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Space between buttons */
+    max-width: 900px; /* Restrict grid width */
+    margin-top: 80px; 
+    margin-left: 450px; 
+    margin-bottom: 80px;  
+    list-style: none;
+    background-color: #e8e8e8; /* Optional: background to distinguish the grid area */
+}
+
+.button {
+    color: #ffffff;   
+    background-color: #028f67;
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.button h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.button a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+.button a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .buttons-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .button {
+        max-width: 100%;
+    }
+}
+
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {

@@ -49,18 +49,35 @@
 <div class="contact-section">
   <div class="form-container">
     <h1>Help Us Improve</h1>
-    <h3>Do you have suggestions, compliments, or features you would like us to have? We want to hear from you! Please add your thoughts below. We will be in-contact to learn more from you within 30 days. </h3>
+    <h3>Do you have suggestions or features you would like us to include in our platform? We want to hear from you! Please explain your thoughts below. </h3>
     
     <form id="contact-form">
-      <label for="name">Name*</label>
-      <input type="text" id="name" name="name" placeholder="Your Name" required>
+      <label for="name">Name    *optional*</label>
+      <input type="text" id="name" name="name" placeholder="Name">
       
-      <label for="email">Email address *</label>
-      <input type="email" id="email" name="email" placeholder="Your Email" required>
+      <label for="email">Email address    *optional*</label>
+      <input type="email" id="email" name="email" placeholder="Email">
+
+      <label for="phone">Direct Line   *optional*</label>
+      <input type="phone" id="phone" name="phone" placeholder="Direct Line">
       
-      <label for="message">Message</label>
-      <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+      <label for="message">Your Suggestion</label>
+      <textarea id="message" name="message" placeholder="Message" required></textarea>
+    
+      <div>
+        <label>
+          <input type="radio" name="userPreference" id="keepAnonymous" value="anonymous" required>
+          Please keep me anonymous
+        </label>
+      </div>
+      <div>
+        <label>
+          <input type="radio" name="userPreference" id="followUp" value="followUp" required>
+          I'm open to a follow-up chat with a Thizo team member.
+        </label>
+      </div>
       
+      <script src="help-us-improve.js"></script> 
       <button type="submit" class="btn">Send Message</button>
     </form>
   </div>
