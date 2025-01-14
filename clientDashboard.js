@@ -21,7 +21,7 @@ const MAX_SELECTIONS = 9;
 
 function uploadFile(projectId) {
     const projectElement = document.querySelector(`#project${projectId}`);
-    
+
     // Show loading indicator
     const loadingIndicator = document.createElement('div');
     loadingIndicator.className = 'uploading-indicator';
@@ -37,7 +37,7 @@ function uploadFile(projectId) {
 
 function createOptionButtons(projectId) {
     const projectElement = document.querySelector(`#project${projectId}`);
-    
+
     // Check if options already exist
     if (projectElement.querySelector('.project-options')) {
         console.log("Options already exist for project", projectId); // Debug
@@ -80,17 +80,17 @@ function createOptionButtons(projectId) {
 
 function toggleOption(button, projectId, option) {
     const projectKey = `project${projectId}`;
-    
+
     // Add transition effect
     button.style.transition = 'all 0.3s ease';
-    
+
     if (selectedOptions[projectKey].has(option)) {
         // Deselect option with animation
         button.classList.add('deselecting');
         selectedOptions[projectKey].delete(option);
         button.classList.remove('selected');
         totalSelections--;
-        
+
         // Enable this option in other projects
         updateOptionAvailability(option, false);
     } else {
@@ -99,13 +99,13 @@ function toggleOption(button, projectId, option) {
             alert('Maximum of 9 selections across all projects reached');
             return;
         }
-        
+
         // Select option with animation
         button.classList.add('selecting');
         selectedOptions[projectKey].add(option);
         button.classList.add('selected');
         totalSelections++;
-        
+
         // Disable this option in other projects
         updateOptionAvailability(option, true);
     }
@@ -130,3 +130,38 @@ function isOptionSelectedInOtherProjects(option, currentProjectId) {
         return projectKey !== `project${currentProjectId}` && selections.has(option);
     });
 }
+
+// Function to save project data to a local file
+function saveToLocalFile(filename, data) {
+    // Create a Blob with the data
+    const blob = new Blob([data], { type: 'application/json' });
+
+    // Create a link element
+    const link = document.createElement('a');
+    link.href = window.URL.createObjectURL(blob);
+    link.download = filename;
+
+    // Append the link to the body temporarily and trigger the download
+    document.body.appendChild(link);
+    link.click();
+
+    // Remove the link after download
+    document.body.removeChild(link);
+}
+
+// Update "Save to Revit" button functionality
+function updateSaveToRevitButton() {
+    const saveToRevitButton = document.querySelector('.save-to-revit'); // Assuming class name is 'save-to-revit'
+
+    if (saveToRevitButton) {
+        saveToRevitButton.addEventListener('click', () => {
+            const projectData = JSON.stringify(selectedOptions, null, 2); // Serialize project data
+            saveToLocalFile('project_data.json', projectData); // Save the data
+        });
+    } else {
+        console.error('Save to Revit button not found');
+    }
+}
+
+// Initialize the "Save to Revit" button functionality
+updateSaveToRevitButton();
