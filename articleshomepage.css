@@ -1,0 +1,417 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: "Autodesk Sans", sans-serif;
+    line-height: 1.6;
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Navbar Section */
+  /* Navigation links */
+  nav a,
+  .nav-link {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500; /* Medium weight for clarity */
+    text-transform: uppercase; /* Optional: make links uppercase */
+    color: #00474f; /* Customize color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Button styles */
+  .button,
+  .btn {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500; /* Medium weight for buttons */
+    color: #fff;
+    background-color: #08584B; /* Customize button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .button:hover,
+  .btn:hover {
+    background-color: #028f67; /* Lighter on hover */
+  }
+  
+  .navbar {
+    background-color: #ffffff;
+    padding: 20px 0;
+  }
+  
+  .logo img {
+    width: 120px;
+  }
+  
+  .nav-links {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    margin: 0;
+  }
+  
+  .nav-links ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .nav-links ul li a:hover {
+    color: #028f67;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .cta-buttons .button {
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .demo-button {
+    background-color: #08584B;
+    color: #fff;
+  }
+  
+  .login-button {
+    background-color: #08584B;
+    color: #fff;
+  }
+ 
+  /* HERO SECTION */
+  .hero {
+    position: relative;
+    padding: 50px 20px;
+    background: #d6b587; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 5vh;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: absolute;
+    transform: translateY(-50%);
+    max-width: 600px;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .hero-content {
+        position: relative;
+        transform: none;
+        max-width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+  /* ARTICLES SECTION */
+.articles-section {
+    text-align: center;
+    padding: 40px;
+    background-color: #e8e8e8; /* Apply background color to the entire section */
+  }
+  
+  .articles-section h2 {
+    font-size: 2.5em;
+    color: #08584B; /* Caribbean Current */
+    margin-bottom: 40px;
+  }
+  
+  .solutions {
+    display: flex;
+    flex-wrap: wrap; /* Allow wrapping to new rows */
+    justify-content: space-evenly; /* Evenly distribute the cards */
+    gap: 20px; /* Add spacing between cards */
+    padding: 40px 0;
+    background-color: #e8e8e8;
+  }
+  
+  .section {
+    text-align: center;
+    flex: 1 1 calc(30% - 20px); /* Ensure three cards per row with spacing */
+    max-width: 30%; /* Prevent cards from growing too large */
+    background-color: #d6b587; /* Non Photo Tan */
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+  }
+  
+  .section img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+  }
+  
+  .section h3 {
+    font-size: 1.5em;
+    color: #3a3a46; /* Caribbean Current */
+    margin-bottom: 10px;
+  }
+  
+  .section p {
+    font-size: 1em;
+    color: #3a3a46; /* Cadet Gray */
+  }
+
+  /* Ensure the <a> tag covers the entire card */
+.section {
+  display: block; /* Allow the <a> tag to behave like a block element */
+  text-decoration: none; /* Remove underline from links */
+  color: inherit; /* Inherit text color for natural look */
+}
+
+.section:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add hover effect for cards */
+  transform: scale(1.02); /* Slight scaling for hover effect */
+  transition: all 0.3s ease; /* Smooth animation */
+}
+
+  @media (max-width: 768px) {
+    .solutions {
+      flex-direction: column;
+      align-items: center;
+    }
+  
+    .section {
+      width: 80%; /* Make the cards stack vertically on smaller screens */
+      max-width: none;
+      margin-bottom: 20px;
+    }
+  }
+  
+
+  /* PRIVACY RIGHTS BANNER */
+  .privacy-section {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #000; /* Black background */
+    color: #ffffff; /* White text */
+  }
+  
+  .privacy-section h2 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: #ffffff; /* White heading */
+  }
+  
+  .privacy-section p {
+    font-size: 1.2em;
+    margin-bottom: 40px;
+    color: #ffffff; /* White paragraph */
+  }
+  
+  .privacy-section .contact-us {
+    font-size: 1.1em;
+    color: #028f67; /* Set to #028f67 */
+    text-decoration: none; /* Remove underline initially */
+    cursor: pointer;
+  }
+  
+  .privacy-section .contact-us:hover,
+  .privacy-section .contact-us:focus {
+    text-decoration: underline; /* Underline on hover and focus */
+    color: #028f67; /* Keep the color consistent on hover */
+  }
+  
+/* FOOTER SECTION */
+  /* Footer */
+  .footer-wrapper {
+    background-color: #e8e8e8; /* Background color for the footer */
+    padding: 50px 0; /* Padding for top and bottom */
+}
+
+.footer {
+    background-color: #e8e8e8; /* Retain footer background color */
+    padding: 50px 0; /* Maintain footer padding */
+    border-radius: 0px; /* Remove any rounding */
+    border: none; /* Remove border if any */
+    font-size: 1rem; 
+}
+
+.footer-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+  gap: calc(var(--spacing-unit) * 2.5);
+}
+
+.footer-logo {
+  width: 9.375rem;
+  height: auto;
+  margin-bottom: calc(var(--spacing-unit) * 1.25);
+}
+
+.footer-description p {
+  max-width: 25rem;
+  font-size: 1rem; 
+}
+
+.social-links {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 0.625);
+  margin: calc(var(--spacing-unit) * 1.25) 0;
+  margin-top: 1.5rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.social-links img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+  gap: calc(var(--spacing-unit) * 2.5);
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #08584B; /* Set titles to green */
+}
+
+.footer-column ul {
+  line-height: 2;
+  list-style: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding to align items */
+}
+
+.footer-column ul li {
+  line-height: 2; 
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #000000; /* Set text links to black */
+}
+
+.footer-column ul li a:hover {
+  color: #028f67; /* Optional: Keep hover effect */
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; /* Align links and text on the same plane */
+  align-items: center; /* Vertically align elements */
+  flex-wrap: wrap; /* Ensure proper alignment on smaller screens */
+  font-size: 0.875rem; /* Match the font size of the copyright text */
+  color: #555; /* Match the color for consistency */
+  gap: 10px; /* Add spacing for wrapping items */
+}
+
+.footer-bottom p {
+  margin: 0;
+  margin-left: 10px; /* Add 15px left margin */
+  font-size: inherit; /* Ensure font size consistency */
+}
+
+.legal-links {
+  display: flex;
+  margin-right: 10px; 
+  gap: 20px; /* Add space between individual links */
+}
+
+.legal-links a {
+  font-family: 'Montserrat', sans-serif; /* Match the desired font */
+  font-weight: 500; /* Medium weight for clarity */
+  font-size: inherit; /* Match the footer's font size */
+  text-decoration: none; /* Remove underlines */
+  color: #555; /* Ensure color matches copyright text */
+}
+
+.legal-links a:hover {
+  text-decoration: underline; /* Add hover effect for clarity */
+}
+
+/* Remove "+" signs from navigation links */
+.nav-links ul li::before {
+  content: none; /* Removes any "+" or other symbols */
+}
+
+/* Remove "+" signs from popular articles */
+.popular-articles ul li::before {
+  content: none; /* Removes any "+" or other symbols */
+}
+
+/* General rule to prevent "+" signs globally (if needed) */
+ul li::before {
+  content: none; /* Safeguard: removes any default content for list items */
+}
+
+a {
+    text-decoration: none; /* Removes the underline from all links */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 75rem;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
