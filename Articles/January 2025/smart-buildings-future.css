@@ -141,56 +141,20 @@
 .hero {
     position: relative;
     padding: 50px 20px;
-    background-image: url('https://i.ibb.co/SPPnFHX/Thizo.jpg');
+    background: #d6b587; 
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    height: 60vh;
+    height: 5vh;
     overflow: hidden;
 }
 
 .hero-content {
     position: absolute;
-    top: 50%;
-    left: 5%;
     transform: translateY(-50%);
     max-width: 600px;
     z-index: 2;
     text-align: center;
-}
-
-.hero-content h1 {
-    font-size: 2.5rem;
-    color: #3A3A46;
-    margin-bottom: 10px;
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    color: #08584B;
-}
-
-.hero-buttons {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.hero-buttons .button {
-    padding: 15px 30px;
-    font-size: 1.2rem;
-    color: #fff;
-    background-color: #08584B;
-    border: none;
-    border-radius: 10px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    margin-right: 20px;
-    display: inline-block;
-}
-
-.hero-buttons .button:hover {
-    background-color: #028F67;
 }
 
 /* Responsive Adjustments */
@@ -208,13 +172,9 @@
         text-align: center;
         padding: 0;
     }
-
-    .hero-buttons {
-        text-align: center;
-    }
 }
 
-/* ABOUT US */
+/* THE LIGHTHOUSE BUIDLING */
 .intro {
     padding: 3rem 10rem;
     text-align: center;
@@ -248,160 +208,73 @@
     text-align: left; 
 }
 
-/* OUR VALUES TITLE */
-.focus-text {
-  background: #e8e8e8;
-  padding-top: 1rem; /* Adds spacing internally within the section */
-  margin-top: 0; /* Resets margin-top */
-  text-align: center;
-}
-
-.focus-text h5 {
-  font-size: 2rem;
-  margin: 0.5rem 0;
-  margin-top: 2rem; 
-  color: #f47801;
-}
-
-.focus-text p {
-  color: #333; /* Darker text color for contrast */
-  font-size: 1.2rem;
-}
-
-/* OUR VALUES COLUMNS */
-.three-column {
-  display: flex;
-  flex-wrap: wrap; /* Ensures responsiveness */
-  justify-content: center; /* Centers the columns */
-  gap: 5rem; /* Adds spacing between columns */
-  align-items: flex-start;
-  padding: 2rem;
-  background: #e8e8e8; /* Sets the background color */
-  text-align: center;
-}
-
-.column {
-  flex: 1;
-  max-width: 300px;
-  margin: 0 1rem;
-}
-
-.column img {
-  width: 250px;
-  height: 165px;
-  margin-bottom: 1rem;
-}
-
-.column h3 {
-  font-size: 1.25rem;
-  margin: 0.5rem 0;
-  color: #111;
-}
-
-.column p {
-  font-size: 1rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-  /* ROI SECTION */
-  .roi-section {
-    text-align: center;
-    padding: 60px 40px;
-    background-color: #e8e8e8; /* Background color */
-  }
-  
-  .roi-header h2 {
-    font-size: 2.5em;
-    color: #08584B; /* Dark green for the heading */
-    margin-bottom: 10px;
-  }
-  
-  .roi-header p {
-    font-size: 1.2em;
-    color: #08584B; /* Dark green for subheading */
-    margin-bottom: 40px;
-  }
-  
-  .roi-stats {
+/* ACTION BUTTONS SECTION */
+.buttons-grid-container {
     display: flex;
-    justify-content: space-around;
-    margin-bottom: 40px;
-  }
-  
-  .stat-item {
-    width: 30%;
-    text-align: center;
-  }
-  
-  .stat-item h3 {
-    font-size: 3em;
-    color: #3a3a46; /* Dark grey for the percentage stats */
-    margin-bottom: 10px;
-  }
-  
-  .stat-item p {
-    font-size: 1.1em;
-    color: #3a3a46; /* Dark grey for smaller text */
-    margin-bottom: 10px;
-  }
-  
-  .stat-item strong {
-    color: #000000; /* Dark grey for emphasized text */
-  }
-  
-  .roi-button {
-    margin-top: 30px;
-  }
-  
-  .roi-button button {
-    padding: 15px 30px;
-    font-size: 1em;
-    background-color: #08584B; /* Green Current */
-    color: white;
-    border: none;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Space between buttons */
+    max-width: 900px; /* Restrict grid width */
+    margin-top: 80px; 
+    margin-left: 450px; 
+    margin-bottom: 80px;  
+    list-style: none;
+    background-color: #ffffff; /* Optional: background to distinguish the grid area */
+}
+
+.button {
+    color: #ffffff;   
+    background-color: #08584B;
     border-radius: 5px;
-    cursor: pointer;
-  }
-  .btn.learn-more:hover {
-      background-color: #028f67 !important; 
-  }
-  
-  .roi-button p {
-    font-size: 0.9em;
-    color: #3a3a46; /* Cadet Gray for footnote */
-    margin-top: 10px;
-  }
-  
-  @media (max-width: 768px) {
-    .roi-stats {
-      flex-direction: column;
-      align-items: center;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.button h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.button a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+.button a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .buttons-grid {
+        flex-direction: column;
+        align-items: center;
     }
-  
-    .stat-item {
-      width: 80%;
-      margin-bottom: 30px;
+    .button {
+        max-width: 100%;
     }
-  }
+}
 
 /* WE WANT YOUR FEEDBACK */
 .privacy-section {
     text-align: center;
     padding: 60px 40px;
     background-color: #d6b587;
-    color: #ffffff;
+    color: #333;
 }
 
 .privacy-section h2 {
     font-size: 2.5em;
-    color: #ffffff;
+    color: #333;
     margin-bottom: 20px;
 }
 
 .privacy-section p {
     font-size: 1.2em;
-    color: #ffffff;
+    color: #333;
     margin-bottom: 40px;
 }
 
