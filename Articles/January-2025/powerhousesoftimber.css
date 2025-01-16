@@ -1,0 +1,456 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Apply to all headings (H1 to H6) */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 700; /* Bold for main headings */
+    color: #08584B; /* Adjust color to suit your design */
+  }
+  
+  /* Slightly lighter for subheadings */
+  h2, h3 {
+    font-weight: 600;
+    color: #028F67; /* Adjust color to suit your design */
+  }
+  /* Typography */
+  :root {
+    --primary-color: #08584B;
+    --secondary-color: #028F67;
+    --accent-color: #F47801;
+    --text-color: #333;
+    --spacing-unit: 1rem;
+  }
+  
+  body {
+    font-family: 'Montserrat';
+    line-height: 1.6;
+    color: var(--text-color);
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat';
+    font-weight: 700;
+    color: var(--primary-color);
+  }
+  
+  /* Container */
+  .container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  /* Navbar Section */
+  .navbar {
+    background-color: #ffffff;
+    padding: 20px 0;
+  }
+
+  /* Navigation links */
+  nav a, .nav-link {
+    font-family: 'Montserrat';
+    font-weight: 500; /* Medium weight for clarity */
+    text-transform: uppercase; /* Optional: make links uppercase */
+    color: #3A3A46; /* Customize color */
+    text-decoration: none; /* Remove underline */
+  }
+  
+  /* Button styles */
+  .button, .btn {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Medium weight for buttons */
+    color: #fff;
+    background-color: #028F67; /* Customize button color */
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    display: inline-block;
+  }
+  
+  .button:hover, .btn:hover {
+    background-color: #08584B; 
+  }
+  
+  .logo img {
+    width: 120px;
+    height: auto;
+  }
+  
+  .nav-links {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .nav-links ul {
+    list-style: none;
+    display: inline-flex;
+    gap: 30px;
+    margin: 0;
+  }
+  
+  .nav-links ul li a {
+    text-decoration: none;
+    color: #3a3a46;
+    font-weight: 600;
+    transition: color 0.3s;
+  }
+  
+  .nav-links ul li a:hover {
+    color: #028F67;
+  }
+  
+  .cta-buttons {
+    display: flex;
+    gap: 15px
+  }
+  
+  .cta-buttons .button {
+    padding: 10px 20px; 
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s, color 0.3s;
+  }
+  
+  .demo-button {
+    background-color: #08584B; 
+    color: #fff; 
+  }
+  
+  .login-button {
+    background-color: #08584B;
+    color: #fff; 
+  }
+  
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fff;
+  }
+
+/* HERO SECTION */
+.hero {
+    position: relative;
+    padding: 50px 20px;
+    background: #d6b587; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 5vh;
+    overflow: hidden;
+}
+
+.hero-content {
+    position: absolute;
+    transform: translateY(-50%);
+    max-width: 600px;
+    z-index: 2;
+    text-align: center;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .hero {
+        height: auto;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .hero-content {
+        position: relative;
+        transform: none;
+        max-width: 100%;
+        text-align: center;
+        padding: 0;
+    }
+}
+
+/* THE LIGHTHOUSE BUIDLING */
+.intro {
+    padding: 3rem 10rem;
+    text-align: center;
+}
+
+.intro header h1 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.intro header p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    text-align: left; 
+}
+
+.intro article {
+    margin-bottom: 3rem;
+}
+
+.intro article h2, .intro article h3 {
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    text-align: left; 
+}
+
+.intro article p {
+    font-size: 1rem;
+    color: #666;
+    text-align: left; 
+}
+
+/* ACTION BUTTONS SECTION */
+.buttons-grid-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; /* Space between buttons */
+    max-width: 900px; /* Restrict grid width */
+    margin-top: 80px; 
+    margin-left: 450px; 
+    margin-bottom: 80px;  
+    list-style: none;
+    background-color: #ffffff; /* Optional: background to distinguish the grid area */
+}
+
+.button {
+    color: #ffffff;   
+    background-color: #08584B;
+    border-radius: 5px;
+    padding: 15px 20px;
+    text-align: center;
+}
+
+.button h4 {
+    color: #ffffff;
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.button a {
+    text-decoration: none;
+    color: #ffffff;
+    display: block;
+}
+
+.button a:hover {
+    color: #ffffff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .buttons-grid {
+        flex-direction: column;
+        align-items: center;
+    }
+    .button {
+        max-width: 100%;
+    }
+}
+
+/* WE WANT YOUR FEEDBACK */
+.privacy-section {
+    text-align: center;
+    padding: 60px 40px;
+    background-color: #d6b587;
+    color: #333;
+}
+
+.privacy-section h2 {
+    font-size: 2.5em;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.privacy-section p {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.privacy-section .contact-us {
+    font-size: 1.1em;
+    color: #028F67;
+    text-decoration: none;
+}
+
+.privacy-section .contact-us:hover {
+    text-decoration: underline;
+    color: #666;
+}
+
+/* FOOTER SECTION */
+  /* Footer */
+  .footer-wrapper {
+    background-color: #e8e8e8; /* Background color for the footer */
+    padding: 50px 0; /* Padding for top and bottom */
+}
+
+.footer {
+    background-color: #e8e8e8; /* Retain footer background color */
+    padding: 50px 0; /* Maintain footer padding */
+    border-radius: 0px; /* Remove any rounding */
+    border: none; /* Remove border if any */
+    font-size: 1rem; 
+}
+
+.footer-container {
+  max-width: 75rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 18.75rem), 1fr));
+  gap: calc(var(--spacing-unit) * 2.5);
+}
+
+.footer-logo {
+  width: 9.375rem;
+  height: auto;
+  margin-bottom: calc(var(--spacing-unit) * 1.25);
+}
+
+.footer-description p {
+  max-width: 25rem;
+  font-size: 1rem;
+  color: #000000; /* Set titles to black */ 
+}
+
+.social-links {
+  display: flex;
+  gap: calc(var(--spacing-unit) * 0.625);
+  margin: calc(var(--spacing-unit) * 1.25) 0;
+  margin-top: 1.5rem; 
+  margin-bottom: 1.5rem; 
+}
+
+.social-links img {
+  width: 1.875rem;
+  height: 1.875rem;
+}
+
+.footer-links {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 12.5rem), 1fr));
+  gap: calc(var(--spacing-unit) * 2.5);
+}
+
+.footer-column h4 {
+  margin-bottom: 10px;
+  font-size: 1.25rem;
+  color: #08584B; /* Set titles to green */
+}
+
+.footer-column ul {
+  line-height: 2;
+  list-style: none; /* Remove bullet points */
+  padding-left: 0; /* Remove padding to align items */
+}
+
+.footer-column ul li {
+  line-height: 2; 
+  margin-bottom: 5px;
+}
+
+.footer-column ul li a {
+  text-decoration: none;
+  color: #000000; /* Set text links to black */
+}
+
+.footer-column ul li a:hover {
+  color: #028f67; /* Optional: Keep hover effect */
+}
+
+.legal-links {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .footer-container {
+      grid-template-columns: 1fr;
+  }
+
+  .footer-bottom {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  justify-content: space-between; /* Align links and text on the same plane */
+  align-items: center; /* Vertically align elements */
+  flex-wrap: wrap; /* Ensure proper alignment on smaller screens */
+  font-size: 0.875rem; /* Match the font size of the copyright text */
+  color: #555; /* Match the color for consistency */
+  gap: 10px; /* Add spacing for wrapping items */
+}
+
+.footer-bottom p {
+  margin: 0;
+  margin-left: 10px; /* Add 15px left margin */
+  font-size: inherit; /* Ensure font size consistency */
+  color: #000000; /* Set titles to black */ 
+}
+
+.legal-links {
+  display: flex;
+  margin-right: 10px; 
+  gap: 20px; /* Add space between individual links */
+}
+
+.legal-links a {
+  font-family: 'Montserrat', sans-serif; /* Match the desired font */
+  font-weight: 500; /* Medium weight for clarity */
+  font-size: inherit; /* Match the footer's font size */
+  text-decoration: none; /* Remove underlines */
+  color: #555; /* Ensure color matches copyright text */
+}
+
+.legal-links a:hover {
+  text-decoration: underline; /* Add hover effect for clarity */
+}
+
+/* Remove "+" signs from navigation links */
+.nav-links ul li::before {
+  content: none; /* Removes any "+" or other symbols */
+}
+
+/* Remove "+" signs from popular articles */
+.popular-articles ul li::before {
+  content: none; /* Removes any "+" or other symbols */
+}
+
+/* General rule to prevent "+" signs globally (if needed) */
+ul li::before {
+  content: none; /* Safeguard: removes any default content for list items */
+}
+
+a {
+    text-decoration: none; /* Removes the underline from all links */
+}
+
+/* Footer Bottom */
+.footer-bottom {
+  max-width: 75rem;
+  margin: 20px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px;
+}
