@@ -174,39 +174,64 @@
     }
 }
 
-/* THE LIGHTHOUSE BUIDLING */
+/* MAIN CONTENT */
 .intro {
-    padding: 3rem 10rem;
-    text-align: center;
+  padding: 3rem 10rem;
+  text-align: center;
 }
 
 .intro header h1 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }
 
 .intro header p {
-    font-size: 1.2rem;
-    margin-bottom: 2rem;
-    text-align: left; 
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  text-align: left; 
 }
 
 .intro article {
-    margin-bottom: 3rem;
+  margin-bottom: 3rem;
 }
 
 .intro article h2, .intro article h3 {
-    font-size: 1.5rem;
-    color: #333;
-    margin-bottom: 0.5rem;
-    text-align: left; 
+  font-size: 1.5rem;
+  color: #333;
+  margin-bottom: 0.5rem;
+  text-align: left; 
 }
 
 .intro article p {
-    font-size: 1rem;
-    color: #666;
-    text-align: left; 
+  font-size: 1rem;
+  color: #666;
+  text-align: left; 
 }
+
+.intro article .sources {
+  margin-top: 2rem;
+  padding-left: 2rem;
+  list-style-type: disc; /* Keeps bullet points */
+  text-align: left; /* Aligns the whole list to the left */
+}
+
+.intro article .sources li {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 0.5rem;
+  text-align: left; /* Ensures each item is left-aligned */
+}
+
+.intro article .sources a {
+  color: #007BFF;
+  text-decoration: none;
+  display: inline-block; /* Ensures alignment with bullet points */
+}
+
+.intro article .sources a:hover {
+text-decoration: underline; /* Underline on hover for clarity */
+}
+
 
 /* ACTION BUTTONS SECTION */
 .buttons-grid-container {

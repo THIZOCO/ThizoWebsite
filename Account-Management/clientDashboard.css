@@ -139,7 +139,7 @@ body {
     align-items: center;
     max-width: 1440px;
     margin: auto;
-    gap: 50px; /* Reduced gap between buttons for closer alignment */
+    gap: 20px; /* Reduced gap between buttons for closer alignment */
 }
 
 .secondary-button {

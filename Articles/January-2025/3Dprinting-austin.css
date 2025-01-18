@@ -174,7 +174,7 @@
     }
 }
 
-/* THE LIGHTHOUSE BUIDLING */
+/* MAIN CONTENT */
 .intro {
     padding: 3rem 10rem;
     text-align: center;
@@ -207,6 +207,28 @@
     color: #666;
     text-align: left; 
 }
+.intro article .sources {
+  margin-top: 2rem;
+  padding-left: 2rem;
+  list-style-type: disc; /* Adds bullet points */
+  text-align: left; /* Aligns text to the left */
+}
+
+.intro article .sources li {
+  font-size: 1rem;
+  color: #444; /* Slightly darker than paragraph text for better visibility */
+  margin-bottom: 0.5rem; /* Adds space between list items */
+}
+
+.intro article .sources a {
+  color: #007BFF; /* A standard blue for links */
+  text-decoration: none; /* Removes underline */
+}
+
+.intro article .sources a:hover {
+  text-decoration: underline; /* Underline on hover for clarity */
+}
+
 
 /* ACTION BUTTONS SECTION */
 .buttons-grid-container {
