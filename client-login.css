@@ -140,65 +140,83 @@ body {
 
 /* Login Section Styles */
 .login-section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: calc(100vh - 80px);
-    background: #3a3a46;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: calc(100vh - 80px);
+  background: #3a3a46;
 }
 
 .login-container {
-    background-color: #ffffff;
-    padding: 40px;
-    border-radius: 8px;
-    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    max-width: 400px;
-    width: 100%;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
 }
 
 .login-container h2 {
-    color: #08584B;
-    margin-bottom: 20px;
+  color: #08584B;
+  margin-bottom: 20px;
 }
 
 .login-form label {
-    display: block;
-    margin: 15px 0 5px;
-    font-weight: 600;
-    color: #333;
+  display: block;
+  margin: 15px 0 5px;
+  font-weight: 600;
+  color: #333;
 }
 
 .login-form input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
 .login-button {
-    background-color: #08584B;
-    color: #ffffff;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-weight: 600;
+  background-color: #08584B;
+  color: #ffffff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
 }
 
 .login-button:hover {
-    background-color: #028f67;
+  background-color: #028f67;
 }
 
 .login-form a {
-    color: #028f67;
-    text-decoration: none;
+  color: #028f67;
+  text-decoration: none;
 }
 
 .login-form a:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
+
+/* New styles for error and feedback messages */
+.error-message {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: -15px;
+  margin-bottom: 15px;
+  text-align: left;
+  display: block;
+}
+
+.feedback {
+  margin-top: 20px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: center;
+}
+
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
