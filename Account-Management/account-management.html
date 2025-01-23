@@ -129,54 +129,111 @@
     </div>
 </div>
 
-    <!-- FOOTER SECTION -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-description">
-                <img src="https://i.ibb.co/D9nGN89/processed-image.png" alt="Thizo Logo" class="footer-logo">
-                <p>Thizo is committed to advancing the design and real estate industries by improving the lives of professionals everywhere, leading technology innovation, and building a global community of elevated creators. Our connected platform turbo charges stakeholders by compressing nuanced work and supporting the experts; fostering innovation, efficiency, and the new era of design.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/company/thizo/?viewAsMember=true" target="_blank">
-                        <img src="https://i.ibb.co/s5zffWq/image-3.png" alt="LinkedIn">
-                    </a>
-                </div>
-                <p class="contact-info">Call us at <a href="tel:+18001234567">(800) 123-4567</a> to speak with a product expert.</p>
-            </div>
+    <!-- JavaScript for Account Management -->
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/9.1.3/firebase-firestore.js"></script>
 
-            <div class="footer-links">
-                <div class="footer-column new-to-thizo">
-                    <h4>New to Thizo?</h4>
-                    <ul>
-                        <li><a href="../Footer/about-us.html">What is Thizo?</a></li>
-                        <li><a href="../Footer/product-updates.html">Product Updates</a></li>
-                        <li><a href="../Footer/ROI.html">ROI</a></li>
-                        <li><a href="../Footer/trust.html">Trust & Security</a></li>
-                        <li><a href="../Articles/articleshomepage.html">Industry Articles</a></li>
-                        <li><a href="../Footer/newsroom.html">Industry Newsroom</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>About Thizo</h4>
-                    <ul>
-                        <li><a href="../Footer/our-story.html">Our Story</a></li>
-                        <li><a href="../Footer/careers.html">Careers</a></li>
-                        <li><a href="../contact-us.html">Contact Us</a></li>
-                        <li><a href="../Investors/investors.html">Investors</a></li>
-                        <li><a href="../Legal/legal.html">Legal</a></li>
-                        <li><a href="../Footer/FAQ.html">FAQs</a></li>
-                    </ul>
-                </div>
+    <script type="module">
+        // Firebase configuration and initialization
+        const firebaseConfig = {
+            apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
+            authDomain: "thizoco1.firebaseapp.com",
+            projectId: "thizoco1",
+            storageBucket: "thizoco1.firebasestorage.app",
+            messagingSenderId: "234620248112",
+            appId: "1:234620248112:web:752f2e6c65844239764df5",
+            measurementId: "G-B8M102JDYP"
+        };
+
+        // Initialize Firebase
+        const app = firebase.initializeApp(firebaseConfig);
+        const auth = firebase.auth();
+        const firestore = firebase.firestore();
+
+        // After user login
+        auth.onAuthStateChanged(user => {
+            if (user) {
+                // Get user data from Firestore (assuming user data includes organization field)
+                const userId = user.uid;
+                const userRef = firestore.collection("users").doc(userId);
+
+                userRef.get().then(doc => {
+                    if (doc.exists) {
+                        const userData = doc.data();
+                        const organization = userData.organization; // Store the user's organization in Firestore
+
+                        // Dynamically display content based on the user's organization
+                        const contentDiv = document.getElementById('organization-specific-content');
+                        if (organization === 'Fox Architects') {
+                            contentDiv.innerHTML = '<p>Welcome, Fox Architects Designer!</p>';
+                        } else if (organization === 'Perkins Eastman') {
+                            contentDiv.innerHTML = '<p>Welcome, Perkins Eastman Designer!</p>';
+                        } else {
+                            contentDiv.innerHTML = '<p>Welcome, valued client!</p>';
+                        }
+                    } else {
+                        console.log("No user data found!");
+                    }
+                }).catch(error => {
+                    console.error("Error getting user data:", error);
+                });
+            } else {
+                // Redirect to login if no user is logged in
+                window.location.href = '/client-login.html';
+            }
+        });
+    </script>
+
+   
+  <!-- FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer-container">
+        <div class="footer-description">
+            <img src="https://i.ibb.co/D9nGN89/processed-image.png" alt="Thizo Logo" class="footer-logo">
+            <p>Thizo is committed to advancing the design and real estate industries by improving the lives of professionals everywhere, leading technology innovation, and building a global community of elevated creators. Our connected platform turbo charges stakeholders by compressing nuanced work and supporting the experts; fostering innovation, efficiency, and the new era of design.</p>
+            <div class="social-links">
+              <a href="https://www.linkedin.com/company/thizo/?viewAsMember=true" target="_blank">
+                <img src="https://i.ibb.co/s5zffWq/image-3.png" alt="LinkedIn">
+              </a>
+            </div>
+            <p class="contact-info">Call us at <a href="tel:+18001234567">(800) 123-4567</a> to speak with a product expert.</p>
+        </div>
+  
+        <div class="footer-links">
+            <div class="footer-column new-to-thizo">
+                <h4>New to Thizo?</h4>
+                <ul>
+                  <li><a href="../Footer/about-us.html">What is Thizo?</a></li>
+                  <li><a href="../Footer/product-updates.html">Product Updates</a></li>
+                  <li><a href="../Footer/ROI.html">ROI</a></li>
+                  <li><a href="../Footer/trust.html">Trust & Security</a></li>
+                  <li><a href="../Articles/articleshomepage.html">Industry Articles</a></li>
+                  <li><a href="../Footer/newsroom.html">Industry Newsroom</a></li>
+              </ul>
+          </div>
+          <div class="footer-column">
+              <h4>About Thizo</h4>
+              <ul>
+                  <li><a href="../Footer/our-story.html">Our Story</a></li>
+                  <li><a href="../Footer/careers.html">Careers</a></li>
+                  <li><a href="../contact-us.html">Contact Us</a></li>
+                  <li><a href="../Investors/investors.html">Investors</a></li>
+                  <li><a href="../Legal/legal.html">Legal</a></li>
+                  <li><a href="../Footer/FAQ.html">FAQs</a></li>
+              </ul>
             </div>
         </div>
-
-        <div class="footer-bottom">
-            <p>© 2025 Thizo Technologies, Inc.</p>
-            <div class="legal-links">
-                <a href="../Legal/legal-privacy.html">Privacy Notice</a>
-                <a href="../Legal/legal-terms.html">Terms of Service</a>
-                <a href="../Legal/legal-do-not-sell.html">Do Not Sell Personal Information</a>
-            </div>
-        </div>
-    </footer>
-</body>
-</html>
+    </div>
+  
+    <div class="footer-bottom">
+        <p>© 2025 Thizo Technologies, Inc.</p>
+        <div class="legal-links">
+          <a href="../Legal/legal-privacy.html">Privacy Notice</a>
+          <a href="../Legal/legal-terms.html">Terms of Service</a>
+          <a href="../Legal/legal-do-not-sell.html">Do Not Sell Personal Information</a>
+      </div>
+    </div>
+  </footer>
+  </body>
+  </html>
