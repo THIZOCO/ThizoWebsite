@@ -346,12 +346,15 @@ body {
     width: 3.75rem;
     height: 3.75rem;
 }
+
 .card-content p {
     color: #000;
 }
+
 .support-card p {
     color: #000;
 }
+
 /* RESOURCES SECTION */
 .resources {
     padding: calc(var(--spacing-unit) * 5) var(--spacing-unit);
@@ -410,7 +413,6 @@ body {
     text-decoration: none;
     font-size: 1.1rem;
 }
-
 
 /* FOOTER SECTION */
   /* Footer */
