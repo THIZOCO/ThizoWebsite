@@ -53,112 +53,13 @@
                 <button type="submit" class="login-button">Login</button>
                 <p><a href="#">Forgot your password?</a></p>
                 <BR>
-                <p><a href="#" id="createAccount">New To Thizo? Create Account Here.</a></p>
+                <p><a href="/Investors/investor-create-account.html" id="createAccount">New To Thizo? Create Account Here.</a></p>
             </form>
         </div>
     </section>
 
-    <!-- JavaScript for Login Functionality -->
-    <script type="module">
-        // Ensure that Firebase has been initialized correctly
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
-        import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
-    
-        // Firebase configuration - replace with your actual Firebase config values
-        const firebaseConfig = {
-            apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
-            authDomain: "thizoco1.firebaseapp.com",
-            projectId: "thizoco1",
-            storageBucket: "thizoco1.firebasestorage.app",
-            messagingSenderId: "234620248112",
-            appId: "1:234620248112:web:752f2e6c65844239764df5",
-            measurementId: "G-B8M102JDYP"
-        };
-    
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const auth = getAuth(app);
-    
-        // Function to validate email format
-        function validateEmail(email) {
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return emailRegex.test(email);
-        }
-    
-        // Function to validate password (minimum 8 characters, at least 1 letter, 1 number, and 1 special character)
-        function validatePassword(password) {
-            const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)(?=.*[!@#$%^&*])(?=.{8,})/;
-            return passwordRegex.test(password);
-        }
-    
-        // Function to show feedback to the user (success or error)
-        function showFeedback(message, isSuccess) {
-            const feedback = document.getElementById('feedbackMessage');
-            feedback.textContent = message;
-            feedback.style.color = isSuccess ? 'green' : 'red';
-        }
-    
-        // Event listener for the login form submission
-        document.querySelector('.login-form').addEventListener('submit', async function (e) {
-            e.preventDefault(); // Prevent the default form submission
-    
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-            const emailError = document.getElementById('emailError');
-    
-            // Validate email
-            if (!validateEmail(email)) {
-                emailError.textContent = 'Please enter a valid email address.';
-                return;
-            } else {
-                emailError.textContent = '';
-            }
-    
-            // Validate password
-            if (!validatePassword(password)) {
-                showFeedback('Password must be at least 8 characters, include one letter, one number, and one special character.', false);
-                return;
-            }
-    
-            try {
-                // Try logging in the user using Firebase
-                const user = await signInWithEmailAndPassword(auth, email, password);
-                showFeedback('Login successful! Redirecting...', true);
-                window.location.href = '/client-dashboard'; // Redirect to the dashboard
-            } catch (error) {
-                showFeedback(`Login failed: ${error.message}`, false); // Show error message if login fails
-            }
-        });
-    
-        // Event listener for the "Create Account Here" link
-        document.getElementById('createAccount').addEventListener('click', async function (e) {
-            e.preventDefault(); // Prevent default behavior
-    
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
-    
-            // Validate email before sending to Firebase
-            if (!validateEmail(email)) {
-                showFeedback('Please enter a valid email address.', false);
-                return;
-            }
-    
-            // Validate password before sending to Firebase
-            if (!validatePassword(password)) {
-                showFeedback('Password must be at least 8 characters, include one letter, one number, and one special character.', false);
-                return;
-            }
-    
-            try {
-                // Create a new user in Firebase Authentication
-                const userCredential = await createUserWithEmailAndPassword(auth, email, password);
-                showFeedback('Account created successfully!', true);
-                window.location.href = '/client-dashboard'; // Redirect to the dashboard
-            } catch (error) {
-                showFeedback(`Error creating account: ${error.message}`, false); // Show error message if account creation fails
-            }
-        });
-    </script>
+<!-- JavaScript for Login Functionality -->
+<script src="/investors.js" type="module"></script>
 
     <!-- FOOTER SECTION -->
     <footer class="footer">

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thizo - 3D Digital Models</title>
+    
+    <!-- Link to Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Autodesk+Sans:wght@400;700&display=swap" rel="stylesheet">
+    
+    <!-- Link all CSS files -->
+    <link rel="stylesheet" href="/Investors/investor-create-account.css">
+</head>
+
+<body>
+    <!-- Header Section -->
+    <header class="navbar">
+        <div class="container">
+            <div class="logo">
+                <a href="/index.html">
+                    <img src="https://i.ibb.co/26cPFf7/LOGO.jpg" alt="Thizo Logo">
+                </a>
+            </div>
+            <nav class="nav-links">
+                <ul>
+                    <li><a href="/solutions.html">Solutions</a></li>
+                    <li><a href="/who-we-serve.html">Who We Serve</a></li>
+                    <li><a href="/get-started.html">Pricing</a></li>
+                    <li><a href="/resources.html">Resources</a></li>
+                    <li><a href="/support.html">Support</a></li>
+                </ul>
+            </nav>
+            <div class="cta-buttons">
+                <a href="/request-a-demo-popup.html" class="button demo-button">Request a Demo</a>
+                <a href="/client-login.html" class="button login-button">Log In</a>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- CREATE ACCOUNT SECTION -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>CREATE AN ACCOUNT</h2>
+            <p>Creating the future of 3D modeling for Architects and Engineers</p>
+            <form id="createAccountForm" class="create-account-form">
+                <br>
+                <label for="firmName">Firm Name</label>
+                <input type="text" id="firmName" name="firmName" placeholder="Firm Name" required>
+                <br>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" placeholder="First Name" required>
+                <br>
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" placeholder="Last Name" required>
+                <br>
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <small id="emailError" class="error-message"></small>
+                <br>
+                <div id="feedbackMessage" class="feedback"></div>
+    
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" placeholder="Enter your password" required>
+                <br>
+                <label for="confirmPassword">Confirm Password</label>
+                <input type="password" id="confirmPassword" name="confirmPassword" placeholder="Confirm your password" required>
+                <br>
+                <button type="submit" class="create-account-button">Create Account</button>
+                <br>
+                <p><a href="/investors.html">Already have an account? Login here.</a></p>
+            </form>
+        </div>
+    </section> 
+
+    <!-- JavaScript for Form Validation and Account Creation -->
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+        import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+    
+        const firebaseConfig = {
+            apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
+            authDomain: "thizoco1.firebaseapp.com",
+            projectId: "thizoco1",
+            storageBucket: "thizoco1.firebasestorage.app",
+            messagingSenderId: "234620248112",
+            appId: "1:234620248112:web:752f2e6c65844239764df5",
+            measurementId: "G-B8M102JDYP"
+        };
+    
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+    
+        function validatePassword(password) {
+            const passwordRegex = /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&#]{8,}$/;
+            return passwordRegex.test(password);
+        }
+    
+        document.getElementById('createAccountForm').addEventListener('submit', async function (e) {
+            e.preventDefault();
+    
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const confirmPassword = document.getElementById('confirmPassword').value;
+    
+            if (!validatePassword(password)) {
+                showFeedback('Password must be at least 8 characters with uppercase, lowercase, number, and special character.', false);
+                return;
+            }
+    
+            if (password !== confirmPassword) {
+                showFeedback('Passwords do not match.', false);
+                return;
+            }
+    
+            try {
+                await createUserWithEmailAndPassword(auth, email, password);
+                showFeedback('Account created successfully! Redirecting...', true);
+    
+                // Redirect to the login page after 2 seconds
+                setTimeout(() => {
+                    window.location.href = '/investors.html';
+                }, 2000);
+            } catch (error) {
+                showFeedback(`Error creating account: ${error.message}`, false);
+            }
+        });
+    
+        function showFeedback(message, isSuccess) {
+            const feedbackElement = document.getElementById('feedbackMessage');
+            feedbackElement.textContent = message;
+            feedbackElement.style.color = isSuccess ? 'green' : 'red';
+            feedbackElement.style.display = 'block';
+        }
+    </script>
+    
+
+    <!-- FOOTER SECTION -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-description">
+                <img src="https://i.ibb.co/D9nGN89/processed-image.png" alt="Thizo Logo" class="footer-logo">
+                <p>Thizo is committed to advancing the design and real estate industries by improving the lives of professionals everywhere, leading technology innovation, and building a global community of elevated creators.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/company/thizo/?viewAsMember=true" target="_blank">
+                        <img src="https://i.ibb.co/s5zffWq/image-3.png" alt="LinkedIn">
+                    </a>
+                </div>
+                <p class="contact-info">Call us at <a href="tel:+18001234567">(800) 123-4567</a> to speak with a product expert.</p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-column new-to-thizo">
+                    <h4>New to Thizo?</h4>
+                    <ul>
+                        <li><a href="../Footer/about-us.html">What is Thizo?</a></li>
+                        <li><a href="../Footer/product-updates.html">Product Updates</a></li>
+                        <li><a href="../Footer/ROI.html">ROI</a></li>
+                        <li><a href="../Footer/trust.html">Trust & Security</a></li>
+                        <li><a href="../Articles/articleshomepage.html">Industry Articles</a></li>
+                        <li><a href="../Footer/newsroom.html">Industry Newsroom</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column">
+                    <h4>About Thizo</h4>
+                    <ul>
+                        <li><a href="../Footer/our-story.html">Our Story</a></li>
+                        <li><a href="../Footer/careers.html">Careers</a></li>
+                        <li><a href="../contact-us.html">Contact Us</a></li>
+                        <li><a href="../Investors/investors.html">Investors</a></li>
+                        <li><a href="../Legal/legal.html">Legal</a></li>
+                        <li><a href="../Footer/FAQ.html">FAQs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p>© 2025 Thizo Technologies, Inc.</p>
+            <div class="legal-links">
+                <a href="../Legal/legal-privacy.html">Privacy Notice</a>
+                <a href="../Legal/legal-terms.html">Terms of Service</a>
+                <a href="../Legal/legal-do-not-sell.html">Do Not Sell Personal Information</a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
