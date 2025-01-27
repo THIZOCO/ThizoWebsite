@@ -39,7 +39,7 @@ document.querySelector('.login-form').addEventListener('submit', async function 
     const emailDomain = email.split('@')[1];
 
     if (invalidDomains.includes(emailDomain) && !allowedExceptions.includes(email)) {
-        showFeedback('Industry Specific Users Only.', false);
+        showFeedback('Industry Clients Only.', false);
         return;
     }
 

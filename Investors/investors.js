@@ -16,7 +16,6 @@ document.querySelector('.login-form').addEventListener('submit', async function 
         "thomas.h.snow@gmail.com",
         "j.alex.trent91@gmail.com",
         "bfoxj42@gmail.com",
-        "danail.momchilov@gmail.com"
     ];
 
     try {
@@ -30,22 +29,22 @@ document.querySelector('.login-form').addEventListener('submit', async function 
             if (allowedExceptions.includes(email)) {
                 window.location.href = `/Investors/${email.split('@')[0]}-investors-dashboard.html`;
             } else {
-                showFeedback("Access restricted to listed investors only.", false);
+                showFeedback("Access restricted to Thizo Investors.", false);
             }
         } else if (currentPath.includes("client-login.html")) {
             // Clients login: redirect to client-specific dashboard
             if (allowedExceptions.includes(email)) {
                 window.location.href = `/Account-Management/${email.split('@')[0]}-account-management.html`;
             } else {
-                showFeedback("Access restricted to professional clients only.", false);
+                showFeedback("Access restricted to industry clients only.", false);
             }
         } else {
-            showFeedback("Invalid login context. Please try again.", false);
+            showFeedback("Invalid login username and/or password. Please try again.", false);
         }
     } catch (error) {
         if (error.code === 'auth/user-not-found') {
             if (window.location.pathname.includes("client-login.html")) {
-                showFeedback("No Account is created for this username. Create an account below to sign-in.", false);
+                showFeedback("No Account is created for this username yet. Create an account below to sign-in.", false);
                 setTimeout(() => {
                     window.location.href = '/client-create-account.html';
                 }, 2000);
