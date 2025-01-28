@@ -78,3 +78,4 @@ function showFeedback(message, isSuccess) {
     feedbackElement.style.color = isSuccess ? 'green' : 'red';
     feedbackElement.style.display = 'block';
 }
+console.log(auth);
