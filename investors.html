@@ -3,15 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal - Privacy</title>
-    
-    <!-- Link to the specific CSS file for this page -->
-    <link rel="stylesheet" href="./Legal/legal-privacy.css">
+    <title>Thizo - 3D Digital Models</title>
     
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Autodesk+Sans:wght@400;700&display=swap" rel="stylesheet">
-
+    
+    <!-- Link all CSS files -->
+    <link rel="stylesheet" href="./css/investors.css">
 </head>
 
 <body>
@@ -19,7 +17,6 @@
     <header class="navbar">
         <div class="container">
             <div class="logo">
-                <!-- Logo links back to the homepage -->
                 <a href="./index.html">
                     <img src="https://i.ibb.co/26cPFf7/LOGO.jpg" alt="Thizo Logo" border="0">
                 </a>
@@ -40,86 +37,30 @@
         </div>
     </header>
 
-    <!-- PRIVACY POLICY -->
-    <section class="privacy-policy content-wrapper">
-        <h1>Privacy Policy Topics</h1>
-        <p>
-            Thizo is committed to protecting the privacy of its users. This Privacy Policy explains how we collect, use, and share information about you when you use our services.
-        </p>
+    <!-- INVESTOR LOGIN SECTION -->
+    <section class="login-section">
+        <div class="login-container">
+            <h2>Thizo Investors</h2>
+            <p>Creating the future of 3D modeling for Architects and Engineers</p>
+            <form class="login-form">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
 
-        <h2>1. Introduction</h2>
-        <p>
-            At <span class="highlight">Thizo</span>, we take privacy seriously. 
-            We ensure that all information provided by our customers is stored securely and used responsibly.
-        </p>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
 
-        <h2>2. Data We Collect</h2>
-        <p>
-            We collect different types of information, including your contact details, usage data, and other 
-            personal information. This allows us to offer personalized services.
-        </p>
-
-        <!-- Highlighted Content Section -->
-        <h2 class="highlight">Data Use and Sharing</h2>
-        <p>
-            The following data may be collected and shared with third parties: 
-            <span class="highlight">Your interaction with Thizo platforms and services</span>. We may also share data with 
-            affiliated partners and service providers as per our terms.
-        </p>
-
-        <!-- Sample table -->
-        <table>
-            <thead>
-                <tr>
-                    <th>Type of Data</th>
-                    <th>Purpose</th>
-                    <th>Shared with</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>Personal Info</td>
-                    <td>Providing personalized services</td>
-                    <td>Authorized Partners</td>
-                </tr>
-                <tr>
-                    <td>Usage Data</td>
-                    <td>Improving platform features</td>
-                    <td>Analytics Providers</td>
-                </tr>
-            </tbody>
-        </table>
-
-        <p class="highlight">Note: This content is generated for Thizo and similar changes should be updated.</p>
-
-        <h2>Exercise Your Rights</h2>
-        <p>
-            To exercise your rights regarding your <span class="highlight">Personal Data</span>, 
-            please fill out the <a href="#" class="highlight">Privacy Rights Request form</a> or contact 
-            us at <a href="mailto:privacy@thizo.co">privacy@thizo.co</a>.
-        </p>
-
-        <h2>Data Subject Rights</h2>
-        <p>
-            You have the right to request access, rectification, or deletion of your personal data. We may also share 
-            information with third parties for the purposes outlined in this policy.
-        </p>
-
-        <h2>Privacy Rights</h2>
-        <p>
-            This privacy notice has been updated to comply with <span class="highlight">GDPR</span> and other regulations.
-            Your rights include, but are not limited to, the right to know, right to correct, and right to be informed.
-        </p>
-
-        <h3>California Privacy Rights</h3>
-        <p>
-            California residents have additional privacy rights under the <span class="highlight">CCPA</span>. 
-            You can request details on how your data is collected and shared.
-        </p>
+                <button type="submit" class="login-button">Login</button>
+                <p><a href="#">Forgot your password?</a></p>
+                <BR>
+                <p><a href="./investor-create-account.html" id="createAccount">New To Thizo? Create Account Here.</a></p>
+            </form>
+        </div>
     </section>
 
- <!-- FOOTER SECTION -->
-<div class="footer-wrapper">
+<!-- JavaScript for Login Functionality -->
+<script src="./js/investors.js" type="module"></script>
+
+    <!-- FOOTER SECTION -->
     <footer class="footer">
         <div class="footer-container">
             <div class="footer-description">
@@ -132,7 +73,7 @@
                 </div>
                 <p class="contact-info">Call us at <a href="tel:+18001234567">(800) 123-4567</a> to speak with a product expert.</p>
             </div>
-
+  
             <div class="footer-links">
                 <div class="footer-column new-to-thizo">
                     <h4>New to Thizo?</h4>
@@ -158,7 +99,7 @@
                 </div>
             </div>
         </div>
-
+  
         <div class="footer-bottom">
             <p>© 2025 Thizo Technologies, Inc.</p>
             <div class="legal-links">
@@ -168,4 +109,5 @@
             </div>
         </div>
     </footer>
-</div>
+</body>
+</html>
