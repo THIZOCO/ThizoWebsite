@@ -47,12 +47,12 @@ document.querySelector('.login-form').addEventListener('submit', async function 
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
         // Redirect to account-management.html for all users upon successful login
-        window.location.href = '/Account-Management/account-management.html';
+        window.location.href = './Account-Management/account-management.html';
     } catch (error) {
         if (error.code === 'auth/user-not-found') {
             showFeedback('No Account Exists for This User. Please create an account.', false);
             setTimeout(() => {
-                window.location.href = '/create-account.html';
+                window.location.href = './create-account.html';
             }, 2000);
         } else {
             showFeedback(`Login failed: ${error.message}`, false);
