@@ -27,14 +27,14 @@ document.querySelector('.login-form').addEventListener('submit', async function 
         if (currentPath.includes("investors.html")) {
             // Investors login: redirect to investor-specific dashboard
             if (allowedExceptions.includes(email)) {
-                window.location.href = `/Investors/${email.split('@')[0]}-investors-dashboard.html`;
+                window.location.href = `./Investors/${email.split('@')[0]}-investors-dashboard.html`;
             } else {
                 showFeedback("Access restricted to Thizo Investors.", false);
             }
-        } else if (currentPath.includes("client-login.html")) {
+        } else if (currentPath.includes("./client-login.html")) {
             // Clients login: redirect to client-specific dashboard
             if (allowedExceptions.includes(email)) {
-                window.location.href = `/Account-Management/${email.split('@')[0]}-account-management.html`;
+                window.location.href = `./Account-Management/${email.split('@')[0]}-account-management.html`;
             } else {
                 showFeedback("Access restricted to industry clients only.", false);
             }
@@ -43,10 +43,10 @@ document.querySelector('.login-form').addEventListener('submit', async function 
         }
     } catch (error) {
         if (error.code === 'auth/user-not-found') {
-            if (window.location.pathname.includes("client-login.html")) {
+            if (window.location.pathname.includes("./client-login.html")) {
                 showFeedback("No Account is created for this username yet. Create an account below to sign-in.", false);
                 setTimeout(() => {
-                    window.location.href = '/client-create-account.html';
+                    window.location.href = './client-create-account.html';
                 }, 2000);
             } else {
                 showFeedback("Account not found. Please contact support.", false);
