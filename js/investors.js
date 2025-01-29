@@ -45,9 +45,9 @@ document.querySelector('.login-form').addEventListener('submit', async function 
         console.log(`Login successful for email: ${email}`);
         console.log(`Current path: ${currentPath}`);
 
-        if (currentPath.includes("investors.html")) {
+        if (currentPath.includes("./investors.html")) {
             if (allowedExceptions.includes(email)) {
-                const redirectPath = `./${email.split('@')[0]}-investors-dashboard.html`;
+                const redirectPath = `${email.split('@')[0]}-investors-dashboard.html`;
                 console.log(`Redirecting to: ${redirectPath}`);
                 window.location.href = redirectPath;
             } else {
