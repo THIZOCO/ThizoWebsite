@@ -42,13 +42,13 @@ document.querySelector('.login-form').addEventListener('submit', async function 
 
         if (currentPath.includes("investors.html")) {
             if (allowedExceptions.includes(email)) {
-                window.location.href = `./Investors/${email.split('@')[0]}-investors-dashboard.html`;
+                window.location.href = `./${email.split('@')[0]}-investors-dashboard.html`;
             } else {
                 showFeedback("Access restricted to Thizo Investors.", false);
             }
         } else if (currentPath.includes("client-login.html")) {
             if (allowedExceptions.includes(email)) {
-                window.location.href = `./Account-Management/${email.split('@')[0]}-account-management.html`;
+                window.location.href = `./${email.split('@')[0]}-account-management.html`;
             } else {
                 showFeedback("Access restricted to industry clients only.", false);
             }
