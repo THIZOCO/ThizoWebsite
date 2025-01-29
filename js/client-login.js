@@ -59,9 +59,9 @@ document.querySelector('.login-form').addEventListener('submit', async function 
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
         if (allowedExceptions.includes(email)) {
-            // Redirect allowed exception users
+            // Redirect all allowed exceptions to a shared dynamic page
             console.log("Allowed exception login successful.");
-            window.location.href = `./${email.split('@')[0]}-account-management.html`;
+            window.location.href = `./account-management.html?user=${encodeURIComponent(email)}`;
         } else if (firmRouting[emailDomain]) {
             // Redirect firm-based users
             const firmAccountPage = firmRouting[emailDomain];
