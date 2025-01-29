@@ -1,3 +1,30 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
+import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-storage.js";
+
+// Firebase configuration
+const firebaseConfig = {
+    apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
+    authDomain: "thizoco1.firebaseapp.com",
+    projectId: "thizoco1",
+    storageBucket: "thizoco1.firebasestorage.app",
+    messagingSenderId: "234620248112",
+    appId: "1:234620248112:web:752f2e6c65844239764df5",
+    measurementId: "G-B8M102JDYP"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const storage = getStorage(app);
+
+// Extract the firm name from the URL query
+const urlParams = new URLSearchParams(window.location.search);
+const firm = urlParams.get('firm');
+
+if (!firm) {
+    alert("Error: No firm identifier found. Please log in again.");
+}
+
+// Existing Project Selection System
 const OPTIONS = [
     "Core & Shell",
     "Room Layout",
@@ -20,97 +47,109 @@ let totalSelections = 0;
 const MAX_SELECTIONS = 9;
 
 function uploadFile(projectId) {
-    const projectElement = document.querySelector(`#project${projectId}`);
+    const fileInput = document.querySelector(`#project${projectId} input[type="file"]`);
+    const file = fileInput.files[0];
 
-    // Show loading indicator
-    const loadingIndicator = document.createElement('div');
-    loadingIndicator.className = 'uploading-indicator';
-    loadingIndicator.textContent = 'Uploading...';
+    if (!file) {
+        alert("Please select a file to upload.");
+        return;
+    }
+
+    if (!firm) {
+        alert("Error: Firm identifier missing. Cannot upload file.");
+        return;
+    }
+
+    // Show uploading indicator
+    const projectElement = document.querySelector(`#project${projectId}`);
+    const loadingIndicator = document.createElement("div");
+    loadingIndicator.className = "uploading-indicator";
+    loadingIndicator.textContent = "Uploading...";
     projectElement.appendChild(loadingIndicator);
 
-    // Simulate upload delay
-    setTimeout(() => {
-        loadingIndicator.remove();
-        createOptionButtons(projectId);
-    }, 300);
+    // Create a reference to the firm's folder in Firebase Storage
+    const storageRef = ref(storage, `uploads/${firm}/${file.name}`);
+
+    // Upload the file
+    uploadBytes(storageRef, file).then(async (snapshot) => {
+        loadingIndicator.textContent = "Upload complete!";
+        console.log(`File uploaded: ${file.name}`);
+
+        // Get the file URL
+        const fileURL = await getDownloadURL(storageRef);
+
+        // Display file download link
+        const fileLink = document.createElement("a");
+        fileLink.href = fileURL;
+        fileLink.textContent = "View Uploaded File";
+        fileLink.target = "_blank";
+        projectElement.appendChild(fileLink);
+    }).catch((error) => {
+        console.error("Error uploading file:", error);
+        loadingIndicator.textContent = "Upload failed!";
+    });
 }
 
 function createOptionButtons(projectId) {
     const projectElement = document.querySelector(`#project${projectId}`);
 
-    // Check if options already exist
     if (projectElement.querySelector('.project-options')) {
-        console.log("Options already exist for project", projectId); // Debug
+        console.log("Options already exist for project", projectId);
         return;
     }
 
-    console.log("Creating buttons for project", projectId); // Debug
+    console.log("Creating buttons for project", projectId);
 
-    // Create options container
     const optionsContainer = document.createElement('div');
     optionsContainer.className = 'project-options';
 
-    // Create option buttons
     OPTIONS.forEach((option, index) => {
         const button = document.createElement('button');
         button.className = 'project-option';
         button.textContent = option;
         button.dataset.option = option;
 
-        // Add staggered animation
         button.style.animationDelay = `${0.2 + index * 0.05}s`;
 
-        // Check if this option is selected in other projects
         if (isOptionSelectedInOtherProjects(option, projectId)) {
             button.classList.add('disabled');
             button.disabled = true;
         }
 
-        // Add click handler for toggling options
         button.addEventListener('click', () => toggleOption(button, projectId, option));
         optionsContainer.appendChild(button);
     });
 
-    // Append the options container to the project card
     projectElement.appendChild(optionsContainer);
-
-    // Debug: Ensure options container was added
     console.log("Options container appended:", projectElement.querySelector('.project-options'));
 }
 
 function toggleOption(button, projectId, option) {
     const projectKey = `project${projectId}`;
 
-    // Add transition effect
     button.style.transition = 'all 0.3s ease';
 
     if (selectedOptions[projectKey].has(option)) {
-        // Deselect option with animation
         button.classList.add('deselecting');
         selectedOptions[projectKey].delete(option);
         button.classList.remove('selected');
         totalSelections--;
 
-        // Enable this option in other projects
         updateOptionAvailability(option, false);
     } else {
-        // Check if max selections reached
         if (totalSelections >= MAX_SELECTIONS) {
             alert('Maximum of 9 selections across all projects reached');
             return;
         }
 
-        // Select option with animation
         button.classList.add('selecting');
         selectedOptions[projectKey].add(option);
         button.classList.add('selected');
         totalSelections++;
 
-        // Disable this option in other projects
         updateOptionAvailability(option, true);
     }
 
-    // Remove animation classes after transition
     setTimeout(() => {
         button.classList.remove('selecting', 'deselecting');
     }, 300);
@@ -131,37 +170,30 @@ function isOptionSelectedInOtherProjects(option, currentProjectId) {
     });
 }
 
-// Function to save project data to a local file
+// Function to save project data locally
 function saveToLocalFile(filename, data) {
-    // Create a Blob with the data
-    const blob = new Blob([data], { type: 'application/json' });
-
-    // Create a link element
-    const link = document.createElement('a');
+    const blob = new Blob([data], { type: "application/json" });
+    const link = document.createElement("a");
     link.href = window.URL.createObjectURL(blob);
     link.download = filename;
-
-    // Append the link to the body temporarily and trigger the download
     document.body.appendChild(link);
     link.click();
-
-    // Remove the link after download
     document.body.removeChild(link);
 }
 
 // Update "Save to Revit" button functionality
 function updateSaveToRevitButton() {
-    const saveToRevitButton = document.querySelector('.save-to-revit'); // Assuming class name is 'save-to-revit'
+    const saveToRevitButton = document.querySelector(".save-to-revit");
 
     if (saveToRevitButton) {
-        saveToRevitButton.addEventListener('click', () => {
-            const projectData = JSON.stringify(selectedOptions, null, 2); // Serialize project data
-            saveToLocalFile('project_data.json', projectData); // Save the data
+        saveToRevitButton.addEventListener("click", () => {
+            const projectData = JSON.stringify(selectedOptions, null, 2);
+            saveToLocalFile("project_data.json", projectData);
         });
     } else {
-        console.error('Save to Revit button not found');
+        console.error("Save to Revit button not found");
     }
 }
 
-// Initialize the "Save to Revit" button functionality
+// Initialize "Save to Revit" button
 updateSaveToRevitButton();
