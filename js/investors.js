@@ -42,7 +42,7 @@ document.querySelector('.login-form').addEventListener('submit', async function 
 
         if (currentPath.includes("investors.html")) {
             if (allowedExceptions.includes(email)) {
-                window.location.href = `./${email.split('@')[0]}-investors-dashboard.html`;
+                window.location.href = `./${email.split('@')[0]}-investor-dashboard.html`;
             } else {
                 showFeedback("Access restricted to Thizo Investors.", false);
             }
