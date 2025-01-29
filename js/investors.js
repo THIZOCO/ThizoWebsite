@@ -40,23 +40,37 @@ document.querySelector('.login-form').addEventListener('submit', async function 
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
         const currentPath = window.location.pathname;
 
+        console.log(`Login successful for: ${email}`);
+        console.log(`Current Path: ${currentPath}`);
+
         if (currentPath.includes("investors.html")) {
             if (allowedExceptions.includes(email)) {
-                window.location.href = `./${email.split('@')[0]}-investor-dashboard.html`;
+                // Redirect to a single dashboard file with the user info passed via query parameter
+                const redirectPath = `./investor-dashboard.html?user=${email.split('@')[0]}`;
+                console.log(`Redirecting to: ${redirectPath}`);
+                window.location.href = redirectPath;
             } else {
+                console.log("Access denied: Not an allowed investor.");
                 showFeedback("Access restricted to Thizo Investors.", false);
             }
         } else if (currentPath.includes("client-login.html")) {
             if (allowedExceptions.includes(email)) {
-                window.location.href = `./${email.split('@')[0]}-account-management.html`;
+                const redirectPath = `./account-management.html?user=${email.split('@')[0]}`;
+                console.log(`Redirecting to: ${redirectPath}`);
+                window.location.href = redirectPath;
             } else {
+                console.log("Access denied: Not an allowed client.");
                 showFeedback("Access restricted to industry clients only.", false);
             }
         } else {
+            console.log("Invalid login attempt.");
             showFeedback("Invalid login username and/or password. Please try again.", false);
         }
     } catch (error) {
+        console.error(`Login failed: ${error.message}`);
+
         if (error.code === 'auth/user-not-found') {
+            console.log("User not found, redirecting to account creation.");
             if (window.location.pathname.includes("client-login.html")) {
                 showFeedback("No Account is created for this username yet. Create an account below to sign-in.", false);
                 setTimeout(() => {
@@ -78,7 +92,6 @@ function showFeedback(message, isSuccess) {
     feedbackElement.style.color = isSuccess ? 'green' : 'red';
     feedbackElement.style.display = 'block';
 }
-console.log(auth); 
 
 // Debug Firebase initialization
 console.log("Firebase auth initialized:", auth);
