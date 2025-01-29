@@ -1,5 +1,5 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
+import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
 
 // Firebase configuration
 const firebaseConfig = {
@@ -16,7 +16,22 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const auth = getAuth(app);
 
-// Firm-based routing: Define allowed firms and their specific account pages
+// Allowed exceptions and firm-based routing
+const allowedExceptions = [
+    "valerie.e.trent@gmail.com",
+    "jroither@gmail.com",
+    "kristin.pautlitz@gmail.com",
+    "naumannoor@gmail.com",
+    "snow.michaelwesley@gmail.com",
+    "jstevensnow@gmail.com",
+    "megtwright@gmail.com",
+    "thomas.h.snow@gmail.com",
+    "j.alex.trent91@gmail.com",
+    "bfoxj42@gmail.com", 
+    "danail.momchilov@gmail.com"
+];
+
+const invalidDomains = ["gmail.com", "yahoo.com", "aol.com"];
 const firmRouting = {
     "foxarchitects.com": "foxarchitects-account-management.html",
     "millerdesign.com": "millerdesign-account-management.html",
@@ -24,42 +39,76 @@ const firmRouting = {
     // Add more firms as needed
 };
 
+// Event listener for login form submission
 document.querySelector('.login-form').addEventListener('submit', async function (e) {
     e.preventDefault();
 
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
-    const emailDomain = email.split('@')[1];  // Extract domain from email
+    const emailDomain = email.split('@')[1]; // Extract email domain
+
+    console.log(`Login attempt by email: ${email}, domain: ${emailDomain}`);
+
+    // Check if the email is invalid
+    if (invalidDomains.includes(emailDomain) && !allowedExceptions.includes(email)) {
+        showFeedback("Access restricted to industry clients only.", false);
+        return;
+    }
 
     try {
-        console.log(`Attempting login for email: ${email}`);
-
         const userCredential = await signInWithEmailAndPassword(auth, email, password);
 
-        // Check if the domain is in the firmRouting map
-        if (firmRouting[emailDomain]) {
+        if (allowedExceptions.includes(email)) {
+            // Redirect allowed exception users
+            console.log("Allowed exception login successful.");
+            window.location.href = `./${email.split('@')[0]}-account-management.html`;
+        } else if (firmRouting[emailDomain]) {
+            // Redirect firm-based users
             const firmAccountPage = firmRouting[emailDomain];
-            const clientDashboardPage = firmAccountPage.replace("account-management", "client-dashboard");
-
-            console.log(`Routing to ${firmAccountPage} and linking to ${clientDashboardPage}`);
-
-            // Redirect to the firm's account management page, passing the firm name
-            window.location.href = `./${firmAccountPage}?firm=${emailDomain}`;
+            console.log(`Firm-based login successful. Redirecting to ${firmAccountPage}`);
+            window.location.href = `./${firmAccountPage}`;
         } else {
-            showFeedback("Access restricted to registered firms.", false);
+            // Allow creation for new firms
+            console.log("New firm domain detected. Allowing account creation.");
+            showFeedback("No account found. Please create an account.", false);
+            setTimeout(() => {
+                window.location.href = './create-account.html';
+            }, 2000);
         }
     } catch (error) {
         console.error(`Login failed: ${error.message}`);
 
         if (error.code === 'auth/user-not-found') {
-            showFeedback("Account not found. Please contact support.", false);
+            showFeedback("Account not found. Please create an account.", false);
+            setTimeout(() => {
+                window.location.href = './create-account.html';
+            }, 2000);
         } else {
             showFeedback(`Login failed: ${error.message}`, false);
         }
     }
 });
 
-// Helper function to display feedback
+// Forgot Password functionality
+document.getElementById('forgotPassword').addEventListener('click', async function (e) {
+    e.preventDefault();
+
+    const email = prompt("Please enter your registered email address:");
+
+    if (!email) {
+        alert("Email is required to reset your password.");
+        return;
+    }
+
+    try {
+        await sendPasswordResetEmail(auth, email);
+        alert("Password reset email sent! Please check your inbox.");
+    } catch (error) {
+        alert(`Error: ${error.message}`);
+    }
+});
+
+// Helper function to display feedback messages
 function showFeedback(message, isSuccess) {
     const feedbackElement = document.getElementById('feedbackMessage');
     feedbackElement.textContent = message;
