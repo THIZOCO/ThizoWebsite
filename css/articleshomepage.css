@@ -155,40 +155,46 @@
   }
   
   .solutions {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping to new rows */
-    justify-content: space-evenly; /* Evenly distribute the cards */
+    display: grid; 
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 20px; /* Add spacing between cards */
     padding: 40px 0;
     background-color: #e8e8e8;
   }
   
   .section {
-    text-align: center;
-    flex: 1 1 calc(30% - 20px); /* Ensure three cards per row with spacing */
-    max-width: 30%; /* Prevent cards from growing too large */
-    background-color: #d6b587; /* Non Photo Tan */
-    border-radius: 8px;
-    padding: 20px;
+    background-color: #d6b587;
+    padding: 10px; 
+    border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    box-sizing: border-box;
+    overflow: hidden;
+    display: flex; 
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: inherit;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
   
   .section img {
-    width: 100%;
-    height: auto;
+    margin: 10px; 
+    margin-right: 5px; 
+    width: 95%;
+    height: 200px;
     border-radius: 8px;
     margin-bottom: 20px;
+    object-fit: cover;
   }
   
   .section h3 {
-    font-size: 1.5em;
+    font-size: 0.5em;
     color: #3a3a46; /* Caribbean Current */
     margin-bottom: 10px;
   }
   
   .section p {
-    font-size: 1em;
+    font-size: .5em;
     color: #3a3a46; /* Cadet Gray */
   }
 

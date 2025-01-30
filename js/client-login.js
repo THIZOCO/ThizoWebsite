@@ -1,8 +1,8 @@
 import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
 import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
 
-// Firebase configuration
-const firebaseConfig = {
+// Firebase configuration 
+const firebaseConfig = { 
     apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
     authDomain: "thizoco1.firebaseapp.com",
     projectId: "thizoco1",
