@@ -62,7 +62,7 @@ document.querySelector('.login-form').addEventListener('submit', async function 
     }
 
     try {
-        const userCredential = await signInWithEmailAndPassword(auth, email, password);
+        const userCredential = await firebase.auth().signInWithEmailAndPassword(email, password);
 
         if (allowedExceptions.includes(email)) {
             // Redirect all allowed exceptions to a shared dynamic page
