@@ -9,9 +9,14 @@ const firebaseConfig = {
     measurementId: "G-F46RWJ6J3E"
   };
   
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
+// Initialize Firebase
+const app = firebase.initializeApp(firebaseConfig);
+
+// Initialize Firebase Auth
+const auth = firebase.auth();
+
+console.log("Auth initialized:", auth);
+
   
   // Allowed exceptions and firm-based routing
   const allowedExceptions = [
@@ -38,11 +43,31 @@ const firebaseConfig = {
   // Event listener for login form submission
   document.querySelector(".login-form").addEventListener("submit", async function (e) {
     e.preventDefault();
+
+    document.querySelector('.login-form').addEventListener('submit', async function (e) {
+        e.preventDefault();
+    
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+    
+        // Debugging logs
+        console.log("Form submitted with email:", email, "and password:", password);
+        console.log("Auth instance:", auth);
+    
+        try {
+            const userCredential = await auth.signInWithEmailAndPassword(email, password);
+            console.log("Login successful:", userCredential.user);
+            window.location.href = "./account-management.html";
+        } catch (error) {
+            console.error("Login error:", error.message);
+            alert(`Login failed: ${error.message}`);
+        }
+    });    
   
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const emailDomain = email.split("@")[1]; // Extract email domain
-  
+  /*
     console.log(`Login attempt by email: ${email}, domain: ${emailDomain}`);
   
     // Check if the email is invalid
@@ -103,7 +128,7 @@ const firebaseConfig = {
       alert(`Error: ${error.message}`);
     }
   });
-  
+  */
   // Helper function to display feedback messages
   function showFeedback(message, isSuccess) {
     const feedbackElement = document.getElementById("feedbackMessage");
