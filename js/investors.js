@@ -2,19 +2,27 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase
 import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
 
 // Firebase configuration
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
 const firebaseConfig = {
-    apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
-    authDomain: "thizoco1.firebaseapp.com",
-    projectId: "thizoco1",
-    storageBucket: "thizoco1.firebasestorage.app",
-    messagingSenderId: "234620248112",
-    appId: "1:234620248112:web:752f2e6c65844239764df5",
-    measurementId: "G-B8M102JDYP"
+  apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
+  authDomain: "thizoco1.firebaseapp.com",
+  projectId: "thizoco1",
+  storageBucket: "thizoco1.firebasestorage.app",
+  messagingSenderId: "234620248112",
+  appId: "1:234620248112:web:3740a2cfa48a0753764df5",
+  measurementId: "G-F46RWJ6J3E"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
+const analytics = getAnalytics(app);
 
 // Add event listener for form submission
 document.querySelector('.login-form').addEventListener('submit', async function (e) {
