@@ -50,9 +50,9 @@ const firebaseConfig = {
       showFeedback("Access restricted to industry clients only.", false);
       return;
     }
-  
+    
     try {
-      const userCredential = await auth.signInWithEmailAndPassword(email, password);
+      const userCredential = await auth.signInWithEmailAndPassword(email, password); 
   
       if (allowedExceptions.includes(email)) {
         // Redirect all allowed exceptions to a shared dynamic page
@@ -110,6 +110,10 @@ const firebaseConfig = {
     feedbackElement.textContent = message;
     feedbackElement.style.color = isSuccess ? "green" : "red";
     feedbackElement.style.display = "block";
+    const user = userCredential.user;
+    console.log("Login successful:", user);
+    console.error("Login error:", error.message);
+      showFeedback(`Login failed: ${error.message}`, false);
   }
   
   // Debug Firebase initialization
