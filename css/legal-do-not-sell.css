@@ -201,7 +201,7 @@ p {
 
 /* Links */
 a {
-  color: #ff5733; /* Bright orange color for links */
+  color: #f47801; /* Bright orange color for links */
   text-decoration: none;
 }
 
@@ -211,7 +211,7 @@ a:hover {
 
 /* Highlighted Text */
 .highlight {
-  color: #ff5733;
+  color: #ce6c15;
   font-weight: bold;
 }
 /* Content Wrapper for side margins */

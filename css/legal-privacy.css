@@ -175,7 +175,7 @@ p {
 
 /* Links */
 a {
-    color: #ff5733;
+    color: #f47801;
     text-decoration: none;
 }
 
@@ -185,7 +185,7 @@ a:hover {
 
 /* Highlighting the text that needs to be reviewed */
 .highlight {
-    color: #FF5733; /* Bright orange */
+    color: #ce6c15; /* Bright orange */
     font-weight: bold;
 }
 
