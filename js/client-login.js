@@ -1,16 +1,14 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
-import { getAuth, signInWithEmailAndPassword, sendPasswordResetEmail } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-auth.js";
 
-// Firebase configuration 
-// Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+  // Import the functions you need from the SDKs you need
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js";
+  import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js";
 
-// Your web app's Firebase configuration
-// For Firebase JS SDK v7.20.0 and later, measurementId is optional
-const firebaseConfig = {
+  // TODO: Add SDKs for Firebase products that you want to use
+  // https://firebase.google.com/docs/web/setup#available-libraries
+
+  // Your web app's Firebase configuration
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+  const firebaseConfig = {
     apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
     authDomain: "thizoco1.firebaseapp.com",
     projectId: "thizoco1",
@@ -18,12 +16,11 @@ const firebaseConfig = {
     messagingSenderId: "234620248112",
     appId: "1:234620248112:web:3740a2cfa48a0753764df5",
     measurementId: "G-F46RWJ6J3E"
-  };  
+  };
 
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const analytics = getAnalytics(app);
-const auth = getAuth(app); // Move this line here
+  // Initialize Firebase
+  const app = initializeApp(firebaseConfig);
+  const analytics = getAnalytics(app);
 
 // Allowed exceptions and firm-based routing
 const allowedExceptions = [
@@ -126,4 +123,4 @@ function showFeedback(message, isSuccess) {
 }
 
 // Debug Firebase initialization
-console.log("Firebase auth initialized:", auth); 
+console.log("Firebase auth initialized:", auth);
