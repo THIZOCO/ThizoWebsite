@@ -1,11 +1,3 @@
-if (typeof firebase === "undefined") {
-  throw new Error("Firebase SDK not loaded. Ensure Firebase CDN is included.");
-}
-
-const app = firebase.initializeApp(firebaseConfig);
-const auth = firebase.auth();
-
-
 // Firebase initialization
 const firebaseConfig = {
   apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
@@ -22,7 +14,7 @@ if (typeof firebase === "undefined") {
   throw new Error("Firebase SDK not loaded. Ensure Firebase CDN is included.");
 }
 
-// Initialize Firebase
+// Initialize Firebase (only once)
 const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
 
