@@ -1,3 +1,4 @@
+
 // Firebase initialization
 const firebaseConfig = {
     apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
@@ -9,14 +10,11 @@ const firebaseConfig = {
     measurementId: "G-F46RWJ6J3E"
   };
   
-// Initialize Firebase
-const app = firebase.initializeApp(firebaseConfig);
-
-// Initialize Firebase Auth
-const auth = firebase.auth();
-
-console.log("Auth initialized:", auth);
-
+  // Initialize Firebase
+  const app = firebase.initializeApp(firebaseConfig);
+  const auth = firebase.auth();
+  
+  console.log("Auth initialized:", auth);
   
   // Allowed exceptions and firm-based routing
   const allowedExceptions = [
@@ -43,31 +41,11 @@ console.log("Auth initialized:", auth);
   // Event listener for login form submission
   document.querySelector(".login-form").addEventListener("submit", async function (e) {
     e.preventDefault();
-
-    document.querySelector('.login-form').addEventListener('submit', async function (e) {
-        e.preventDefault();
-    
-        const email = document.getElementById('email').value;
-        const password = document.getElementById('password').value;
-    
-        // Debugging logs
-        console.log("Form submitted with email:", email, "and password:", password);
-        console.log("Auth instance:", auth);
-    
-        try {
-            const userCredential = await auth.signInWithEmailAndPassword(email, password);
-            console.log("Login successful:", userCredential.user);
-            window.location.href = "./account-management.html";
-        } catch (error) {
-            console.error("Login error:", error.message);
-            alert(`Login failed: ${error.message}`);
-        }
-    });    
   
     const email = document.getElementById("email").value;
     const password = document.getElementById("password").value;
     const emailDomain = email.split("@")[1]; // Extract email domain
-  /*
+  
     console.log(`Login attempt by email: ${email}, domain: ${emailDomain}`);
   
     // Check if the email is invalid
@@ -75,30 +53,27 @@ console.log("Auth initialized:", auth);
       showFeedback("Access restricted to industry clients only.", false);
       return;
     }
-    
+  
     try {
-      const userCredential = await auth.signInWithEmailAndPassword(email, password); 
+      const userCredential = await auth.signInWithEmailAndPassword(email, password);
+      console.log("Login successful:", userCredential.user);
   
       if (allowedExceptions.includes(email)) {
         // Redirect all allowed exceptions to a shared dynamic page
-        console.log("Allowed exception login successful.");
         window.location.href = `./account-management.html?user=${encodeURIComponent(email)}`;
       } else if (firmRouting[emailDomain]) {
         // Redirect firm-based users
         const firmAccountPage = firmRouting[emailDomain];
-        console.log(`Firm-based login successful. Redirecting to ${firmAccountPage}`);
         window.location.href = `./${firmAccountPage}`;
       } else {
         // Allow creation for new firms
-        console.log("New firm domain detected. Allowing account creation.");
         showFeedback("No account found. Please create an account.", false);
         setTimeout(() => {
           window.location.href = "./create-account.html";
         }, 2000);
       }
     } catch (error) {
-      console.error(`Login failed: ${error.message}`);
-  
+      console.error("Login error:", error.message);
       if (error.code === "auth/user-not-found") {
         showFeedback("Account not found. Please create an account.", false);
         setTimeout(() => {
@@ -115,7 +90,6 @@ console.log("Auth initialized:", auth);
     e.preventDefault();
   
     const email = prompt("Please enter your registered email address:");
-  
     if (!email) {
       alert("Email is required to reset your password.");
       return;
@@ -128,17 +102,13 @@ console.log("Auth initialized:", auth);
       alert(`Error: ${error.message}`);
     }
   });
-  */
+  
   // Helper function to display feedback messages
   function showFeedback(message, isSuccess) {
     const feedbackElement = document.getElementById("feedbackMessage");
     feedbackElement.textContent = message;
     feedbackElement.style.color = isSuccess ? "green" : "red";
     feedbackElement.style.display = "block";
-    const user = userCredential.user;
-    console.log("Login successful:", user);
-    console.error("Login error:", error.message);
-      showFeedback(`Login failed: ${error.message}`, false);
   }
   
   // Debug Firebase initialization
