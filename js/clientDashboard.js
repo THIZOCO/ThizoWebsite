@@ -1,21 +1,3 @@
-import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-app.js";
-import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/9.1.3/firebase-storage.js";
-
-// Firebase configuration
-const firebaseConfig = {
-    apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
-    authDomain: "thizoco1.firebaseapp.com",
-    projectId: "thizoco1",
-    storageBucket: "thizoco1.firebasestorage.app",
-    messagingSenderId: "234620248112",
-    appId: "1:234620248112:web:752f2e6c65844239764df5",
-    measurementId: "G-B8M102JDYP"
-};
-
-// Initialize Firebase
-const app = initializeApp(firebaseConfig);
-const storage = getStorage(app);
-
 // Extract the firm name from the URL query
 const urlParams = new URLSearchParams(window.location.search);
 const firm = urlParams.get('firm');
@@ -67,24 +49,33 @@ function uploadFile(projectId) {
     loadingIndicator.textContent = "Uploading...";
     projectElement.appendChild(loadingIndicator);
 
-    // Create a reference to the firm's folder in Firebase Storage
-    const storageRef = ref(storage, `uploads/${firm}/${file.name}`);
+    // Prepare the form data
+    const formData = new FormData();
+    formData.append("file", file);
+    formData.append("firm", firm);
 
-    // Upload the file
-    uploadBytes(storageRef, file).then(async (snapshot) => {
-        loadingIndicator.textContent = "Upload complete!";
-        console.log(`File uploaded: ${file.name}`);
-
-        // Get the file URL
-        const fileURL = await getDownloadURL(storageRef);
-
-        // Display file download link
+    // Make the POST request to the IIS API endpoint
+    fetch("http://10.128.0.4/uploads", {
+        method: "POST",
+        body: formData
+    })
+    .then(response => {
+        if (response.ok) {
+            loadingIndicator.textContent = "Upload complete!";
+            return response.json(); // Assuming the server sends a JSON response
+        } else {
+            throw new Error("Upload failed");
+        }
+    })
+    .then(data => {
+        // Handle the response (e.g., display the uploaded file link)
         const fileLink = document.createElement("a");
-        fileLink.href = fileURL;
+        fileLink.href = data.fileURL; // Adjust based on the server response
         fileLink.textContent = "View Uploaded File";
         fileLink.target = "_blank";
         projectElement.appendChild(fileLink);
-    }).catch((error) => {
+    })
+    .catch(error => {
         console.error("Error uploading file:", error);
         loadingIndicator.textContent = "Upload failed!";
     });
