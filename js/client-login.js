@@ -15,8 +15,10 @@ if (typeof firebase === "undefined") {
 }
 
 // Initialize Firebase (only once)
-const app = firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
+const db = firebase.firestore();
+const storage = firebase.storage();
+
 
 console.log("Auth initialized:", auth);
 
