@@ -3,7 +3,7 @@ const firebaseConfig = {
   apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
   authDomain: "thizoco1.firebaseapp.com",
   projectId: "thizoco1",
-  storageBucket: "thizoco1.appspot.com", // Corrected storage bucket
+  storageBucket: "thizoco1.appspot.com", // Keeping this in case future updates need storage
   messagingSenderId: "234620248112",
   appId: "1:234620248112:web:3740a2cfa48a0753764df5",
   measurementId: "G-F46RWJ6J3E"
@@ -16,9 +16,7 @@ if (typeof firebase === "undefined") {
 
 // Initialize Firebase (only once)
 const auth = firebase.auth();
-const db = firebase.firestore();
-const storage = firebase.storage();
-
+const db = firebase.firestore(); // Keeping Firestore for any structured data requirements
 
 console.log("Auth initialized:", auth);
 

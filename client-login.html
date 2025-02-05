@@ -7,22 +7,39 @@
 
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Autodesk+Sans:wght@400;700&display=swap" rel="stylesheet">
     
     <!-- Firebase Configuration -->
     <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js"></script>    
+    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js"></script>
+
+    <script>
+      // Initialize Firebase
+      const firebaseConfig = {
+        apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
+        authDomain: "thizoco1.firebaseapp.com",
+        projectId: "thizoco1",
+        storageBucket: "thizoco1.appspot.com", // Corrected storage bucket
+        messagingSenderId: "234620248112",
+        appId: "1:234620248112:web:3740a2cfa48a0753764df5",
+        measurementId: "G-F46RWJ6J3E"
+      };
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
 
     <!-- Link to local CSS -->
-    <link rel="stylesheet" href="./css/client-login.css"> 
+    <link rel="stylesheet" href="./css/client-login.css">
+
+    <!-- Link to JavaScript -->
+    <script src="./js/client-login.js" defer></script>
 </head>
 
 <body>
-    <!-- Header Section -->
-    <header class="navbar">
-        <div class="container">
-            <div class="logo">
+    <!-- Header Section --> 
+    <header class="navbar"> 
+        <div class="container"> 
+            <div class="logo"> 
                 <a href="./index.html">
                     <img src="https://i.ibb.co/26cPFf7/LOGO.jpg" alt="Thizo Logo" border="0">
                 </a>
@@ -64,11 +81,10 @@
             <p><a href="./create-account.html" id="createAccount">New To Thizo? Create Account Here.</a></p>
         </form>
     </div>
-</section>    
+</section>
 
 <!-- JavaScript for Login Functionality -->
-<script src="./js/client-login.js"></script>
-
+<script src="./js/client-login.js" type="module"></script>
 
 
     <!-- FOOTER SECTION -->
