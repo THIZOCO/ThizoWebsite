@@ -9,15 +9,14 @@ const firebaseConfig = {
   measurementId: "G-F46RWJ6J3E"
 };
 
-// Check Firebase is loaded
+// Check if Firebase is loaded
 if (typeof firebase === "undefined") {
   throw new Error("Firebase SDK not loaded. Ensure Firebase CDN is included.");
 }
 
 // Initialize Firebase (only once)
+firebase.initializeApp(firebaseConfig);
 const auth = firebase.auth();
-const db = firebase.firestore(); // Keeping Firestore for any structured data requirements
-
 console.log("Auth initialized:", auth);
 
 // Allowed exceptions and firm-based routing
