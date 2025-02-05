@@ -65,16 +65,16 @@ if (loginForm) {
 
       if (allowedExceptions.includes(email)) {
         // Redirect all allowed exceptions to a shared dynamic page
-        window.location.href = `../account-management.html?user=${encodeURIComponent(email)}`;
+        window.location.href = `/account-management.html?user=${encodeURIComponent(email)}`;
       } else if (firmRouting[emailDomain]) {
         // Redirect firm-based users
         const firmAccountPage = firmRouting[emailDomain];
-        window.location.href = `../${firmAccountPage}`;
+        window.location.href = `/${firmAccountPage}`;
       } else {
         // Allow creation for new firms
         showFeedback("No account found. Please create an account.", false);
         setTimeout(() => {
-          window.location.href = "../create-account.html";
+          window.location.href = "/create-account.html";
         }, 2000);
       }
     } catch (error) {
@@ -82,7 +82,7 @@ if (loginForm) {
       if (error.code === "auth/user-not-found") {
         showFeedback("Account not found. Please create an account.", false);
         setTimeout(() => {
-          window.location.href = "../create-account.html";
+          window.location.href = "/create-account.html";
         }, 2000);
       } else {
         showFeedback(`Login failed: ${error.message}`, false);
