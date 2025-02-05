@@ -1,3 +1,4 @@
+console.log("client-login.js loaded successfully");
 
 // Initialize Firebase
 const firebaseConfig = {
@@ -116,7 +117,7 @@ if (forgotPasswordBtn) {
 // Helper function to display feedback messages
 function showFeedback(message, isSuccess) {
   const feedbackElement = document.getElementById("feedbackMessage");
-  if (feedbackElement) {
+  if (feedbackElement && typeof message === "string") {
     feedbackElement.textContent = message;
     feedbackElement.style.color = isSuccess ? "green" : "red";
     feedbackElement.style.display = "block";
