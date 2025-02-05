@@ -8,24 +8,29 @@
     <!-- Link to Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     
-    <!-- Firebase Configuration -->
-    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-auth.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/11.2.0/firebase-analytics.js"></script>
-
     <script>
-      // Initialize Firebase
-      const firebaseConfig = {
-        apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
-        authDomain: "thizoco1.firebaseapp.com",
-        projectId: "thizoco1",
-        storageBucket: "thizoco1.appspot.com", // Corrected storage bucket
-        messagingSenderId: "234620248112",
-        appId: "1:234620248112:web:3740a2cfa48a0753764df5",
-        measurementId: "G-F46RWJ6J3E"
-      };
-      firebase.initializeApp(firebaseConfig);
-      firebase.analytics();
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+// Your web app's Firebase configuration
+// For Firebase JS SDK v7.20.0 and later, measurementId is optional
+const firebaseConfig = {
+  apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
+  authDomain: "thizoco1.firebaseapp.com",
+  projectId: "thizoco1",
+  storageBucket: "thizoco1.firebasestorage.app",
+  messagingSenderId: "234620248112",
+  appId: "1:234620248112:web:3740a2cfa48a0753764df5",
+  measurementId: "G-F46RWJ6J3E"
+};
+
+// Initialize Firebase
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
     </script>
 
     <!-- Link to local CSS -->
