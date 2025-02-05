@@ -1,3 +1,15 @@
+
+// Initialize Firebase
+const firebaseConfig = {
+  apiKey: "AIzaSyBhPo4M2lnVTKkqLVug2bHDvHyjJGtu-LY",
+  authDomain: "thizoco1.firebaseapp.com",
+  projectId: "thizoco1",
+  storageBucket: "thizoco1.appspot.com",
+  messagingSenderId: "234620248112",
+  appId: "1:234620248112:web:3740a2cfa48a0753764df5",
+  measurementId: "G-F46RWJ6J3E"
+};
+
 // Check if Firebase is loaded
 if (typeof firebase === "undefined") {
   throw new Error("Firebase SDK not loaded. Ensure Firebase CDN is included.");
