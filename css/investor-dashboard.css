@@ -199,7 +199,7 @@ body {
     margin: 5px 0; /* Add spacing between paragraphs */
   }
 
-  .investment-agreement-button {
+  .download-btn {
     background-color: #f47801;
     color: #fff;
     border: none;
@@ -209,6 +209,8 @@ body {
     width: 70%;
     font-size: 1rem;
     transition: background-color 0.3s;
+    text-align: center; /* Centers the text */
+    display: inline-block; /* Ensures proper alignment */
   }
   
   .add-card-button:hover {

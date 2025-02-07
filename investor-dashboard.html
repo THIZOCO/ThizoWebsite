@@ -48,15 +48,29 @@
         <p>Investor Name:</p>
         <p>Investor Email:</p>
         <p>Investor Phone Number:</p>
-        <p>Investor Address:</p>
+        <p>Investor Tax City/State:</p>
         <p>Date of Investment:</p>
         <p>Investment Amount:</p> 
         <p>% Ownership at company valuation of $5million:</p> 
         <BR>
         <BR>   
         <BR>
-        <button class="investment-agreement-button">Upload Investment Agreement</button>
+        <a id="download-btn" class="download-btn" >Download My Investment Agreement</a>
       </div>
+
+        <!-- JAVASCRIPT SECTION -->
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const urlParams = new URLSearchParams(window.location.search);
+            const user = urlParams.get("user"); // Extracts username from URL
+        
+            if (user) {
+                const filePath = `https://yourserver.com/files/investors/${user}/document.pdf`;
+                document.getElementById("download-btn").setAttribute("href", filePath);
+            }
+        });
+        </script>
+        
 
       <!-- THE NUMBERS SECTION -->
       <div class="column">
