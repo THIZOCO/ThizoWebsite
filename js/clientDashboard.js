@@ -188,3 +188,20 @@ function updateSaveToRevitButton() {
 
 // Initialize "Save to Revit" button
 updateSaveToRevitButton();
+
+// PopUp Disclaimer
+document.addEventListener("DOMContentLoaded", function () {
+    const buildButton = document.querySelector(".build-button");
+    const popup = document.getElementById("disclaimer-popup");
+    const agreeButton = document.getElementById("agree-button");
+
+    buildButton.addEventListener("click", function (event) {
+        event.preventDefault();
+        popup.style.display = "flex";
+    });
+
+    agreeButton.addEventListener("click", function () {
+        popup.style.display = "none";
+        // Proceed with the "Build" action here if needed
+    });
+});

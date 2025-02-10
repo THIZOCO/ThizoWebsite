@@ -245,6 +245,7 @@ nav a, .nav-link {
     background-color: #3a3a46;
     color: #fff;
     padding: 20px;
+    margin: 10px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
@@ -336,18 +337,66 @@ nav a, .nav-link {
     font-weight: bold; /* Ensure the "+" sign is visually strong */
     color: #3a3a46; /* Grey color (#808080) */
     text-align: center; /* Align the "+" in the center of its container */
-    margin: 0 auto; /* Center horizontally */
+    margin: 10px; /* Center horizontally */
     display: inline-block; /* Ensure proper spacing and positioning */
     line-height: 1; /* Align visually with other content */
 }
+
 .equals-sign {
     font-size: 3rem; /* Adjusted for larger size */
     font-weight: bold; /* Ensure the "=" sign is visually strong */
     color: #3a3a46; /* Grey color (#808080) */
     text-align: center; /* Align the "+" in the center of its container */
-    margin: 0 auto; /* Center horizontally */
+    margin: 10px; /* Center horizontally */
     display: inline-block; /* Ensure proper spacing and positioning */
     line-height: 1; /* Align visually with other content */
+}
+
+.build-button {
+  font-size: 2rem; /* Adjusted for larger size */
+  font-weight: bold; 
+  background-color: #028F67; 
+  box-shadow: none;
+  color: #3a3a46; /* Grey color */
+  text-align: center; /* Align in the center of its container */
+  margin: 10px; /* Center horizontally */ 
+  padding: 10px; 
+  border-radius: 8px;
+  display: inline-block; /* Ensure proper spacing and positioning */
+  line-height: 1; /* Align visually with other content */
+}
+
+/* POPUP DISCLAIMER */
+.popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  z-index: 6; /* Ensure it appears on top */
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  max-width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+#agree-button {
+  background-color: #028F67;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  margin-top: 10px;
+  cursor: pointer;
+  border-radius: 5px;
 }
 
 /* FOOTER SECTION */
