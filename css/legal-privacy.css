@@ -185,7 +185,7 @@ a:hover {
 
 /* Highlighting the text that needs to be reviewed */
 .highlight {
-    color: #ce6c15; /* Bright orange */
+    color: #f47801; /* Bright orange */
     font-weight: bold;
 }
 
@@ -206,16 +206,21 @@ table th {
     background-color: #f8f8f8;
 }
 
+.content-wrapper {
+  margin-bottom: 30px; /* Adjust space above the footer */
+}
+
+
 /* FOOTER SECTION */
   /* Footer */
   .footer-wrapper {
     background-color: #e8e8e8; /* Background color for the footer */
-    padding: 50px 0; /* Padding for top and bottom */
+    padding: 20px 0; /* Padding for top and bottom */
 }
 
 .footer {
     background-color: #e8e8e8; /* Retain footer background color */
-    padding: 50px 0; /* Maintain footer padding */
+    padding: 20px 0; /* Maintain footer padding */
     border-radius: 0px; /* Remove any rounding */
     border: none; /* Remove border if any */
     font-size: 1rem; 
