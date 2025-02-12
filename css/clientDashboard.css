@@ -389,6 +389,23 @@ nav a, .nav-link {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
 }
 
+#user-email {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+#submit-email {
+  background-color: #028F67;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
 #agree-button {
   background-color: #028F67;
   color: white;

@@ -8,15 +8,8 @@ if (!firm) {
 
 // Existing Project Selection System
 const OPTIONS = [
-    "Core & Shell",
-    "Room Layout",
-    "Wall types & Doors",
-    "Plumbing",
-    "Electrical",
-    "Ceiling and Lighting",
-    "Floors & Millwork",
-    "Finishes",
-    "Furniture"
+    "Core & Shell", "Room Layout", "Wall types & Doors", "Plumbing", "Electrical", 
+    "Ceiling and Lighting", "Floors & Millwork", "Finishes", "Furniture"
 ];
 
 const selectedOptions = {
@@ -62,15 +55,14 @@ function uploadFile(projectId) {
     .then(response => {
         if (response.ok) {
             loadingIndicator.textContent = "Upload complete!";
-            return response.json(); // Assuming the server sends a JSON response
+            return response.json();
         } else {
             throw new Error("Upload failed");
         }
     })
     .then(data => {
-        // Handle the response (e.g., display the uploaded file link)
         const fileLink = document.createElement("a");
-        fileLink.href = data.fileURL; // Adjust based on the server response
+        fileLink.href = data.fileURL;
         fileLink.textContent = "View Uploaded File";
         fileLink.target = "_blank";
         projectElement.appendChild(fileLink);
@@ -81,127 +73,32 @@ function uploadFile(projectId) {
     });
 }
 
-function createOptionButtons(projectId) {
-    const projectElement = document.querySelector(`#project${projectId}`);
-
-    if (projectElement.querySelector('.project-options')) {
-        console.log("Options already exist for project", projectId);
-        return;
-    }
-
-    console.log("Creating buttons for project", projectId);
-
-    const optionsContainer = document.createElement('div');
-    optionsContainer.className = 'project-options';
-
-    OPTIONS.forEach((option, index) => {
-        const button = document.createElement('button');
-        button.className = 'project-option';
-        button.textContent = option;
-        button.dataset.option = option;
-
-        button.style.animationDelay = `${0.2 + index * 0.05}s`;
-
-        if (isOptionSelectedInOtherProjects(option, projectId)) {
-            button.classList.add('disabled');
-            button.disabled = true;
-        }
-
-        button.addEventListener('click', () => toggleOption(button, projectId, option));
-        optionsContainer.appendChild(button);
-    });
-
-    projectElement.appendChild(optionsContainer);
-    console.log("Options container appended:", projectElement.querySelector('.project-options'));
-}
-
-function toggleOption(button, projectId, option) {
-    const projectKey = `project${projectId}`;
-
-    button.style.transition = 'all 0.3s ease';
-
-    if (selectedOptions[projectKey].has(option)) {
-        button.classList.add('deselecting');
-        selectedOptions[projectKey].delete(option);
-        button.classList.remove('selected');
-        totalSelections--;
-
-        updateOptionAvailability(option, false);
-    } else {
-        if (totalSelections >= MAX_SELECTIONS) {
-            alert('Maximum of 9 selections across all projects reached');
-            return;
-        }
-
-        button.classList.add('selecting');
-        selectedOptions[projectKey].add(option);
-        button.classList.add('selected');
-        totalSelections++;
-
-        updateOptionAvailability(option, true);
-    }
-
-    setTimeout(() => {
-        button.classList.remove('selecting', 'deselecting');
-    }, 300);
-}
-
-function updateOptionAvailability(option, isSelected) {
-    document.querySelectorAll('.project-option').forEach(button => {
-        if (button.dataset.option === option && !button.classList.contains('selected')) {
-            button.disabled = isSelected;
-            button.classList.toggle('disabled', isSelected);
-        }
-    });
-}
-
-function isOptionSelectedInOtherProjects(option, currentProjectId) {
-    return Object.entries(selectedOptions).some(([projectKey, selections]) => {
-        return projectKey !== `project${currentProjectId}` && selections.has(option);
-    });
-}
-
-// Function to save project data locally
-function saveToLocalFile(filename, data) {
-    const blob = new Blob([data], { type: "application/json" });
-    const link = document.createElement("a");
-    link.href = window.URL.createObjectURL(blob);
-    link.download = filename;
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
-}
-
-// Update "Save to Revit" button functionality
-function updateSaveToRevitButton() {
-    const saveToRevitButton = document.querySelector(".save-to-revit");
-
-    if (saveToRevitButton) {
-        saveToRevitButton.addEventListener("click", () => {
-            const projectData = JSON.stringify(selectedOptions, null, 2);
-            saveToLocalFile("project_data.json", projectData);
-        });
-    } else {
-        console.error("Save to Revit button not found");
-    }
-}
-
-// Initialize "Save to Revit" button
-updateSaveToRevitButton();
-
-// PopUp Disclaimer
+// Functionality for the 48-hour popup & Disclaimer popup
 document.addEventListener("DOMContentLoaded", function () {
     const buildButton = document.querySelector(".build-button");
-    const popup = document.getElementById("disclaimer-popup");
+    const popup48 = document.getElementById("popup-48hours");
+    const disclaimerPopup = document.getElementById("disclaimer-popup");
+    const submitEmailBtn = document.getElementById("submit-email");
     const agreeButton = document.getElementById("agree-button");
 
     buildButton.addEventListener("click", function (event) {
         event.preventDefault();
-        popup.style.display = "flex";
+        popup48.style.display = "flex";
+    });
+
+    submitEmailBtn.addEventListener("click", function () {
+        const userEmail = document.getElementById("user-email").value;
+        if (!userEmail) {
+            alert("Please enter a valid email.");
+            return;
+        }
+
+        localStorage.setItem("userEmail", userEmail);
+        popup48.style.display = "none";
+        disclaimerPopup.style.display = "flex";
     });
 
     agreeButton.addEventListener("click", function () {
-        popup.style.display = "none";
-        // Proceed with the "Build" action here if needed
+        disclaimerPopup.style.display = "none";
     });
 });
