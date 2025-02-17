@@ -10,7 +10,6 @@
 
     <!-- Link to local CSS -->
     <link rel="stylesheet" href="./css/client-login.css">
-
 </head>
 
 <body>
@@ -48,95 +47,33 @@
             <input type="email" id="email" name="email" placeholder="Enter your email" required>
             <small id="emailError" class="error-message"></small>
             
-            <div id="feedbackMessage" class="feedback"></div>
-
             <label for="password">Password</label>
             <input type="password" id="password" name="password" required>
 
             <button type="submit" class="login-button">Login</button>
             <p><a href="#" id="forgotPassword">Forgot your password?</a></p>
-            <BR>
+            <br>
             <p><a href="./create-account.html" id="createAccount">New To Thizo? Create Account Here.</a></p>
         </form>
     </div>
 </section>
 
-    <!-- FOOTER SECTION -->
-    <footer class="footer">
-        <div class="footer-container">
-            <div class="footer-description">
-                <img src="https://i.ibb.co/D9nGN89/processed-image.png" alt="Thizo Logo" class="footer-logo">
-                <p>Thizo is committed to advancing the design and real estate industries by improving the lives of professionals everywhere, leading technology innovation, and building a global community of elevated creators. Our connected platform turbo charges stakeholders by compressing nuanced work and supporting the experts; fostering innovation, efficiency, and the new era of design.</p>
-                <div class="social-links">
-                    <a href="https://www.linkedin.com/company/thizo/?viewAsMember=true" target="_blank">
-                        <img src="https://i.ibb.co/s5zffWq/image-3.png" alt="LinkedIn">
-                    </a>
-                </div>
-                <p class="contact-info">Call us at <a href="tel:+18001234567">(800) 123-4567</a> to speak with a product expert.</p>
-            </div>
-  
-            <div class="footer-links">
-                <div class="footer-column new-to-thizo">
-                    <h4>New to Thizo?</h4>
-                    <ul>
-                        <li><a href="./about-us.html">What is Thizo?</a></li>
-                        <li><a href="./product-updates.html">Product Updates</a></li>
-                        <li><a href="./ROI.html">ROI</a></li>
-                        <li><a href="./trust.html">Trust & Security</a></li>
-                        <li><a href="./articleshomepage.html">Industry Articles</a></li>
-                        <li><a href="./newsroom.html">Industry Newsroom</a></li>
-                    </ul>
-                </div>
-                <div class="footer-column">
-                    <h4>About Thizo</h4>
-                    <ul>
-                        <li><a href="./our-story.html">Our Story</a></li>
-                        <li><a href="./careers.html">Careers</a></li>
-                        <li><a href="./contact-us.html">Contact Us</a></li>
-                        <li><a href="./investors.html">Investors</a></li>
-                        <li><a href="./legal.html">Legal</a></li>
-                        <li><a href="./FAQ.html">FAQs</a></li>
-                    </ul>
-                </div>
-            </div>
+<!-- FOOTER SECTION -->
+<footer class="footer">
+    <div class="footer-container">
+        <p>© 2025 Thizo Technologies, Inc.</p>
+        <div class="legal-links">
+            <a href="./legal-privacy.html">Privacy Notice</a>
+            <a href="./legal-terms.html">Terms of Service</a>
+            <a href="./legal-do-not-sell.html">Do Not Sell Personal Information</a>
         </div>
-  
-        <div class="footer-bottom">
-            <p>© 2025 Thizo Technologies, Inc.</p>
-            <div class="legal-links">
-                <a href="./legal-privacy.html">Privacy Notice</a>
-                <a href="./legal-terms.html">Terms of Service</a>
-                <a href="./legal-do-not-sell.html">Do Not Sell Personal Information</a>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 
-<!-- JAVASCRIPT SECTION -->
-    <script type="module">
-        // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/11.3.1/firebase-analytics.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-        const firebaseConfig = {
-          apiKey: "AIzaSyCXHLmDGAGfvkiiNJiOV7p-ULJFjn5-IfM",
-          authDomain: "thizologin.firebaseapp.com",
-          projectId: "thizologin",
-          storageBucket: "thizologin.firebasestorage.app",
-          messagingSenderId: "35666835546",
-          appId: "1:35666835546:web:e7956ca1d73afee0498063",
-          measurementId: "G-FPK97DDZBK"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
-
-<!-- Link to local JS -->
+<!-- Firebase & Local JS -->
+<script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/11.3.1/firebase-auth.js"></script>
 <script src="./js/client-login.js"></script>
+
 </body>
 </html>
