@@ -9,8 +9,12 @@ const firebaseConfig = {
     measurementId: "G-FPK97DDZBK"
   };
   
-  firebase.initializeApp(firebaseConfig);
-  const auth = firebase.auth();
+// Wait for Firebase to load before using it
+document.addEventListener("DOMContentLoaded", function() {
+    firebase.initializeApp(firebaseConfig);
+    const auth = firebase.auth();
+});
+
   
   // Exception Emails
   const exceptionEmails = [
