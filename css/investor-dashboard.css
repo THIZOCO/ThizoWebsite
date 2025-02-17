@@ -213,6 +213,10 @@ body {
     display: inline-block; /* Ensures proper alignment */
   }
   
+  .download-btn:hover {
+    background-color: #CE6C15;
+  }
+
   .add-card-button:hover {
     background-color: #CE6C15;
   }
@@ -276,6 +280,81 @@ body {
     color: #08584B; /* Updated to specific blue color */
     margin-bottom: 10px;
 }
+
+/* INVESTMENT EMAIL UPDATES */
+#investment-history-section {
+  max-width: 1200px;
+  margin: 50px auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.chart-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.chart-header h3 {
+  font-size: 1.5rem;
+  color: #ffffff;
+  background-color: #08584B;
+  margin-left: 20px;
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+/* Investor Email History Table */
+.investor-history-table {
+  max-width: 1200px;
+  width: 100%;
+  margin-left: 4px;
+  border-collapse: collapse;
+}
+
+.investor-history-table thead th {
+  background-color: #08584B;
+  color: #ffffff;
+  text-align: left;
+  padding: 10px;
+}
+
+.investor-history-table tbody tr:nth-child(even) {
+  background-color: #f4f4f4;
+}
+
+.investor-history-table tbody tr:nth-child(odd) {
+  background-color: #ffffff;
+}
+
+.investor-history-table tbody td {
+  padding: 10px;
+  text-align: left;
+  color: #333;
+}
+
+.investor-history-table tbody tr td:first-child {
+  font-weight: bold;
+}
+
+.download-button {
+  background-color: #08584B;
+  color: #ffffff;
+  padding: 8px 15px;
+  border: none;
+  border-radius: 5px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #028f67;
+}
+
 
 /* FOOTER SECTION */
   /* Footer */
