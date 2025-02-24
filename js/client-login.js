@@ -36,10 +36,8 @@ document.addEventListener("DOMContentLoaded", function() {
         const userEmail = userCredential.user.email;
         const emailDomain = userEmail.split("@")[1].split(".")[0]; 
 
-        if (exceptionEmails.includes(userEmail)) {
+        if (exceptionEmails.includes(userEmail) || isProfessionalEmail(userEmail)) {
             window.location.href = "account-management.html";
-        } else if (isProfessionalEmail(userEmail)) {
-            window.location.href = `${emailDomain}-account-management.html`;
         } else {
             alert("Access denied.");
         }
