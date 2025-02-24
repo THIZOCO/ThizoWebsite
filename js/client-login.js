@@ -43,7 +43,9 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     })
     .catch((error) => {
-        document.getElementById("emailError").innerText = error.message;
+        if (error.code == "auth/invalid-credential") {
+            document.getElementById("emailError").innerText = "Your credentials is not correct.";
+        }
         console.error("Login error:", error.message);
     });
   });
