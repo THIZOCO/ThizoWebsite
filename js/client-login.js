@@ -61,7 +61,8 @@ document.querySelector("#forgotPassword").addEventListener("click", function(eve
 
     sendPasswordResetEmail(auth, email)
     .then(() => {
-        console.log("Successfully Reset Password Email:");
+        alert("Successfully sent a reset password email.");
+        console.log("Successfully sent a reset password email.");
     })
     .catch((error) => {
         const errorCode = error.code;
